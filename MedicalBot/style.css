@@ -28,3 +28,14 @@ body {
   body.show-chatbot .chatbot-toggler {
     transform: rotate(90deg);
   }
+  .chatbot-toggler span {
+    color: #fff;
+    position: absolute;
+  }
+  .chatbot-toggler span:last-child,
+  body.show-chatbot .chatbot-toggler span:first-child  {
+    opacity: 0;
+  }
+  body.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+  }
