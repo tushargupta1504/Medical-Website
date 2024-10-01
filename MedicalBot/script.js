@@ -4,7 +4,7 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
-let userMessage = null; // Variable to store user's message
+let userMessage = null; 
 const inputInitHeight = chatInput.scrollHeight;
 
 
@@ -17,13 +17,11 @@ const createChatLi = (message, className) => {
   let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
   chatLi.innerHTML = chatContent;
   chatLi.querySelector("p").textContent = message;
-  return chatLi; // return chat <li> element
+  return chatLi; 
 }
 
 const generateResponse = async (chatElement) => {
   const messageElement = chatElement.querySelector("p");
-
-  // Define the properties and message for the API request
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
