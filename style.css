@@ -4,6 +4,10 @@
     --font: "Montserrat", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     font-family: var(--font);
 }
