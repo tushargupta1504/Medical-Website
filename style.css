@@ -1,41 +1,150 @@
-:root { --mavi: #6bc1f1 }
-header { background: url('img/headerbg.jpg') center/cover }
-.bg-mavi { background-color: var(--mavi) }
-.bg-goy{background-color: #072035;}
-.bg-boz { background-color: #f1f1f1 }
-.text-mavi { color: var(--mavi) }
-.vh-50 { min-height: 50vh; }
-.features:hover { opacity: .5;}
-.serviceimgs{ width: 100px; height: 100px;}
-.carousel-caption , .carousel-item {height: 200px;}
-.carousel-indicators button { width: 45px!important; height: 45px!important; border-radius: 50%; }
-.carousel-indicators button.active { width: 50px!important; height: 50px!important; }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --mavi: #6bc1f1;
+    --font: "Montserrat", sans-serif;
+}
 
-.carousel-inner h6 { text-transform: uppercase; letter-spacing: .1rem;}
-.carousel-inner p { text-transform: uppercase; color: rgba(255, 255, 255, 0.7);}
+*{
+    font-family: var(--font);
+}
 
-footer p{
+header {
+    background: url('img/headerbg.jpg') center/cover
+}
+#navbarTogglerDemo01{
+    height: 70px;
+}
+
+.mainLogo{
+    height: 30px;
+}
+ul{
+    font-size: 18px;
+    font-weight: 600;
+    gap: 20px;
+    margin-left: 20px;
+}
+ul li .nav-link:hover{
+    background: var(--mavi);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+.card-body{
+    position: relative;
+    max-width: 7;
+}
+
+.circle{
+    position: absolute;
+    background-color: var(--mavi);
+    height: 370px;
+    width: 370px;
+    top: -20px;
+    left: 50px;
+    border-radius: 50%;
+    opacity: 0.8;  
+}
+.hero{
+    position: relative;
+    z-index: 1;
+}
+
+.py-5 .card-body .card-title{
+    font-size: 30px;
+}
+.py-5 .card-body .card-subtitle{
+    font-size: 60px;
+}
+.bg-mavi {
+    background-color: var(--mavi)
+}
+
+.bg-goy {
+    background-color: #072035;
+}
+
+.bg-boz {
+    background-color: #f1f1f1
+}
+
+.text-mavi {
+    color: var(--mavi)
+}
+
+.vh-50 {
+    min-height: 50vh;
+}
+
+.features:hover {
+    opacity: .5;
+}
+
+.serviceimgs {
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-caption,
+.carousel-item {
+    height: 200px;
+}
+
+.carousel-indicators button {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators button.active {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.carousel-inner h6 {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.carousel-inner p {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer p {
     opacity: 0.7;
     font-size: 0.8rem;
     line-height: 30px;
     color: #fff;
     font-weight: 400;
-    font-family: "Roboto";
+    font-family: var(--font);
 }
 
-footer h5{
+footer h5 {
     margin-top: 40px;
     font-size: 1.1rem;
     color: #fff;
     font-weight: 400;
     font-family: "Roboto";
-    
+
 }
 
-.bt1 { background: url("img/feature-1.jpg") center/cover;}
-.bt2 { background: url("img/feature-2.jpg") center/cover;}
-.bt3 { background: url("img/feature-3.jpg") center/cover;}
-.bt4 { background: url("img/feature-4.jpg") center/cover;}
-.bt5 { background: url("img/feature-5.jpg") center/cover;}
+.bt1 {
+    background: url("img/feature-1.jpg") center/cover;
+}
 
+.bt2 {
+    background: url("img/feature-2.jpg") center/cover;
+}
 
+.bt3 {
+    background: url("img/feature-3.jpg") center/cover;
+}
+
+.bt4 {
+    background: url("img/feature-4.jpg") center/cover;
+}
+
+.bt5 {
+    background: url("img/feature-5.jpg") center/cover;
+}
