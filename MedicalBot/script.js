@@ -36,11 +36,8 @@ const generateResponse = async (chatElement) => {
     const response = await fetch(API_URL, requestOptions);
     const data = await response.json();
     if (!response.ok) throw new Error(data.error.message);
-    
-    // Get the API response text and update the message element
     messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1');
   } catch (error) {
-    // Handle error
     messageElement.classList.add("error");
     messageElement.textContent = error.message;
   } finally {
@@ -49,14 +46,12 @@ const generateResponse = async (chatElement) => {
 }
 
 const handleChat = () => {
-  userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
+  userMessage = chatInput.value.trim();
   if (!userMessage) return;
 
-  // Clear the input textarea and set its height to default
   chatInput.value = "";
   chatInput.style.height = `${inputInitHeight}px`;
 
-  // Append the user's message to the chatbox
   chatbox.appendChild(createChatLi(userMessage, "outgoing"));
   chatbox.scrollTo(0, chatbox.scrollHeight);
 
