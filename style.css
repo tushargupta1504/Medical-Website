@@ -8,6 +8,15 @@
     font-family: var(--font);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 header {
     background: url('img/headerbg.jpg') center/cover
 }
