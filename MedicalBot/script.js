@@ -32,8 +32,6 @@ const generateResponse = async (chatElement) => {
       }] 
     }),
   }
-
-  // Send POST request to API, get response and set the reponse as paragraph text
   try {
     const response = await fetch(API_URL, requestOptions);
     const data = await response.json();
