@@ -1,4 +1,3 @@
-
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
@@ -9,8 +8,19 @@ let userMessage = null;
 const inputInitHeight = chatInput.scrollHeight;
 
 
-const API_KEY = ""; // Your API key here
-const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+let API_KEY = ''; // Your API key here
+let API_URL = '';
+
+const loadConfig = async () => {
+  try {
+    const response = await fetch('config.json');
+    const config = await response.json();
+    API_KEY = config.apiKey;
+    API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+  } catch (error) {
+    console.error('Error loading config:', error);
+  }
+};
 
 const createChatLi = (message, className) => {
   const chatLi = document.createElement("li");
@@ -22,6 +32,12 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = async (chatElement) => {
+  if (!API_KEY) {
+    await loadConfig();
+  }
+  console.log('API_KEY:', API_KEY);
+  console.log('API_URL:', API_URL);
+
   const messageElement = chatElement.querySelector("p");
   const requestOptions = {
     method: "POST",
@@ -45,6 +61,7 @@ const generateResponse = async (chatElement) => {
     chatbox.scrollTo(0, chatbox.scrollHeight);
   }
 }
+loadConfig();
 
 const handleChat = () => {
   userMessage = chatInput.value.trim();
