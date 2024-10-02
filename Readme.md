@@ -1,4 +1,4 @@
-# 🌐 Welcome to Our Healthcare Platform! .
+# 🌐 Welcome to Our Healthcare Platform!
 
 Our platform revolutionizes healthcare by offering **online medical consultations** and providing **reliable health information** at your fingertips. We ensure access to the **latest diagnostic tests**, **stress management consultancy**, and a wide range of **affordable medical services**. Our mission is to make healthcare **easily accessible** and **affordable** for all. Whether you're seeking advice in **Cardiology**, **Neurology**, **Hepatology**, or any other medical field, we’ve got you covered!
 
@@ -35,6 +35,6 @@ For additional reference on best practices and features, you can explore the web
 
 Your contributions make a difference! Let's work together to provide a better healthcare experience for all.
 <br/>
-<h1 align="center">Medical Website Template</h1>
+<h1 align="left">Medical Website Template</h1>
 <br/>
 <img src="img/medical.gif" alt="video">
