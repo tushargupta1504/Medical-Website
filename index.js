@@ -14,3 +14,7 @@ window.addEventListener('scroll', function() {
     
     lastScrollTop = scrollTop;
 });
+
+function scrollToTop(){
+    window.scrollTo(0,0);
+}
