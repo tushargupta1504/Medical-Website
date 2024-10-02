@@ -266,6 +266,8 @@ ul li .nav-link:hover{
 .card-body{
     position: relative;
     max-width: 7;
+    font-size: 25px;
+    text-align: center;
 }
 
 .circle{
