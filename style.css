@@ -4,7 +4,7 @@
 }
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
@@ -14,31 +14,31 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
-.heading{
+.heading {
     text-align: center;
     font-size: 4rem;
     color: #333;
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(255,51,153,0.05);
+    background: rgba(43, 181, 255, 0.05);
 }
 
-.heading span{
+.heading span {
     color: var(--blue);
 }
 
-.btn{
+s .btn {
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
@@ -49,57 +49,59 @@ section{
     font-size: 1.7rem;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--blue);
 }
 
-header{
+header {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #fff;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-header .logo{
+header .logo {
     font-size: 3rem;
     color: #333;
     font-weight: bolder;
 }
 
-header .logo span{
+header .logo span {
     color: var(--blue);
 }
 
-header .navbar a{
+header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #666;
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     color: var(--blue);
 }
 
-header #toggler{
+header #toggler {
     display: none;
 }
 
-header .fa-bars{
+header .fa-bars {
     font-size: 20px;
-    color:#333;
+    color: #333;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
-    border: .1rem solid rgba(0,0,0,0.3);
+    border: .1rem solid rgba(0, 0, 0, 0.3);
     display: none;
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -108,30 +110,30 @@ header .fa-bars{
     background-position: center;
 }
 
-.home .content{
+.home .content {
     max-width: 50rem;
 }
 
-.home .content h3{
+.home .content h3 {
     font-size: 5rem;
     color: #333;
 }
 
-.home .content span{
+.home .content span {
     font-size: 3.5rem;
     color: var(--blue);
     padding: 1rem 0;
     line-height: 1.5;
 }
 
-.home .content p{
+.home .content p {
     font-size: 1.5rem;
     color: #000000;
     padding: 1rem 0;
     line-height: 1.5;
 }
 
-.about .row{
+.about .row {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -140,23 +142,24 @@ header .fa-bars{
     padding-bottom: 3rem;
 }
 
-.about .row .video-container{
+.about .row .video-container {
     flex: 1 1 40rem;
     position: relative;
 }
 
-.about .row .video-container video{
+.about .row .video-container video {
     width: 100%;
     border: 1.5rem solid #fffefe;
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     height: 100%;
     object-fit: cover;
 }
 
-.about .row .video-container h3{
+.about .row .video-container h3 {
     position: absolute;
-    top: 50%; transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 3rem;
     background: #fff;
     width: 100%;
@@ -165,16 +168,16 @@ header .fa-bars{
     mix-blend-mode: screen;
 }
 
-.about .row .content{
-    flex:1 1 40rem;
+.about .row .content {
+    flex: 1 1 40rem;
 }
 
-.about .row .content h3{
+.about .row .content h3 {
     font-size: 3rem;
     color: #333;
 }
 
-.about .row .content p{
+.about .row .content p {
     font-size: 1.5rem;
     color: #999;
     padding: 0.5rem 0;
@@ -182,7 +185,7 @@ header .fa-bars{
     line-height: 1.5;
 }
 
-.icons-container{
+.icons-container {
     background: #eee;
     display: flex;
     flex-wrap: wrap;
@@ -191,44 +194,46 @@ header .fa-bars{
     padding-bottom: 5rem;
 }
 
-.icons-container .icons{
+.icons-container .icons {
     background: #fff;
-    border: 0.1rem solid rgba(0,0,0,0.1);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
     display: flex;
     align-items: center;
     flex: 1 1 25rem;
 }
 
-.icons-container .icons h3{
+.icons-container .icons h3 {
     color: #333;
     padding-bottom: 0.5rem;
     font-size: 1.5rem;
 }
 
-.icons-container .icons span{
+.icons-container .icons span {
     color: #555;
     font-size: 1.3rem;
 }
 
-ul{
+ul {
     font-size: 18px;
     font-weight: 600;
     gap: 20px;
     margin-left: 20px;
 }
-ul li .nav-link:hover{
+
+ul li .nav-link:hover {
     background: var(--blue);
     color: white;
     border-radius: 30px;
     transition: all 0.5s;
 }
-.card-body{
+
+.card-body {
     position: relative;
     max-width: 7;
 }
 
-.circle{
+.circle {
     position: absolute;
     background-color: var(--blue);
     height: 370px;
@@ -236,19 +241,38 @@ ul li .nav-link:hover{
     top: -20px;
     left: 50px;
     border-radius: 50%;
-    opacity: 0.8;  
+    opacity: 0.8;
 }
-.hero{
+
+.hero {
     position: relative;
     z-index: 1;
 }
 
-.py-5 .card-body .card-title{
+.py-5 .card-body .card-title {
     font-size: 30px;
 }
-.py-5 .card-body .card-subtitle{
+
+.py-5 .card-body .card-subtitle {
     font-size: 60px;
 }
+
+.py-5 img {
+    width: 200px;
+    /* adjust the width as per your requirement */
+    height: 200px;
+    /* adjust the height as per your requirement */
+    object-fit: cover;
+    /* to maintain the aspect ratio */
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 30px;
+}
+
+.py-5 img:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
 .bg-mavi {
     background-color: var(--blue)
 }
@@ -318,7 +342,6 @@ footer h5 {
     color: #fff;
     font-weight: 400;
     font-family: "Roboto";
-
 }
 
 .bt1 {
@@ -342,99 +365,86 @@ footer h5 {
 }
 
 
-
-
-
-
-
 /* media queries */
-@media (max-width:991px){
 
-    html{
+@media (max-width:991px) {
+    html {
         font-size: 55%;
     }
-
-    header{
+    header {
         padding: 2rem;
     }
-
-    section{
+    section {
         padding: 2rem;
     }
-
-    .home{
+    .home {
         background-position: left;
     }
-    
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: 100%; /* Adjust the width */
-    height: 50px; /* Adjust the height */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    /* Adjust the width */
+    height: 50px;
+    /* Adjust the height */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1.6rem;
 }
 
+
 /* Adjust the textarea height specifically */
+
 textarea {
-    height: 150px; /* Increase height for a larger textarea */
+    height: 150px;
+    /* Increase height for a larger textarea */
 }
 
-@media (max-width:768px){
-
-    html .fa-bars{
+@media (max-width:768px) {
+    html .fa-bars {
         display: block;
     }
-
-    header .navbar{
+    header .navbar {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: #eee;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-
-    header #toggler:checked ~ .navbar{
+    header #toggler:checked~.navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-
-    header .navbar a{
+    header .navbar a {
         margin: 1.5rem;
         padding: 1.5rem;
         background: #fff;
-        border: 0.1rem solid rgba(0,0,0,0.1);
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
         display: block;
     }
-
-    .home .content h3{
+    .home .content h3 {
         font-size: 5rem;
     }
-
-    .home .content span{
+    .home .content span {
         font-size: 2.5rem;
     }
-
-    .icons-container .icons h3{
+    .icons-container .icons h3 {
         font-size: 2rem;
     }
-    
-    .icons-container .icons span{
+    .icons-container .icons span {
         font-size: 1.7rem;
     }
-     
-
 }
 
-@media (max-width:450px){
-
-    html{
+@media (max-width:450px) {
+    html {
         font-size: 50%;
     }
-
-    .heading{
+    .heading {
         font-size: 3rem;
     }
-    
 }
