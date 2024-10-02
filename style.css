@@ -480,3 +480,15 @@ textarea {
     }
     
 }
+
+#gallery .image-container {
+    overflow: hidden;
+}
+
+#gallery .image-container img {
+    transition: transform .5s ease;
+}
+
+#gallery .image-container:hover img {
+    transform: scale(1.5);
+}
