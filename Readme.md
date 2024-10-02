@@ -1,4 +1,4 @@
-# 🌐 Welcome to Our Healthcare Platform! .
+# 🌐 Welcome to Our Healthcare Platform!
 
 Our platform revolutionizes healthcare by offering **online medical consultations** and providing **reliable health information** at your fingertips. We ensure access to the **latest diagnostic tests**, **stress management consultancy**, and a wide range of **affordable medical services**. Our mission is to make healthcare **easily accessible** and **affordable** for all. Whether you're seeking advice in **Cardiology**, **Neurology**, **Hepatology**, or any other medical field, we’ve got you covered!
 
@@ -33,8 +33,17 @@ For additional reference on best practices and features, you can explore the web
 4. [Johns Hopkins Medicine, USA](https://www.hopkinsmedicine.org)
 5. [Fortis Healthcare, India](https://www.fortishealthcare.com)
 
+## 🐳 Deploying with Docker
+Deploying with Docker makes for an easy and consistant development experience
+
+- **Ensure Docker is Running**: Install/Start Docker on the host machine
+- **Open a Terminal**: Open a terminal in the root project directory. (Where the compose.yaml file is located)
+- **Run Compose Command**: Run the docker compose command. 'docker compose up -d'
+- **Open a browser**: Navigate to the url http://localhost:9090
+- **Enjoy!**: You should be able to navigate the website in your browser!
+
 Your contributions make a difference! Let's work together to provide a better healthcare experience for all.
 <br/>
-<h1 align="center">Medical Website Template</h1>
+<h1 align="left">Medical Website Template</h1>
 <br/>
 <img src="img/medical.gif" alt="video">
