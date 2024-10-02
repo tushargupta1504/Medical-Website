@@ -8,187 +8,170 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
-    <title>Medical-Website</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Swasthya Point</title>
 </head>
 
 <body>
-    <header id="home" class="min-vh-100 full-height">
-        <nav class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-75" aria-label="Main Navigation">
-            <div class="container">
-                <a class="navbar-brand" href="#home">
-                    <img class="mainLogo img-fluid" src="img/Medical.png" alt="Medical logo" />
-                </a>
+    <!-- header section starts -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">
-                        <img class="mainLogo" src="img/Medical.png" alt="Medical logo" />
-                    </a>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Porfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <header>
+        
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Swasthya<span>.</span></a>
+         
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+            <a href="nearby.html">Nearby</a>
         </nav>
-    
-        <div class="container vh-100 d-flex align-items-center justify-content-center">
-            <div class="row w-100">
-                <div class="card col-lg-6 bg-transparent border-0 text-white">
-                    <div class="card-body">
-                        <div class="circle"></div>
-                        <div class="hero">
-                            <h1 class="card-title display-3">The Best Doctors in <b>Medicine!!</b></h1>
-                            <h5 class="card-subtitle mb-2">In the World of Modern Medicine!</h5>
-                            <p class="card-text my-5">"Your health, simplified. Explore telemedicine options, find
-                                specialists, and access reliable health information—all in one place."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
 
-    <main>
-        <div class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 ">
-                        <div class="card bg-transparent border-0">
-                            <div class="card-body">
-                                <h6 class="card-title text-mavi text-uppercase">Welcome to clinic</h6>
-                                <h2 class="card-subtitle mb-2">Why you should choose us?</h2>
-                                <p class="card-text my-4">Transforming healthcare accessibility. Instantly book
-                                    appointments, receive virtual consultations, and explore personalized treatment
-                                    options with our innovative online platform..</p>
-                                <button class="btn btn-info bg-mavi text-white border-0 rounded-0 text-uppercase"
-                                    type="submit">Get started now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-end">
-                        <img src="img/hekimbaba.jpg" class="mw-100" alt="Hekim baba" />
-                    </div>
-                </div>
-            </div>
+    </header> 
+    
+    <!-- header section ends -->
+
+
+    <!-- home section starts -->
+
+    <section class="home" id="Home">
+
+        <div class="content">
+            <h3>Your Health, Our Priority</h3>
+            <span>Personalized Care for Every Patient</span>
+            <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet your unique health needs.</p>
+            <a href="#" class="btn">EXPLORE</a>
         </div>
-        <div class="bg-mavi">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 vh-50 d-flex align-items-center order-md-1">
-                        <div class="card bg-transparent border-0 text-white text-center mx-md-5 px-md-5">
-                            <div class="card-body">
-                                <h6 class="card-title text-uppercase">Features</h6>
-                                <h2 class="card-subtitle mb-2">Professional surgeons</h2>
-                                <p class="card-text my - 4">Your health, our priority. Streamline your medical journey
-                                    with seamless specialist referrals, real-time telemedicine, and comprehensive health
-                                    resources at your fingertips.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 vh-50 features" style="background: url('img/features1.jpg') center/cover;">
-                    </div>
-                    <div class="col-md-6 vh-50 d-flex align-items-center order-md-1">
-                        <div class="card bg-transparent border-0 text-white text-center mx-md-5 px-md-5 ">
-                            <div class="card-body">
-                                <h6 class="card-title text-uppercase">Features</h6>
-                                <h2 class="card-subtitle mb-2">Emergency care fore children</h2>
-                                <p class="card-text my-4">Empowering you with personalized care. Experience a new era of
-                                    healthcare convenience with our intuitive platform offering virtual visits, tailored
-                                    treatment plans, and expert guidance.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 vh-50 order-md-1 features"
-                        style="background: url('img/features2.jpg') center/cover"></div>
-                </div>
+
+    </section>
+
+    <!-- home section ends-->
+
+    <!-- about section starts -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span> about </span> us </h1>
+
+        <div class="row">
+
+            <div class="video-container">
+                <video src="img/about-video.mp4" loop autoplay muted></video>
+                <h3>who we are</h3>
+            </div>
+
+            <div class="content">
+                <h3>Our Commitment to Healthcare</h3>
+                <p>Welcome to Swasthya Point! e have been dedicated to providing exceptional healthcare services to our community. </p>
+                <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care across various specialties, including emergency services and wellness programs.</p>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+     <!-- about section ends -->
+
+     <!-- icons sections starts -->
+
+     <section class="icons-container">
+
+        <div class="icons">
+            <div class="info">
+                <h3>Pharmacy</h3>
+                <span>Prescription and medications.</span>
             </div>
         </div>
 
+        <div class="icons">
+            <div class="info">
+                <h3>Maternity Care</h3>
+                <span>Support for new mothers</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <div class="info">
+                <h3>Mental Health Services</h3>
+                <span>Emotional wellness support</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <div class="info">
+                <h3>Health Screening</h3>
+                <span>Preventive health evaluations</span>
+            </div>
+        </div>
+
+     </section>
+
+     <!-- icons section ends -->
+
         <div class="py-5">
             <div class="container">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-4 justify-content-center flex-column">
                         <div class="card my-5 border-0 align-items-center">
-                            <img src="img/ic1.jpg" class="card-img-top serviceimgs img-fluid" alt="Telemedicine Consultations" loading="lazy">
+                            <img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="...">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Telemedicine Consultations</h5>
-                                <p class="card-text">Connect with our healthcare professionals from the comfort of your home through secure video consultations.</p>
-
+                                <h5 class="card-title">Radiology</h5>
+                                <h5 class="card-text">To visualize internal structures and diagnose conditions.</h5>
                             </div>
                         </div>
-        
+
                         <div class="card border-0 align-items-center">
-                            <img src="img/ic2.jpg" class="card-img-top serviceimgs img-fluid" alt="Emergency Services" loading="lazy">
+                            <img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="...">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Emergency Services</h5>
-                                <p class="card-text">24/7 emergency care for critical health situations, ensuring immediate and comprehensive medical attention.</p>
+                                <h5 class="card-title">Blood Bank</h5>
+                                <h5 class="card-text">ransfusion medicine and blood donation center</h5>
                             </div>
                         </div>
                     </div>
-        
-                    <div class="col-md-4">
+
+                    <div class="col-md-4 ">
                         <div class="card my-5 border-0 align-items-center">
-                            <img src="img/ic3.jpg" class="card-img-top serviceimgs img-fluid" alt="Pediatric Care" loading="lazy">
+                            <img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="...">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Pediatric Care</h5>
-                                <p class="card-text">Specialized healthcare services tailored for infants, children, and adolescents to promote healthy development.</p>
+                                <h5 class="card-title ">Psychiatrist</h5>
+                                <h5 class="card-text">Specializes in mental health</h5>
                             </div>
                         </div>
-        
-                        <div class="card border-0 align-items-center">
-                            <img src="img/ic4.jpg" class="card-img-top serviceimgs img-fluid" alt="Mental Health Support" loading="lazy">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Mental Health Support</h5>
-                                <p class="card-text">Comprehensive mental health services to support your emotional and psychological well-being.</p>
 
+                        <div class="card border-0 align-items-center">
+                            <img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Urologist</h5>
+                                <h5 class="card-text">Focuses on conditions affecting the urinary tract</h5>
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="col-md-4">
                         <div class="card my-5 border-0 align-items-center">
-                            <img src="img/ic5.jpg" class="card-img-top serviceimgs img-fluid" alt="Cardiac Care" loading="lazy">
+                            <img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="...">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Cardiac Care</h5>
-                                <p class="card-text">Advanced cardiac treatments and preventive measures to maintain a healthy heart.</p>
+                                <h5 class="card-title">Dermatologist</h5>
+                                <h5 class="card-text">diagnosis and treatment of skin, hair, and nail conditions.</h5>
                             </div>
                         </div>
-        
+
                         <div class="card border-0 align-items-center">
-                            <img src="img/ic6.jpg" class="card-img-top serviceimgs img-fluid" alt="Orthopedic Services" loading="lazy">
+                            <img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="...">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Orthopedic Services</h5>
-                                <p class="card-text">Comprehensive orthopedic care to treat musculoskeletal issues and enhance mobility.</p>
+                                <h5 class="card-title">Pediatrician</h5>
+                                <h6 class="card-text">Specializes in the medical care of infants, children</h5>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section>
-
+        </div>
 
         <!-- <div class="bg-boz py-3">
             <div class="container">
@@ -216,31 +199,31 @@
                     <div class="col-md-4">
                         <div class="image-container">
                             <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
-                            <div class="overlay">Precision in Surgery</div>
+                           
                         </div>
                         <div class="image-container">
                             <img src="img/portfolio-2.jpg" class="card-img " alt="...">
-                            <div class="overlay">Advanced Diagnostics</div>
+                            
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="image-container">
                             <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
-                            <div class="overlay">Specialized Medical Team</div>
+                            
                         </div>
                         <div class="image-container">
                             <img src="img/portfolio-4.jpg" class="card-img" alt="...">
-                            <div class="overlay">Breakthrough Research</div>
+                            
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="image-container">
                             <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
-                            <div class="overlay">Care for the Future</div>
+                           
                         </div>
                         <div class="image-container">
                             <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
-                            <div class="overlay">Precision Analysis</div>
+                          
                         </div>
                     </div>
                 </div>
@@ -258,9 +241,9 @@
                                 consult with specialists, and access medical resources conveniently online.</p>
                         </div>
                     </div>
-        
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Testimonials Carousel">
 
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                 class="active bt1" aria-current="true" aria-label="Slide 1"></button>
@@ -277,36 +260,31 @@
                             <div class="carousel-item active">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
                                     <h6>Jane Galadriel</h6>
-                                    <p>CEO, Tengkurep</p>
-                                    <p>"Medical has transformed the way I access healthcare services. The platform is intuitive and efficient."</p>
+                                    <p>Ceo Tengkurep</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>John Doe</h6>
-                                    <p>Chief Surgeon, HealthCare Inc.</p>
-                                    <p>"Exceptional care and professional staff. I felt valued and well-cared for throughout my treatment."</p>
+                                    <h6>Jane Galadriel</h6>
+                                    <p>Ceo Tengkurep</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Emily Smith</h6>
-                                    <p>Head of Pediatrics, CarePlus</p>
-                                    <p>"Our children receive the best possible care. The pediatric services are outstanding and compassionate."</p>
+                                    <h6>Jane Galadriel</h6>
+                                    <p>Ceo Tengkurep</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Michael Brown</h6>
-                                    <p>Director of Operations, MedLife</p>
-                                    <p>"A reliable and efficient medical platform that has streamlined our operations significantly."</p>
+                                    <h6>Jane Galadriel</h6>
+                                    <p>Ceo Tengkurep</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Sarah Johnson</h6>
-                                    <p>Lead Nurse, WellCare</p>
-                                    <p>"The support and resources provided have greatly enhanced patient care and nurse efficiency."</p>
+                                    <h6>Jane Galadriel</h6>
+                                    <p>Ceo Tengkurep</p>
                                 </div>
                             </div>
                         </div>
@@ -323,80 +301,38 @@
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
 
         <div class="py-5">
             <div class="container">
                 <div class="row justify-content-center">
-
                     <div class="col-md-4">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                placeholder="Your Message"></textarea>
-                        </div>
-                        <div class="col d-flex justify-content-center">
-                            <button type="button" class="btn btn-outline-primary">Contact</button>
-                        </div>
+                        <form id="contactForm">
+                             <div class="mb-3">
+                                 <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                             </div>
+                              <div class="mb-3">
+                                  <input type="email" class="form-control" id="emailInput" placeholder="E-mail">
+                             </div>
+                             <div class="mb-3">
+                                 <input type="text" class="form-control" id="subjectInput" placeholder="Subject">
+                             </div>
+                             <div class="mb-3">
+                                  <textarea class="mb-3" id="messageInput" rows="3"
+                                  placeholder="Your Message"></textarea>
+                             </div>
+                             <div class="col d-flex justify-content-center">
+                                 <button type="button" class="btn btn-outline-primary" id="submitButton">Submit</button>
+                              </div>
+                        </form>      
+
+                        <div id="thankYouMessage" class="text-center text-success mt-3" style="display:none;">
+                        Thank you for submitting the form! </div>
                     </div>
                 </div>
             </div>
         </div>
-
-                    <div class="col-md-6">
-                        <h2 class="mb-4">Contact Us</h2>
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-outline-primary">Contact</button>
-                            </div>
-                            
-                            <!-- Confirmation message directly after the submit button -->
-                            <div class="d-flex justify-content-center">
-                                <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
-                                    Thank you! Your message has been sent successfully.
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <script>
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevents the form from being submitted to a server
-                
-                // Show the confirmation message
-                document.getElementById('confirmationMessage').style.display = 'block';
-                
-                // Clear form fields (optional)
-                document.getElementById('contactForm').reset();
-            });
-        </script>
-        
-
-    </main>
+         
 
     <footer class="bg-goy">
         <div class="container">
@@ -419,11 +355,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        // JavaScript to handle form submission and display thank you message
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Show thank you message
+            document.getElementById('thankYouMessage').style.display = 'block';
+
+            document.getElementById('contactForm').reset();
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="./index.js"></script>
+
+
 </body>
 
 </html>
