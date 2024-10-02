@@ -33,7 +33,7 @@ For additional reference on best practices and features, you can explore the web
 4. [Johns Hopkins Medicine, USA](https://www.hopkinsmedicine.org)
 5. [Fortis Healthcare, India](https://www.fortishealthcare.com)
 
-## Deploying with Docker
+## 🐳 Deploying with Docker
 Deploying with Docker makes for an easy and consistant development experience
 
 - **Ensure Docker is Running**: Install/Start Docker on the host machine
