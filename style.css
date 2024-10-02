@@ -1,32 +1,216 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --mavi: #6bc1f1;
-    --font: "Montserrat", sans-serif;
-}
-
-*{
-    font-family: var(--font);
-}
-
-::-webkit-scrollbar {
-    display: none;
+    --blue: #4385a9;
 }
 
 * {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
 }
 
-header {
-    background: url('img/headerbg.jpg') center/cover
-}
-#navbarTogglerDemo01{
-    height: 70px;
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
 }
 
-.mainLogo{
-    height: 30px;
+section{
+    padding: 2rem 9%;
 }
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255,51,153,0.05);
+}
+
+.heading span{
+    color: var(--blue);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--blue);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--blue);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: var(--blue);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 20px;
+    color:#333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,0.3);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/bg-home.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--blue);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #000000;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fffefe;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex:1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons{
+    background: #fff;
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons h3{
+    color: #333;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span{
+    color: #555;
+    font-size: 1.3rem;
+}
+
 ul{
     font-size: 18px;
     font-weight: 600;
@@ -34,7 +218,7 @@ ul{
     margin-left: 20px;
 }
 ul li .nav-link:hover{
-    background: var(--mavi);
+    background: var(--blue);
     color: white;
     border-radius: 30px;
     transition: all 0.5s;
@@ -46,7 +230,7 @@ ul li .nav-link:hover{
 
 .circle{
     position: absolute;
-    background-color: var(--mavi);
+    background-color: var(--blue);
     height: 370px;
     width: 370px;
     top: -20px;
@@ -66,7 +250,7 @@ ul li .nav-link:hover{
     font-size: 60px;
 }
 .bg-mavi {
-    background-color: var(--mavi)
+    background-color: var(--blue)
 }
 
 .bg-goy {
@@ -78,7 +262,7 @@ ul li .nav-link:hover{
 }
 
 .text-mavi {
-    color: var(--mavi)
+    color: var(--blue)
 }
 
 .vh-50 {
@@ -122,16 +306,15 @@ ul li .nav-link:hover{
 
 footer p {
     opacity: 0.7;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     line-height: 30px;
     color: #fff;
     font-weight: 400;
-    font-family: var(--font);
 }
 
 footer h5 {
     margin-top: 40px;
-    font-size: 1.1rem;
+    font-size: 2rem;
     color: #fff;
     font-weight: 400;
     font-family: "Roboto";
@@ -159,79 +342,99 @@ footer h5 {
 }
 
 
-/* adding card hover effect */
-
-/* CSS for hover effect on images in .bg-boz */
-.bg-boz .card-img {
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-}
-
-.bg-boz .card-img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
-
-.bg-boz .card-img {
-    transition: transform 0.3s ease, opacity 0.3s ease; 
-    opacity: 1; 
-}
-
-.bg-boz .card-img:hover {
-    transform: scale(1.1); 
-    opacity: 0.5; 
-}
 
 
 
-.image-container {
-    position: relative; /* Position relative to position the overlay */
-    display: inline-block; /* Ensure the container fits the image size */
-}
 
-.image-container img {
-    display: block; /* Remove bottom space */
-    transition: transform 0.5s ease; /* Transition for zoom effect */
-}
 
-.image-container:hover img {
-    transform: scale(1.1); /* Zoom effect */
-}
+/* media queries */
+@media (max-width:991px){
 
-/* Overlay styles */
-.overlay {
-    position: absolute; /* Position it over the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to center */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #6bc1f1; /* Text color */
-    padding: 10px 15px; /* Add padding for some space around the text */
-    border-radius: 5px; /* Optional: round the corners of the overlay */
-    opacity: 0; /* Initially hide the text */
-    /* transition: opacity 0.5s ease; */
-    transition: opacity 0.5s ease, color 0.5s ease, text-shadow 0.5s ease; 
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Initial glow */
-    font-size: 1.0em; /*Increase font size */
+    html{
+        font-size: 55%;
+    }
 
-}
+    header{
+        padding: 2rem;
+    }
 
-/* Show the overlay text on hover */
-.image-container:hover .overlay {
-    opacity: 1; /* Show the overlay */
+    section{
+        padding: 2rem;
+    }
 
-    color:#6bc1f1;
-}
-@media (max-width: 440px) {
+    .home{
+        background-position: left;
+    }
     
-.circle{
-    position: absolute;
-    justify-content: center;
-    background-color: var(--mavi);
-    height:80%;
-    width: 80%;
-    border-radius: 50%;
-    opacity: 0.8;  
 }
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Adjust the width */
+    height: 50px; /* Adjust the height */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+/* Adjust the textarea height specifically */
+textarea {
+    height: 150px; /* Increase height for a larger textarea */
+}
+
+@media (max-width:768px){
+
+    html .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0,0,0,0.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+     
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
     
 }
