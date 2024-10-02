@@ -33,6 +33,15 @@ For additional reference on best practices and features, you can explore the web
 4. [Johns Hopkins Medicine, USA](https://www.hopkinsmedicine.org)
 5. [Fortis Healthcare, India](https://www.fortishealthcare.com)
 
+## 🐳 Deploying with Docker
+Deploying with Docker makes for an easy and consistant development experience
+
+- **Ensure Docker is Running**: Install/Start Docker on the host machine
+- **Open a Terminal**: Open a terminal in the root project directory. (Where the compose.yaml file is located)
+- **Run Compose Command**: Run the docker compose command. 'docker compose up -d'
+- **Open a browser**: Navigate to the url http://localhost:9090
+- **Enjoy!**: You should be able to navigate the website in your browser!
+
 Your contributions make a difference! Let's work together to provide a better healthcare experience for all.
 <br/>
 <h1 align="center">Medical Website Template</h1>
