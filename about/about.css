@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8; /* Adjust as per your need */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 30px;
+    background-color: #ffffff; /* Background color for the navbar */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo .highlight {
+    color: #2196F3; /* Blue color for the highlighted text */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0 25%;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2196F3; /* Hover color for links */
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.home-sec1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90vh;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-image: url('../img/portrait-smiling-dentist-standing-with-arms-crossed-with-her-colleague.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 18%;
+   
+  }
+  
+  .text-section {
+    margin-bottom: 20px;
+  }
+  
+  .trusted-text {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #faf8f8;
+    margin-bottom: 10px;
+    
+  }
+  
+  .exceptional {
+    font-size: 52px;
+    font-weight: 700;
+    color: #f9f8f8;
+    margin-bottom: 20px;
+
+  }
+  
+  .book-button {
+    background-color: #f0c040;
+    color: rgb(9, 9, 9);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 1%;
+  }
+  
+  .book-button:hover {
+    background-color: #d39e30;
+  }
+  
+  .call-text {
+    margin-top: 15px;
+    font-size: 17px;
+    color: #fffffc;
+  }
+  
+  
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+
+.about-us {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-us h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background-color: #10243f; /* Exact dark blue background */
+    padding: 60px 80px; /* Increase padding for spacing */
+    color: #ffffff; /* White text */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Wider container to match alignment */
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 40px; /* Padding between the columns */
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Larger margin for spacing */
+    font-weight: bold; /* Make headers bold */
+    text-align: left;
+}
+
+.footer-column p {
+    font-size: 0.95rem; /* Smaller, elegant font */
+    margin: 10px 0;
+    color: #d1d1d1; /* Light grey text color */
+    text-align: left;
+}
+
+.footer-column a {
+    color: #d1d1d1;
+    text-decoration: none;
+    text-align: left;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Align the text and columns to match the design */
+.footer-column:nth-child(2), .footer-column:nth-child(3) {
+    text-align: left;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
