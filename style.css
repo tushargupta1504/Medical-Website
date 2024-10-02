@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --mavi: #6bc1f1;
+    --mavi: rgb(107, 193, 241);
     --font: "Montserrat", sans-serif;
 }
 
@@ -65,6 +65,99 @@ ul li .nav-link:hover{
 .py-5 .card-body .card-subtitle{
     font-size: 60px;
 }
+
+.doctors__grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+    justify-content: center; 
+  }
+  
+  .doctors__card {
+    text-align: center;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1 1 280px;
+    max-width: 280px; 
+    position: relative;
+    margin-bottom:3rem;
+    
+  }
+  
+  .doctors__card:hover {
+    transform: scale(1.05); 
+    box-shadow: 5px 5px 15px rgba(107, 193, 241, 0.4);
+  }
+  
+  .doctors__card__image {
+    position: relative;
+    overflow: hidden;
+    height: 240px; 
+
+  }
+  
+  .doctors__card__image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: fill; 
+    object-position: center;
+  }
+  
+  .doctors__socials {
+    position: absolute;
+    left: 50%;
+    bottom: -4rem; 
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0; 
+    transition: all 0.5s ease; /
+  }
+  
+  .doctors__socials span {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .doctors__socials span:hover {
+    color: var(--primary-color);
+    background-color: var(--light-grey);
+    transform: scale(1.1); 
+    color: rgb(4, 72, 127) ;
+    color: var(--white); 
+    background-color: rgba(107, 193, 241, 0.7);
+  }
+  
+  .doctors__card:hover .doctors__socials {
+    bottom: 2rem; 
+    opacity: 1; 
+  }
+  
+  .doctors__card h4 {
+    margin-top: 1rem;
+    font-size: 1rem; 
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .doctors__card p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem; 
+    color: var(--text-light);
+  }
+  
+  
 .bg-mavi {
     background-color: var(--mavi)
 }
@@ -159,15 +252,13 @@ footer h5 {
 }
 
 
-/* adding card hover effect */
 
-/* CSS for hover effect on images in .bg-boz */
 .bg-boz .card-img {
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transition: transform 0.3s ease-in-out; 
 }
 
 .bg-boz .card-img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1); 
 }
 
 
@@ -184,41 +275,40 @@ footer h5 {
 
 
 .image-container {
-    position: relative; /* Position relative to position the overlay */
-    display: inline-block; /* Ensure the container fits the image size */
+    position: relative;
+    display: inline-block; 
 }
 
 .image-container img {
-    display: block; /* Remove bottom space */
-    transition: transform 0.5s ease; /* Transition for zoom effect */
+    display: block; 
+    transition: transform 0.5s ease; 
 }
 
 .image-container:hover img {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1); 
 }
 
-/* Overlay styles */
 .overlay {
-    position: absolute; /* Position it over the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to center */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #6bc1f1; /* Text color */
-    padding: 10px 15px; /* Add padding for some space around the text */
-    border-radius: 5px; /* Optional: round the corners of the overlay */
-    opacity: 0; /* Initially hide the text */
-    /* transition: opacity 0.5s ease; */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(107, 193, 241); 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    opacity: 0; 
+    
     transition: opacity 0.5s ease, color 0.5s ease, text-shadow 0.5s ease; 
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Initial glow */
-    font-size: 1.0em; /*Increase font size */
+    white-space: nowrap; 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    font-size: 1.0em; 
 
 }
 
-/* Show the overlay text on hover */
+
 .image-container:hover .overlay {
-    opacity: 1; /* Show the overlay */
+    opacity: 1; 
 
     color:#6bc1f1;
 }
