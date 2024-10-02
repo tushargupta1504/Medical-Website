@@ -8,6 +8,15 @@
     font-family: var(--font);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 header {
     background: url('img/headerbg.jpg') center/cover
 }
@@ -147,4 +156,69 @@ footer h5 {
 
 .bt5 {
     background: url("img/feature-5.jpg") center/cover;
+}
+
+
+/* adding card hover effect */
+
+/* CSS for hover effect on images in .bg-boz */
+.bg-boz .card-img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.bg-boz .card-img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+
+.bg-boz .card-img {
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    opacity: 1; 
+}
+
+.bg-boz .card-img:hover {
+    transform: scale(1.1); 
+    opacity: 0.5; 
+}
+
+
+
+.image-container {
+    position: relative; /* Position relative to position the overlay */
+    display: inline-block; /* Ensure the container fits the image size */
+}
+
+.image-container img {
+    display: block; /* Remove bottom space */
+    transition: transform 0.5s ease; /* Transition for zoom effect */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute; /* Position it over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #6bc1f1; /* Text color */
+    padding: 10px 15px; /* Add padding for some space around the text */
+    border-radius: 5px; /* Optional: round the corners of the overlay */
+    opacity: 0; /* Initially hide the text */
+    /* transition: opacity 0.5s ease; */
+    transition: opacity 0.5s ease, color 0.5s ease, text-shadow 0.5s ease; 
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Initial glow */
+    font-size: 1.0em; /*Increase font size */
+
+}
+
+/* Show the overlay text on hover */
+.image-container:hover .overlay {
+    opacity: 1; /* Show the overlay */
+
+    color:#6bc1f1;
 }
