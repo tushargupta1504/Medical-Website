@@ -1,4 +1,3 @@
-import config from "./config";
 
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
