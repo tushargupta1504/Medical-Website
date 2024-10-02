@@ -1,0 +1,207 @@
+/*-----------facilities-----------*/ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* Colors */
+    --primary-color: #FF6868;
+    --secondary-color: #6bc1f1;
+    --background-color: #EFEFEF;
+    --text-color: #6F6E6E;
+    --dark-text-color: #454545;
+    --light-text-color: #555555;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Font Sizes */
+    --heading-font-size: 50px;
+    --subheading-font-size: 30px;
+    --text-font-size: 20px;
+    --rate-font-size: 20px;
+
+    /* Spacing */
+    --padding: 30px;
+    --section-padding: 30px 90px;
+    --gap: 35px;
+    --card-padding: 0 30px 20px;
+    --slide-container-padding: 10px 20px;
+
+    /* Dimensions */
+    --container-width: 400px;
+    --image-height: 300px;
+    --rating-height: 108px;
+    --rating-width: 150px;
+
+    /* Borders */
+    --border-radius: 40px;
+    --small-border-radius: 50%;
+    --image-border-radius: 70px;
+
+    /* Font Weights */
+    --bold-weight: 800;
+    --semi-bold-weight: 700;
+
+    /* Other */
+    --box-shadow: 0px 0px 19px -6px;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui;
+    box-sizing: border-box;
+}
+
+.facilities {
+    padding: var(--section-padding);
+    height: max-content;
+}
+
+.facilities h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    letter-spacing: 6px;
+    word-spacing: 10px;
+    font-weight: var(--semi-bold-weight);
+    padding: 20px 0;
+}
+
+.facilities .main {
+    display: flex;
+    align-items: rate baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.facilities .main .text {
+    font-size: var(--heading-font-size);
+    color: black;
+    font-weight: var(--bold-weight);
+    line-height: 65px;
+}
+
+.facilities .slide {
+    display: flex;
+    gap: var(--gap);
+}
+
+.facilities .slide-container {
+    height: 40px;
+    width: 40px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: var(--slide-container-padding);
+    font-size: var(--text-font-size);
+    border-radius: var(--small-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facilities .slide-container i {
+    font-size: var(--text-font-size);
+}
+
+.facilities .slide-container:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.facility {
+    margin-top: 100px;
+    display: flex;
+    gap: 40px;
+}
+
+.facility ul {
+    display: flex;
+    gap: 30px;
+}
+
+.facilities .container {
+    margin-left: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    width: var(--container-width);
+    height: auto;
+    gap: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.facilities .content img {
+    border-radius: var(--image-border-radius);
+    padding: 40px 0;
+    height: var(--image-height);
+}
+
+.facilities .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facilities .content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.facilities .content h5 {
+    font-size: var(--subheading-font-size);
+    font-weight: var(--bold-weight);
+    color: black;
+    text-align: center;
+}
+
+.facilities .content p {
+    text-align: center;
+    color: var(--light-text-color);
+}
+
+.facilities .rate {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.facilities .rating {
+    position: absolute;
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: 20px;
+    height: var(--rating-height);
+    width: var(--rating-width);
+    top: -33px;
+    z-index: 20;
+    left: 290px;
+    border-radius: 37%;
+    font-size: var(--rate-font-size);
+    font-weight: var(--bold-weight);
+    text-align: left;
+}
+
+.facilities .rate .rating {
+    color: var(--dark-text-color);
+    top: -33px;
+    z-index: 20;
+    left: 290px;
+}
+
+.facilities .rate .rating i {
+    position: absolute;
+    top: 55px;
+}
+
+.facilities .rate .rating span {
+    position: absolute;
+    top: 55px;
+    margin-left: 30px;
+}
