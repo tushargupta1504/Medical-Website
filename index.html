@@ -283,14 +283,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
+                        <form>
                         <div class="mb-3">
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+                            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="E-mail">
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
+                            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Subject">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
@@ -299,6 +300,7 @@
                         <div class="col d-flex justify-content-center">
                             <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -345,6 +347,29 @@
 </body>
 
 <script>
+
+// Get the input fields
+const nameInput = document.getElementById('exampleFormControlInput1');
+const emailInput = document.getElementById('exampleFormControlInput2');
+const subjectInput = document.getElementById('exampleFormControlInput3');
+const messageInput = document.getElementById('exampleFormControlTextarea1');
+
+const submitButton = document.querySelector('.btn-outline-primary');
+
+submitButton.addEventListener('click', () => {
+    alert('Thank you for submitting the form!');
+  nameInput.value = '';
+  emailInput.value = '';
+  subjectInput.value = '';
+  messageInput.value = '';
+});
+
+const form = document.querySelector('from');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.reset();
+})
+
 var scrollToTopBtn = document.getElementById("scroll-to-top");
 
     // When the user scrolls down 20px from the top of the document, show the button
