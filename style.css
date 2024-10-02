@@ -222,3 +222,16 @@ footer h5 {
 
     color:#6bc1f1;
 }
+@media (max-width: 440px) {
+    
+.circle{
+    position: absolute;
+    justify-content: center;
+    background-color: var(--mavi);
+    height:80%;
+    width: 80%;
+    border-radius: 50%;
+    opacity: 0.8;  
+}
+    
+}
