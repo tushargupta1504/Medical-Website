@@ -40,17 +40,61 @@
 
 
     <!-- home section starts -->
-
-    <section class="home" id="Home">
-
-        <div class="content">
-            <h3>Your Health, Our Priority</h3>
-            <span>Personalized Care for Every Patient</span>
-            <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
-                your unique health needs.</p>
-            <a href="#" class="btn">EXPLORE</a>
-        </div>
-
+    <section class="upper">
+        <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image class="cc"   href="./img/demo.png" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                </svg>
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <!-- <p class="opacity-75 ">Some representative placeholder content for the first slide of the carousel.</p> -->
+                    <p><a class="btn btn-lg btn-outline-light" href="#Contact">Sign up today</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image class="cc"  href="./img/demo2.png" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                </svg>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <!-- <p>Some representative placeholder content for the second slide of the carousel.</p> -->
+                    <p><a class="btn btn-lg btn-outline-light" href="#">Learn more</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image class="cc" href="./img/demo3.png" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
+                </svg>
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-outline-light" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    
     </section>
 
     <!-- home section ends-->
@@ -310,7 +354,7 @@
                 </div>
             </div>
 
-            <div
+            <div id="Contact"
                 class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
                 <h2 class="text-5xl text-sky-900 font-bold mb-6">Contact Us</h2>
 

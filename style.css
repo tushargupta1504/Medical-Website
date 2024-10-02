@@ -137,38 +137,20 @@ header .fa-bars{
     border: .1rem solid rgba(0,0,0,0.3);
     display: none;
 }
-
-.home{
+.cc{
+    object-fit: cover;
+}
+.carousel{
     display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: url(img/bg-home.png)no-repeat;
+    height:180%;
+    
+}
+.carousel-inner{
+    height: 180%;
     background-size: cover;
     background-position: center;
 }
 
-.home .content{
-    max-width: 50rem;
-}
-
-.home .content h3{
-    font-size: 5rem;
-    color: #333;
-}
-
-.home .content span{
-    font-size: 3.5rem;
-    color: var(--blue);
-    padding: 1rem 0;
-    line-height: 1.5;
-}
-
-.home .content p{
-    font-size: 1.5rem;
-    color: #000000;
-    padding: 1rem 0;
-    line-height: 1.5;
-}
 
 .about .row{
     display: flex;
@@ -316,21 +298,30 @@ ul li .nav-link:hover{
     width: 100px;
     height: 100px;
 }
+.carousel-caption{
+    font-size: 20px;
+    padding-bottom: 40px;
+}
 
 .carousel-caption,
 .carousel-item {
-    height: 200px;
+    color: #072035;
+    font-weight: bold;
+
+    top: 50%;
+    margin-top: 100px;
+    height: 500px;
 }
 
 .carousel-indicators button {
-    width: 45px !important;
-    height: 45px !important;
+    width: 10px !important;
+    height: 5px !important;
     border-radius: 50%;
 }
 
 .carousel-indicators button.active {
-    width: 50px !important;
-    height: 50px !important;
+    width: px !important;
+    height: 5px !important;
 }
 
 .carousel-inner h6 {
