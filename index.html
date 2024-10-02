@@ -24,14 +24,14 @@
         <a href="#" class="logo">Swasthya<span>.</span></a>
 
         <nav class="navbar">
-           <ul>
-           <li><a href="#home">Home</a></li> 
-           <li><a href="#about">About Us</a></li>
-           <li><a href="#services">Services</a></li>
-           <li>  <a href="#contact">Contact</a></li>
-           <li> <a href="#blogs">Blogs</a></li>
-           <li><a href="nearby.html">Nearby</a></li>
-           </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li> <a href="#contact">Contact</a></li>
+                <li> <a href="#blogs">Blogs</a></li>
+                <li><a href="nearby.html">Nearby</a></li>
+            </ul>
         </nav>
 
     </header>
@@ -114,7 +114,7 @@
 
             <div class="content">
                 <h3>Our Commitment to Healthcare</h3>
-                <p>Welcome to Swasthya Point! e have been dedicated to providing exceptional healthcare services to our
+                <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to our
                     community. </p>
                 <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care across
                     various specialties, including emergency services and wellness programs.</p>
@@ -163,12 +163,12 @@
 
     <!-- icons section ends -->
 
-    <div class="py-5">
+    <div class="py-5" id="services">
         <div class="container">
             <div class="row ">
                 <div class="col-md-4 justify-content-center flex-column">
                     <div class="card my-5 border-0 align-items-center">
-                        <img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology">
                         <div class="card-body text-center">
                             <h5 class="card-title">Radiology</h5>
                             <h5 class="card-text">To visualize internal structures and diagnose conditions.</h5>
@@ -176,17 +176,17 @@
                     </div>
 
                     <div class="card border-0 align-items-center">
-                        <img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
                         <div class="card-body text-center">
                             <h5 class="card-title">Blood Bank</h5>
-                            <h5 class="card-text">ransfusion medicine and blood donation center</h5>
+                            <h5 class="card-text">Transfusion medicine and blood donation center</h5>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 ">
                     <div class="card my-5 border-0 align-items-center">
-                        <img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="Psychiatrist">
                         <div class="card-body text-center">
                             <h5 class="card-title ">Psychiatrist</h5>
                             <h5 class="card-text">Specializes in mental health</h5>
@@ -194,7 +194,7 @@
                     </div>
 
                     <div class="card border-0 align-items-center">
-                        <img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
                         <div class="card-body text-center">
                             <h5 class="card-title">Urologist</h5>
                             <h5 class="card-text">Focuses on conditions affecting the urinary tract</h5>
@@ -204,7 +204,7 @@
 
                 <div class="col-md-4">
                     <div class="card my-5 border-0 align-items-center">
-                        <img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="Dermatologist">
                         <div class="card-body text-center">
                             <h5 class="card-title">Dermatologist</h5>
                             <h5 class="card-text">diagnosis and treatment of skin, hair, and nail conditions.</h5>
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="card border-0 align-items-center">
-                        <img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="...">
+                        <img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="Pediatrician">
                         <div class="card-body text-center">
                             <h5 class="card-title">Pediatrician</h5>
                             <h6 class="card-text">Specializes in the medical care of infants, children</h5>
@@ -408,17 +408,20 @@
     </div>
     </section>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the form from being submitted to a server
 
-            // Show the confirmation message
-            document.getElementById('confirmationMessage').style.display = 'block';
 
-            // Clear form fields (optional)
-            // document.getElementById('contactForm').reset();
-        });
-    </script>
+<script>
+    // JavaScript to handle form submission and display thank you message
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form from submitting
+
+        // Show thank you message
+        document.getElementById('confirmationMessage').style.display = 'block';
+        document.getElementById('thankYouMessage').style.display = 'block';
+
+        document.getElementById('contactForm').reset();
+    });
+</script>
 
 
     </main>
@@ -444,17 +447,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // JavaScript to handle form submission and display thank you message
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form from submitting
-
-            // Show thank you message
-            document.getElementById('thankYouMessage').style.display = 'block';
-
-            document.getElementById('contactForm').reset();
-        });
-    </script>
+    
 
     <script> configObj = {
             "buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z", "buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",

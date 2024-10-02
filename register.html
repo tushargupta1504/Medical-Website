@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="./style3.css">
+    <script type="text/javascript" src="script3.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1 class="form-title">Medical Website</h1>
+        <form onsubmit="return validateInputs()" action="index.html">
+        <class="main-user-info">
+            <div class="user-input-box">
+                <label for="name">Name : </label>
+                <input type="name" id="name" name="name" placeholder="Enter your name">
+            </div>
+        <div class="user-input-box">
+            <label for="email">E-mail : </label>
+            <input type="email" id="email" name="email" placeholder="Enter your mail id">
+        </div>
+        <div class="user-input-box">
+            <label for="password">password : </label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+        </div>
+        <div class="form-submit-button">
+            <input type="submit" value="Register">
+        </div>
+        <div class="register"> 
+            <a href="login.html">Back to login</a>
+        </div>
+    </div>
+        </form>
+    </div>
+</body>
+</html>
