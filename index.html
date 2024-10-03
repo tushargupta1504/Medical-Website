@@ -371,45 +371,47 @@
                     </button>
                 </div>
             </div>
-            <div id="contact"
-            class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
-            <h2 class="text-5xl text-sky-900 font-bold mb-6">Contact Us</h2>
-        
-            <form method="post" action="#" id="contactForm">
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="name">Name</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" type="text" id="nameInput" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="email">Email Address</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" name="email" id="emailInput" type="email" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="subject">Subject</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subjectInput" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="message">Message</label>
-                    <textarea class="mt-1 p-2 w-full border rounded-md" rows="3" name="message" id="messageInput"></textarea>
-                </div>
-        
-                <div class="flex justify-end">
-                    <button
-                        class="text-2xl [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
-                        type="submit" id="contactBtn">
-                        Send Message
-                    </button>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
-                        Thank you! Your message has been sent successfully.
-                    </div>
-                </div>
-            </form>
+            <div id="contact" 
+    style="max-width: 768px; margin: 0 auto; position: relative; overflow: hidden; z-index: 10; background: white; padding: 32px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+    
+    <h2 style="font-size: 3rem; color: #0c4a6e; font-weight: 700; margin-bottom: 24px; text-align: center;">Contact Us</h2>
+
+    <form method="post" action="#" id="contactForm">
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 1.25rem; font-weight: 500; color: #4b5563;" for="name">Name</label>
+            <input style="margin-top: 8px; padding: 8px 16px; width: 100%; border: 1px solid #e2e8f0; border-radius: 8px;" type="text" id="nameInput" />
         </div>
+
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 1.25rem; font-weight: 500; color: #4b5563;" for="email">Email Address</label>
+            <input style="margin-top: 8px; padding: 8px 16px; width: 100%; border: 1px solid #e2e8f0; border-radius: 8px;" name="email" id="emailInput" type="email" />
+        </div>
+
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 1.25rem; font-weight: 500; color: #4b5563;" for="subject">Subject</label>
+            <input style="margin-top: 8px; padding: 8px 16px; width: 100%; border: 1px solid #e2e8f0; border-radius: 8px;" type="text" id="subjectInput" />
+        </div>
+
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 1.25rem; font-weight: 500; color: #4b5563;" for="message">Message</label>
+            <textarea style="margin-top: 8px; padding: 8px 16px; width: 100%; border: 1px solid #e2e8f0; border-radius: 8px;" rows="3" name="message" id="messageInput"></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <button style="font-size: 1.5rem; background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb); color: white; padding: 12px 24px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; transition: opacity 0.3s;" type="submit" id="contactBtn">
+                Send Message
+            </button>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <div id="confirmationMessage" class="alert alert-success" 
+                style="display: none; margin-top: 24px; background-color: #d1e7dd; color: #0f5132; padding: 16px; border-radius: 8px; font-size: 1rem;">
+                Thank you! Your message has been sent successfully.
+            </div>
+        </div>
+    </form>
+</div>
+
         </div>
 
     </div>
