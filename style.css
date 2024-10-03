@@ -28,10 +28,10 @@ section{
 .heading{
     text-align: center;
     font-size: 4rem;
-    color: #333;
+    color: var(--text-color);
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(255,51,153,0.05);
+    background-color: rgba(255,51,153,0.05);
 }
 
 .heading span{
@@ -76,7 +76,7 @@ header .logo{
 header.logo{
 position: relative;
 font-weight: 700;
-color: #fff;
+color: var(--text-color);
 text-decoration: none;
 font-size: 2rem;
 text-transform: uppercase; 
@@ -99,13 +99,13 @@ header ul li a{
     position: relative;
     margin: 0 15px;
     text-decoration: none;
-    color: #666;
+    color: var(--text-color);
     letter-spacing: 2px;
     transition: 0.6s;
     font-weight: 500px;
 }
 header .sticky ul li a{
-   color: #666;
+    color: var(--text-color);
 }
 header .logo span{
     color: var(--blue);
@@ -113,18 +113,18 @@ header .logo span{
 
 header .navbar {
     display: flex;
-    color: #333;
+    color: var(--text-color);
     gap: 2rem; /* Adds space between the links */
 }
 
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #282727;
+    color: var(--text-color);
 }
 
 .navbar a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -143,7 +143,7 @@ header #toggler{
 
 header .fa-bars{
     font-size: 20px;
-    color:#333;
+    color: var(--text-color);
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -172,7 +172,7 @@ header .fa-bars{
 
 .home .content h3{
     font-size: 5rem;
-    color: #ffffff;
+    color: var(--text-color);
     font-weight: bold;
     text-shadow: 0 0 4px #ffffff;
 }
@@ -186,7 +186,7 @@ header .fa-bars{
 
 .home .content p{
     font-size: 1.5rem;
-    color: #ffffff;
+    color: var(--text-color);
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -231,8 +231,9 @@ header .fa-bars{
 
 .about .row .content h3{
     font-size: 3rem;
-    color: #333;
+    color: var(--text-color);
 }
+
 
 .about .row .content p{
     font-size: 1.5rem;
@@ -504,7 +505,7 @@ section {
   }
   
   .services .icon-box h4 a {
-    color: #2c4964;
+    color: var(--text-color);
   }
   
   .services .icon-box p {
@@ -533,7 +534,7 @@ section {
   
   .services .icon-box:hover h4 a,
   .services .icon-box:hover p {
-    color: #fff;
+    color: var(--text-color);
   }
   
 
@@ -646,3 +647,117 @@ textarea {
 #gallery .image-container:hover img {
     transform: scale(1.5);
 }
+
+
+
+/* Default light mode colors */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --header-bg: lightgray;
+}
+
+h2{
+    color: var(--text-color);
+}
+
+span{
+    color: var(--text-color);
+}
+/* Dark mode colors */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #f1f1f1;
+    --header-bg: #1c1c1c;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a{
+    color: var(--text-color);
+}
+
+
+
+li{
+    color: var(--text-color);
+}
+
+h1 {
+    margin: 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#mode-label {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+/* Toggle Switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+    top: 3px;
+    left: 4px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/*---------------------*/
