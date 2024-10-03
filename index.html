@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="img/favicon.png" type="image/png">
     <title>Swasthya Point</title>
 </head>
@@ -200,36 +201,60 @@
         </div> -->
 
 
-    <div class="bg-boz py-3">
+    <div class="bg-boz py-3" id="gallery">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="image-container">
-                        <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
+                        <a href="img/portfolio-6.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
+                        </a>
 
                     </div>
                     <div class="image-container">
-                        <img src="img/portfolio-2.jpg" class="card-img " alt="...">
+                        <a href="img/portfolio-2.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-2.jpg" class="card-img " alt="...">
+                        </a>
 
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="image-container">
-                        <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
+                        <a href="img/portfolio-3.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
+                        </a>
 
                     </div>
                     <div class="image-container">
-                        <img src="img/portfolio-4.jpg" class="card-img" alt="...">
+                        <a href="img/portfolio-4.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-4.jpg" class="card-img" alt="...">
+                        </a>
 
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="image-container">
-                        <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
+                        <a href="img/portfolio-5.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
+                        </a>
 
                     </div>
                     <div class="image-container">
-                        <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
+                        <a href="img/portfolio-1.jpg" 
+                                data-pswp-width="370" 
+                                data-pswp-height="300">
+                            <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
+                        </a>
 
                     </div>
                 </div>
@@ -466,6 +491,17 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            showHideAnimationType: 'fade',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js')
+        });
+        lightbox.init();
+    </script>
 
 
 </body>
