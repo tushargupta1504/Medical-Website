@@ -140,33 +140,41 @@ header .fa-bars{
 }
 
 .home{
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     min-height: 100vh;
-    background: url(img/bg-home.png)no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background: url(img/bg-home.png)no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    padding: 0;
 }
 
 .home .content{
     max-width: 50rem;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
 }
 
 .home .content h3{
     font-size: 5rem;
-    color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 4px #ffffff;
 }
 
 .home .content span{
     font-size: 3.5rem;
-    color: var(--blue);
+    color: #a7e0ff;
     padding: 1rem 0;
     line-height: 1.5;
 }
 
 .home .content p{
     font-size: 1.5rem;
-    color: #000000;
+    color: #ffffff;
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -325,13 +333,13 @@ ul li .nav-link:hover{
     height: 200px;
 }
 
-.carousel-indicators button {
+#bottom-carousel .carousel-indicators button {
     width: 45px !important;
     height: 45px !important;
     border-radius: 50%;
 }
 
-.carousel-indicators button.active {
+#bottom-carousel .carousel-indicators button.active {
     width: 50px !important;
     height: 50px !important;
 }
