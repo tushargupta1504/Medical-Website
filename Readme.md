@@ -46,4 +46,4 @@ Your contributions make a difference! Let's work together to provide a better he
 <br/>
 <h1 align="left">Medical Website Template</h1>
 <br/>
-<img src="img/medical.gif" alt="video">
+<img src="./assets/images/medical.gif" alt="video">

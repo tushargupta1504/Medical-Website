@@ -370,25 +370,25 @@ footer h5 {
     font-family: "Roboto";
 
 }
-
+/* Carousel Button Images */
 .bt1 {
-    background: url("img/feature-1.jpg") center/cover;
+    background: url("../images/feature-1.jpg") center/cover;
 }
 
 .bt2 {
-    background: url("img/feature-2.jpg") center/cover;
+    background: url("../images/feature-2.jpg") center/cover;
 }
 
 .bt3 {
-    background: url("img/feature-3.jpg") center/cover;
+    background: url("../images/feature-3.jpg") center/cover;
 }
 
 .bt4 {
-    background: url("img/feature-4.jpg") center/cover;
+    background: url("../images/feature-4.jpg") center/cover;
 }
 
 .bt5 {
-    background: url("img/feature-5.jpg") center/cover;
+    background: url("../images/feature-5.jpg") center/cover;
 }
 
 
