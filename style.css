@@ -107,8 +107,17 @@ header ul li a{
 header .sticky ul li a{
    color: #666;
 }
+header .logo {
+    display: flex;
+}
 header .logo span{
     color: var(--blue);
+}
+header .logo .medipluse-icon img{
+    padding-top: 10px;
+    height: 40px;
+    width: 60px;
+    
 }
 
 header .navbar {
