@@ -9,8 +9,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>Medical-Website</title>
-</head>
-
+</head
 <body>
     <header id="home" class="min-vh-100 full-height">
         <nav class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-75" aria-label="Main Navigation">
@@ -335,22 +334,46 @@
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+                            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="E-mail">
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
+                            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Subject">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                                 placeholder="Your Message"></textarea>
                         </div>
                         <div class="col d-flex justify-content-center">
-                            <button type="button" class="btn btn-outline-primary">Contact</button>
+                            <button type="button" id="contactButton" class="btn btn-outline-primary">Contact</button>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
+                                Thank you! Your message has been sent successfully.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+<script>
+    // Function to handle the contact button click
+    document.getElementById('contactButton').addEventListener('click', function(event) {
+        // Show the confirmation message
+        document.getElementById('confirmationMessage').style.display = 'block';
+        
+        // Hide the confirmation message after 3 seconds
+        setTimeout(function() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+        }, 3000);
+        
+        // Clear form fields
+        document.getElementById('exampleFormControlInput1').value = '';
+        document.getElementById('exampleFormControlInput2').value = '';
+        document.getElementById('exampleFormControlInput3').value = '';
+        document.getElementById('exampleFormControlTextarea1').value = '';
+    });    
+</script>
 
                     <div id="contact" class="col-md-6">
                         <h2 class="mb-4">Contact Us</h2>
