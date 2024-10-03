@@ -54,16 +54,18 @@ section{
 }
 
 header{
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    width: 100%;
-    background: #fff;
-    padding: 2rem 9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1100;
-    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0; left: 0; right: 0;
+
+        width: 100%;
+        background: rgba(243, 239, 239, 0.8);
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 1100;
+        box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
 }
 
 header .logo{
@@ -118,11 +120,21 @@ header .navbar {
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #666;
+    color: #282727;
 }
 
-header .navbar a:hover{
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
     color: var(--blue);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
 }
 
 header #toggler{
