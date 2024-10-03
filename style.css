@@ -69,10 +69,19 @@ header{
 }
 
 header .logo{
-    font-size: 3rem;
+    font-size: 50px;
     color: #333;
     font-weight: bolder;
+    img{
+        position: absolute;
+     top: 10px;
+     left: 10px;
+     width: 90px; 
+     height: 90px; 
+    
+    }
 }
+
 header.logo{
 position: relative;
 font-weight: 700;
