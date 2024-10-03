@@ -339,6 +339,7 @@ ul li .nav-link:hover{
     width: 98%;
     height: 98%;
     border: 2px solid #97aac3;
+    border-radius: 20%;
 }
 
 .carousel-caption,
@@ -457,11 +458,11 @@ section {
 
 .services .icon-box {
     text-align: center;
-    border: 1px solid #d5e1ed;
-    padding: 20px 20px 10px 20px;
-    transition: all ease-in-out 0.3s;
+    border: 4px solid #405d7a;
+    padding: 20px 20px 20px 20px;
+    transition: all ease-in-out 0.5s;
     width: 95%;
-
+    border-radius: 9%;
   }
   
   .services .icon-box .icon {
@@ -469,7 +470,7 @@ section {
     width: 140px;
     height: 140px;
     background: #1977cc;
-    border-radius: 5px;
+    border-radius: 20%;
     transition: all 0.3s ease-out 0s;
     display: flex;
     align-items: center;
@@ -491,7 +492,7 @@ section {
     height: 100%;
     width: 100%;
     background: #badaf7;
-    border-radius: 5px;
+    border-radius: 20%;
     transition: all 0.3s ease-out 0s;
     transform: translateZ(-1px);
   }
@@ -513,8 +514,9 @@ section {
   }
   
   .services .icon-box:hover {
-    background: #1977cc;
-    border-color: #1977cc;
+    background: #073a68;
+    border-color: #abcfef;
+    transform: scale(1.05);
   }
   
   .services .icon-box:hover .icon {
