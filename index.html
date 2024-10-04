@@ -10,8 +10,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
+        integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Swasthya Point</title>
 </head>
 
@@ -32,9 +35,7 @@
             <a href="#contact">Contact</a>
             <a href="#blogs">Blogs</a>
             <a href="nearby.html">Nearby</a>
-            <a href="appointment.html"><span>Book Your Appointment</span></
-
-        </nav>
+            <a href="appointment.html"><span>Book Your Appointment</span></ </nav>
 
     </header>
 
@@ -55,36 +56,42 @@
 
         <div style="height: 100vh; filter: brightness(0.7);">
 
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="height: 100%;">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                style="height: 100%;">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                <div class="carousel-inner" style="height: 100%;">
-                  <div class="carousel-item active">
-                    <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
-                  </div>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <div class="carousel-inner" style="height: 100%;">
+                    <div class="carousel-item active">
+                        <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </div>
 
     </section>
-   
+
 
     <!-- home section ends-->
 
@@ -96,12 +103,13 @@
 
         <div class="row">
 
-            <div class="video-container">
+            <div class="video-container" data-aos="zoom-in-up">
                 <video src="img/about-video.mp4" loop autoplay muted></video>
                 <h3>who we are</h3>
             </div>
 
-            <div class="content">
+            <div class="content" data-aos="fade-left"
+                data-aos-duration="500">
                 <h3>Our Commitment to Healthcare</h3>
                 <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to our
                     community. </p>
@@ -120,28 +128,28 @@
 
     <section class="icons-container">
 
-        <div class="icons">
+        <div class="icons" data-aos="fade-up">
             <div class="info">
                 <h3>Pharmacy</h3>
                 <span>Prescription and medications.</span>
             </div>
         </div>
 
-        <div class="icons">
+        <div class="icons" data-aos="fade-up" data-aos-duration="500">
             <div class="info">
                 <h3>Maternity Care</h3>
                 <span>Support for new mothers</span>
             </div>
         </div>
 
-        <div class="icons">
+        <div class="icons" data-aos="fade-up" data-aos-duration="600">
             <div class="info">
                 <h3>Mental Health Services</h3>
                 <span>Emotional wellness support</span>
             </div>
         </div>
 
-        <div class="icons">
+        <div class="icons" data-aos="fade-up" data-aos-duration="700">
             <div class="info">
                 <h3>Health Screening</h3>
                 <span>Preventive health evaluations</span>
@@ -152,7 +160,7 @@
 
     <!-- icons section ends -->
 
-    
+
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
         <div class="container">
@@ -163,7 +171,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-right">
                     <div class="icon-box">
                         <div class="icon"><img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology"></div>
                         <h4><a href="">Radiology</a></h4>
@@ -171,42 +179,47 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-down">
                     <div class="icon-box">
-                        <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="Psychiatrist"></div>
+                        <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="Psychiatrist">
+                        </div>
                         <h4><a href="">Psychiatrist</a></h4>
                         <p>Specializes in mental health.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left">
                     <div class="icon-box">
-                        <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="Dermatologist"></div>
+                        <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="Dermatologist">
+                        </div>
                         <h4><a href="">Dermatologist</a></h4>
                         <p>Diagnosis and treatment of skin, hair, and nail conditions.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-right">
                     <div class="icon-box">
-                        <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank"></div>
+                        <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
+                        </div>
                         <h4><a href="">Blood Bank</a></h4>
                         <p>Transfusion medicine and blood donation center.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up">
                     <div class="icon-box">
-                        <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist"></div>
+                        <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
+                        </div>
                         <h4><a href="">Urologist</a></h4>
                         <p>Focuses on conditions affecting the urinary tract.</p>
                     </div>
                 </div>
 
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-left">
                     <div class="icon-box">
-                        <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="Pediatrician"></div>
+                        <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="Pediatrician">
+                        </div>
                         <h4><a href="">Pediatrician</a></h4>
                         <p>Specializes in the medical care of infants, children.</p>
                     </div>
@@ -216,7 +229,7 @@
 
         </div>
     </section><!-- End Services Section -->
-    
+
     <!-- <div class="bg-boz py-3">
             <div class="container">
                 <div class="row">
@@ -241,54 +254,42 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="image-container">
-                        <a href="img/portfolio-6.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up">
+                        <a href="img/portfolio-6.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
                         </a>
 
                     </div>
-                    <div class="image-container">
-                        <a href="img/portfolio-2.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up" >
+                        <a href="img/portfolio-2.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-2.jpg" class="card-img " alt="...">
                         </a>
 
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="image-container">
-                        <a href="img/portfolio-3.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up" data-aos-duration="500">
+                        <a href="img/portfolio-3.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
                         </a>
 
                     </div>
-                    <div class="image-container">
-                        <a href="img/portfolio-4.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up" data-aos-duration="500" >
+                        <a href="img/portfolio-4.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-4.jpg" class="card-img" alt="...">
                         </a>
 
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="image-container">
-                        <a href="img/portfolio-5.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up" data-aos-duration="600">
+                        <a href="img/portfolio-5.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
                         </a>
 
                     </div>
-                    <div class="image-container">
-                        <a href="img/portfolio-1.jpg" 
-                                data-pswp-width="370" 
-                                data-pswp-height="300">
+                    <div class="image-container" data-aos="fade-up" data-aos-duration="600">
+                        <a href="img/portfolio-1.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
                         </a>
 
@@ -307,7 +308,8 @@
                 <div class="d-flex justify-content-center mb-5">
                     <div class="card-body text-center text-white w-50 d-flex flex-column">
                         <h1 class="card-title">''</h1>
-                        <p class="card-text" style="font-size: 20px;">Welcome to a world of personalized healthcare. Schedule appointments,
+                        <p class="card-text" style="font-size: 20px;">Welcome to a world of personalized healthcare.
+                            Schedule appointments,
                             consult with specialists, and access medical resources conveniently online.</p>
 
                     </div>
@@ -372,44 +374,45 @@
                 </div>
             </div>
             <div id="contact"
-            class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
-            <h2 class="text-5xl text-sky-900 font-bold mb-6">Contact Us</h2>
-        
-            <form method="post" action="#" id="contactForm">
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="name">Name</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" type="text" id="nameInput" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="email">Email Address</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" name="email" id="emailInput" type="email" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="subject">Subject</label>
-                    <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subjectInput" />
-                </div>
-        
-                <div class="mb-4">
-                    <label class="block text-xl font-medium text-gray-600" for="message">Message</label>
-                    <textarea class="mt-1 p-2 w-full border rounded-md" rows="3" name="message" id="messageInput"></textarea>
-                </div>
-        
-                <div class="flex justify-end">
-                    <button
-                        class="text-2xl [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
-                        type="submit" id="contactBtn">
-                        Send Message
-                    </button>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
-                        Thank you! Your message has been sent successfully.
+                class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
+                <h2 class="text-5xl text-sky-900 font-bold mb-6">Contact Us</h2>
+
+                <form method="post" action="#" id="contactForm">
+                    <div class="mb-4">
+                        <label class="block text-xl font-medium text-gray-600" for="name">Name</label>
+                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="nameInput" />
                     </div>
-                </div>
-            </form>
-        </div>
+
+                    <div class="mb-4">
+                        <label class="block text-xl font-medium text-gray-600" for="email">Email Address</label>
+                        <input class="mt-1 p-2 w-full border rounded-md" name="email" id="emailInput" type="email" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-xl font-medium text-gray-600" for="subject">Subject</label>
+                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subjectInput" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-xl font-medium text-gray-600" for="message">Message</label>
+                        <textarea class="mt-1 p-2 w-full border rounded-md" rows="3" name="message"
+                            id="messageInput"></textarea>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button
+                            class="text-2xl [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
+                            type="submit" id="contactBtn">
+                            Send Message
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
     </div>
@@ -424,17 +427,17 @@
 
     <script>
         // JavaScript to handle form submission and display thank you message
-        document.getElementById('contactBtn').addEventListener('click', function(event) {
+        document.getElementById('contactBtn').addEventListener('click', function (event) {
             event.preventDefault(); // Prevents the form from being submitted to a server
-            
+
             // Show the confirmation message
             document.getElementById('confirmationMessage').style.display = 'block';
-    
+
             // Hide the confirmation message after a few seconds
-            setTimeout(function() {
+            setTimeout(function () {
                 document.getElementById('confirmationMessage').style.display = 'none';
             }, 3000);
-    
+
             // Clear form fields
             document.getElementById('nameInput').value = '';
             document.getElementById('emailInput').value = '';
@@ -467,7 +470,7 @@
             </div>
         </div>
     </footer>
-    
+
 
     <script> configObj = {
             "buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z", "buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",
@@ -529,7 +532,9 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="./index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"
+        integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
         const lightbox = new PhotoSwipeLightbox({
@@ -540,9 +545,12 @@
         });
         lightbox.init();
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>
 
 </html>
-
