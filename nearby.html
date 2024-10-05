@@ -13,19 +13,30 @@
 
     <style>
          h2 {
+          text-align: center; /* Center alignment */
             font-size: 3rem; 
             margin-top: 20px; 
             color: #333; 
         }
 
         .lead {
-            font-size: 1.5rem; 
+            font-size: 2rem; 
             line-height: 1.6; 
             color: #555; 
+            margin-top: 40px;
+        }
+        .leads {
+            font-size: 2rem; 
+            line-height: 1.6; 
+            color: #555; 
+            text-align: center; /* Center alignment */
+            text-transform: uppercase; /* Capitalize */
+            font-weight: bold; /* Make it bold */
+            padding-top: 60px; /* Add padding */
         }
 
         .hospitals-link {
-         font-size: 1.5rem; 
+         font-size: 1.9rem; 
          color: #4385a9; 
          text-decoration: none; 
         }
@@ -43,7 +54,8 @@
         
         <input type="checkbox" name="" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
-        <a href="#" class="logo">Swasthya<span>.</span></a>
+        <!-- Logo changed to an image -->
+        <a href="#" class="logo"><img src="img/swasthya-logo.png" alt="Swasthya Logo" style="height: 50px;"></a>
          
         <nav class="navbar">
             <a href="index.html">Home</a>
@@ -52,12 +64,13 @@
             <a href="index.html#contact">Contact</a>
             <a href="index.html#blogs">Blogs</a>
             <a href="index.htmlnearby.html">Nearby</a>
+            <a href="appointment.html">Book Your Appointment</a>
         </nav>
 
     </header> 
      <!-- header section ends -->
          <section class="about" id="about">
-          <p class="lead">Find nearby Clinics and Hospitals</p>
+          <p class="leads">Find nearby Clinics and Hospitals</p>
         </div>
       </header>
       <section id="about"></section>
