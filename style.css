@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --blue: #4385a9;
+    --blue:#0B2F9F;
 }
 
 * {
@@ -28,22 +28,23 @@ section{
 .heading{
     text-align: center;
     font-size: 4rem;
-    color: #333;
+    color:#F9F9E0;
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(255,51,153,0.05);
+    background:#0B2F9F;
+    font-family:fantasy;
 }
 
 .heading span{
-    color: var(--blue);
+    color:#ACE2E1;
 }
 
 .btn{
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background: #333;
-    color: #fff;
+    background: #0B2F9F;
+    color:#F9DBBA;
     padding: 0.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
@@ -58,7 +59,7 @@ header{
         top: 0; left: 0; right: 0;
 
         width: 100%;
-        background: rgba(243, 239, 239, 0.8);
+        background:rgb(22, 29, 111);
         padding: 2rem 9%;
         display: flex;
         align-items: center;
@@ -70,18 +71,20 @@ header{
 
 header .logo{
     font-size: 3rem;
-    color: #333;
+    color:#FDFFE2;
     font-weight: bolder;
+    text-decoration:underline;
 }
 header.logo{
 position: relative;
-font-weight: 700;
+font-weight: 800;
 color: #fff;
-text-decoration: none;
+text-decoration:underline;
 font-size: 2rem;
 text-transform: uppercase; 
 letter-spacing: 2px;
 transition: 0.6s;
+font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 header ul{
@@ -120,7 +123,7 @@ header .navbar {
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #282727;
+    color:#C7FFD8;
 }
 
 .navbar a {
@@ -143,11 +146,11 @@ header #toggler{
 
 header .fa-bars{
     font-size: 20px;
-    color:#333;
+    color:#C7FFD8;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
-    border: .1rem solid rgba(0,0,0,0.3);
+    border: .1rem solid white;
     display: none;
 }
 
@@ -198,6 +201,7 @@ header .fa-bars{
     flex-wrap: wrap;
     padding: 2rem 0;
     padding-bottom: 3rem;
+    background-color: #98DED9;
 }
 
 .about .row .video-container{
@@ -231,28 +235,30 @@ header .fa-bars{
 
 .about .row .content h3{
     font-size: 3rem;
-    color: #333;
+    color:#0A1D56 ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .about .row .content p{
     font-size: 1.5rem;
-    color: #999;
+    color:#186F65 ;
     padding: 0.5rem 0;
     padding-top: 1rem;
     line-height: 1.5;
 }
 
 .icons-container{
-    background: #eee;
+    background: #071952;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .icons-container .icons{
-    background: #fff;
+    background:#DAFFFB;
     border: 0.1rem solid rgba(0,0,0,0.1);
     padding: 2rem;
     display: flex;
@@ -261,14 +267,17 @@ header .fa-bars{
 }
 
 .icons-container .icons h3{
-    color: #333;
+    color:#001C30;
     padding-bottom: 0.5rem;
     font-size: 1.5rem;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .icons-container .icons span{
-    color: #555;
+    color:#186F65;
     font-size: 1.3rem;
+    font-family:'Times New Roman', Times, serif;
 }
 
 ul{
@@ -598,7 +607,7 @@ textarea {
     header .navbar a{
         margin: 1.5rem;
         padding: 1.5rem;
-        background: #fff;
+        background:#16325B;
         border: 0.1rem solid rgba(0,0,0,0.1);
         display: block;
     }
