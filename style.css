@@ -103,66 +103,28 @@ section{
 header{
         position: fixed;
         top: 0; left: 0; right: 0;
-
         width: 100%;
         background: rgba(243, 239, 239, 0.8);
-        padding: 2rem 9%;
+        padding: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         z-index: 1100;
-        box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
 }
 
-header .logo{
-    font-size: 3rem;
-    color: #333;
-    font-weight: bolder;
+
+.logo
+{
+    height:50px;
+    margin-left:20px;
 }
-header.logo{
-position: relative;
-font-weight: 700;
-color: #fff;
-text-decoration: none;
-font-size: 2rem;
-text-transform: uppercase; 
-letter-spacing: 2px;
-transition: 0.6s;
+.logo img
+{
+    width: 100%;
+    height: 100%;
+    border:none;
 }
 
-header ul{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-}
-header ul li{
-    position: relative;
-    List-style: none;
-}
-
-header ul li a{
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #666;
-    letter-spacing: 2px;
-    transition: 0.6s;
-    font-weight: 500px;
-}
-header .sticky ul li a{
-   color: #666;
-}
-header .logo span{
-    color: var(--blue);
-}
-
-header .navbar {
-    display: flex;
-    color: #333;
-    gap: 2rem; /* Adds space between the links */
-}
 
 .dark-btn-navbar{
    padding-left: 6em;
@@ -178,7 +140,8 @@ header .navbar a{
 .navbar a {
     color: black;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 5px 18px;
+    font-size: 1.6rem;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
