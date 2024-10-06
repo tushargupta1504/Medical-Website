@@ -21,6 +21,53 @@ html{
     overflow-x: hidden;
 }
 
+label{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+label:before{
+    position: absolute;
+    content: '';
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    transition: 0.4s;
+}
+label.active:before{
+    left: 24px;
+    background: #fff;
+}
+
+body.night{
+    background: #000;
+    color: #fff;
+}
+body.night .icons-container{
+    background: #101010;
+    color: #fff;
+}
+
+body.night .bg-boz{
+    background: #101010;
+    color: #fff;
+}
+
+body.night header{
+    background: #101010;
+    color: #fff;
+}
+body.night header a{
+    color: #101010;
+    color: #fff;
+}
+
 section{
     padding: 2rem 9%;
 }
@@ -78,6 +125,17 @@ header{
     border:none;
 }
 
+
+.dark-btn-navbar{
+   padding-left: 6em;
+   margin-bottom: 5em;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #282727;
+}
 
 .navbar a {
     color: black;

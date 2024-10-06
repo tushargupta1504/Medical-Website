@@ -35,7 +35,12 @@
             <a href="#contact">Contact</a>
             <a href="#blogs">Blogs</a>
             <a href="nearby.html">Nearby</a>
-            <a href="appointment.html"><span>Book Your Appointment</span></ </nav>  <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+            <a href="appointment.html"><span>Book Your Appointment</span></a>
+
+            <div class="dark-btn-navbar">
+                <label  id="dark-change"></label>
+            </div>
+        </nav>  <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule Appointment</a>
             <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
             <a href="#setmore_widget"><span>Schedule And Reminder</span></nav>
 
@@ -110,8 +115,7 @@
                 <h3>who we are</h3>
             </div>
 
-            <div class="content" data-aos="fade-left"
-                data-aos-duration="500">
+            <div class="content" data-aos="fade-left" data-aos-duration="500">
                 <h3>Our Commitment to Healthcare</h3>
                 <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to our
                     community. </p>
@@ -130,7 +134,7 @@
 
     <!-- icons sections starts -->
 
-    <section class="icons-container">
+    <section class="icons-container body.night">
 
         <div class="icons" data-aos="fade-up">
             <div class="info">
@@ -264,7 +268,7 @@
                         </a>
 
                     </div>
-                    <div class="image-container" data-aos="fade-up" >
+                    <div class="image-container" data-aos="fade-up">
                         <a href="img/portfolio-2.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-2.jpg" class="card-img " alt="...">
                         </a>
@@ -278,7 +282,7 @@
                         </a>
 
                     </div>
-                    <div class="image-container" data-aos="fade-up" data-aos-duration="500" >
+                    <div class="image-container" data-aos="fade-up" data-aos-duration="500">
                         <a href="img/portfolio-4.jpg" data-pswp-width="370" data-pswp-height="300">
                             <img src="img/portfolio-4.jpg" class="card-img" alt="...">
                         </a>
@@ -379,7 +383,7 @@
             </div>
             <div id="contact"
                 class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
-                <h2 class="text-5xl text-sky-900 font-bold mb-6">Contact Us</h2>
+                <h2 class="text-5xl text-sky-900  font-bold mb-6">Contact Us</h2>
 
                 <form method="post" action="#" id="contactForm">
                     <div class="mb-4">
@@ -405,7 +409,7 @@
 
                     <div class="flex justify-end">
                         <button
-                            class="text-2xl [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
+                            class="text-2xl d-grid gap-2 col-6 mx-auto [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
                             type="submit" id="contactBtn">
                             Send Message
                         </button>
@@ -427,7 +431,14 @@
     </div>
     </div>
     </section>
-
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
 
     <script>
         // JavaScript to handle form submission and display thank you message
@@ -553,7 +564,6 @@
     <script>
         AOS.init();
     </script>
-
 
 </body>
 
