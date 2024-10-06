@@ -35,7 +35,12 @@
             <a href="#contact">Contact</a>
             <a href="#blogs">Blogs</a>
             <a href="nearby.html">Nearby</a>
-            <a href="appointment.html"><span>Book Your Appointment</span></ </nav>
+            <a href="appointment.html"><span>Book Your Appointment</span></a>
+
+            <div class="dark-btn-navbar">
+                <label  id="dark-change"></label>
+            </div>
+        </nav>
 
     </header>
 
@@ -126,7 +131,7 @@
 
     <!-- icons sections starts -->
 
-    <section class="icons-container">
+    <section class="icons-container body.night">
 
         <div class="icons" data-aos="fade-up">
             <div class="info">
@@ -423,7 +428,14 @@
     </div>
     </div>
     </section>
-
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
 
     <script>
         // JavaScript to handle form submission and display thank you message
@@ -549,7 +561,6 @@
     <script>
         AOS.init();
     </script>
-
 
 </body>
 
