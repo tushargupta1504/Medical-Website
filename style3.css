@@ -1,105 +1,114 @@
-body{
+/* Base styling */
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url("img/Background.jpg");
+    background-color: #f0f4f8; /* Light, neutral background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.main{
-    width: 100%;
-    max-width: 700px;
-    background: rgba(0,0,0,0.5);
-    padding: 28px;
-    margin: 0 28px;
-    border-radius: 10px;
-}
-.form-title{
-    font-size: 60px;
+
+/* Form container styling */
+.main {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.85); /* Translucent white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
     text-align: center;
-    padding-bottom: 5px;
-    font-style: italic;
 }
-.main-user-info{
+
+/* Title styling */
+.form-title {
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* User input styling */
+.main-user-info {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
     padding: 20px 0;
 }
-.user-input-box{
-    justify-content: end;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
+
+.user-input-box {
+    text-align: left;
 }
-.user-input-box label{
-    width: 95%;
-    font-size: 20px;
-    margin: 5px 0;
+
+.user-input-box label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
 }
-.user-input-box input{
-    height: 35px;
-    width: 95%;
-    border-radius: 7px;
+
+.user-input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    transition: border-color 0.3s;
+}
+
+.user-input-box input:focus {
+    border-color: #38cc5d; /* Highlight color when focused */
     outline: none;
-    border: 1px solid grey;
 }
-.gender-details{
+
+/* Submit button styling */
+.form-submit-button input {
     width: 100%;
-    padding: 10px;
-}
-.gender-title{
-    font-size: 23px;
-}
-.gender-category{
-    margin: 15px 0;
-}
-.gender-category label{
-    padding: 0 20px 0 5px;
-}
-.gender-category label,
-.gender-category input,
-.form-submit-button input{
-    cursor: pointer;
-}
-.form-submit-button{
-    width: 100%;
-}
-.form-submit-button input{
-    width: 100%;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #38cc5d;
     border: none;
-    border-radius: 3px;
-    background: rgba(56,204,93,0.7)
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-.form-submit-button input:hover{
-    color: rgb(255,255,255);
+
+.form-submit-button input:hover {
+    background: #2fa04b;
 }
-.register{
-    font-size: 25px;
-    text-align: center;
-    padding-top: 20px;
+
+/* Register link styling */
+.register {
+    font-size: 16px;
+    margin-top: 15px;
 }
-@media(max-width: 600px){
-    .main{
-        min-width: 200px;
-    }
-    .user-input-box{
-        margin-bottom: 12px;
-        width: 100%;
-    }
-    .gender-category{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .main-user-info{
-        max-height: 300px;
-        overflow: auto;
-    }
-    .main-user-info::-webkit-scrollbar{
-        width: 0;
+
+.register a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register a:hover {
+    color: #38cc5d;
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-title {
+        font-size: 30px;
     }
 }
