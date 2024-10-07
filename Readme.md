@@ -1,6 +1,10 @@
-# <p align="center">**Swasthya🩺**
-<img src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-HEALTHCARE PLATFORM"/>
+<p align="center">
+    **Medical🩺**
 </p>
+<p align="center">
+    <img src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-HEALTHCARE PLATFORM" alt="Welcome to HEALTHCARE PLATFORM" />
+</p>
+
 
 
 Our platform revolutionizes healthcare by offering **online medical consultations** and providing **reliable health information** at your fingertips. We ensure access to the **latest diagnostic tests**, **stress management consultancy**, and a wide range of **affordable medical services**. Our mission is to make healthcare **easily accessible** and **affordable** for all. Whether you're seeking advice in **Cardiology**, **Neurology**, **Hepatology**, or any other medical field, we’ve got you covered!
