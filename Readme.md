@@ -13,11 +13,11 @@ Our platform revolutionizes healthcare by offering **online medical consultation
 ## 🚀 Scope for Improvement and Contributions
 We warmly welcome **all contributors** to enhance our platform and bring innovative solutions. Some key areas where you can contribute include:
 
-- **Payment System Integration**
-- **Video Consulting Features**
-- **Integration with Local Medicine Providers**
+- **Payment System Integration**: Streamline transactions and support multiple payment methods.
+- **Video Consultation Features**: Enable face-to-face interaction between doctors and patients.
+- **Integration with Local Medicine Providers**: Link local pharmacies for medicine delivery.
 - **Online Delivery of Medical Kits and Medicines** through partner networks
-- **Telehealth Scheduling and Reminders**
+- **Telehealth Scheduling and Reminders**: Automate reminders for medical consultations.
 - **Real-Time Health Monitoring** (wearables integration)
 - **Multi-language Support** for global accessibility
 - **Patient Health Records Management** for secure and easy tracking
@@ -41,6 +41,16 @@ Deploying with Docker makes for an easy and consistant development experience
 - **Run Compose Command**: Run the docker compose command. 'docker compose up -d'
 - **Open a browser**: Navigate to the url http://localhost:9090
 - **Enjoy!**: You should be able to navigate the website in your browser!
+
+## 🤝 Contribution Guidelines
+We welcome contributions to improve the platform! To contribute:
+
+1. **Fork the repository**.
+2. **Create a feature branch**: `git checkout -b feature-branch-name`.
+3. **Commit your changes**: `git commit -m "Describe your changes"`.
+4. **Push to the branch**: `git push origin feature-branch-name`.
+5. **Create a pull request**.
+
 
 Your contributions make a difference! Let's work together to provide a better healthcare experience for all.
 <br/>
