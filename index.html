@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
         integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,7 +40,9 @@
             <div class="dark-btn-navbar">
                 <label id="dark-change"></label>
             </div>
-        </nav>
+      <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+            <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+            <a href="#setmore_widget"><span>Schedule And Reminder</span></nav>
 
     </header>
 
@@ -119,6 +122,8 @@
                 <p>Our expert team of professionals leverages advanced technology to provide personalized care across a
                     wide range of specialties, including emergency services and wellness programs.</p>
                 <a href="#" class="btn">Learn more</a>
+            
+
             </div>
 
         </div>
@@ -231,28 +236,7 @@
             </div>
 
         </div>
-    </section><!-- End Services Section -->
-
-    <!-- <div class="bg-boz py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-2.jpg" class="card-img " alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-4.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
+    </section>
     <div class="bg-boz py-3" id="gallery">
         <div class="container">
             <div class="row">
@@ -444,10 +428,8 @@
                         Thank you! Your message has been sent successfully.
                     </div>
                 </div>
-            </div>            
-            
-            
-    </div>
+            </div>                       
+       </div>
 
 
     </div>
@@ -467,7 +449,25 @@
     <script>
         // JavaScript to handle form submission and display thank you message
         document.getElementById('contactBtn').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevents the form from being submitted to a server
+            event.preventDefault();// Prevents the form from being submitted to a server
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate the fields
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Email validation regex
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
 
             // Show the confirmation message
             document.getElementById('confirmationMessage').style.display = 'block';
@@ -483,6 +483,7 @@
             document.getElementById('subjectInput').value = '';
             document.getElementById('messageInput').value = '';
         });
+
     </script>
 
 
