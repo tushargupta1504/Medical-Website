@@ -530,50 +530,50 @@
                                     <form>
                                         <div class="row g-3">
                                             <div class="col-md-6">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <input type="text" class="form-control" id="name" name="name"
                                                         placeholder="Your Name" required>
                                                     <label for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <input type="email" class="form-control" id="email" name="email"
                                                         placeholder="Your Email" required>
                                                     <label for="email">Your Email</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <input type="tel" class="form-control" id="phone" name="phone"
-                                                        placeholder="Your Phone Number" required>
+                                                        placeholder="Your Phone Number" required style=" height: 50px; font-size: 15px;">
                                                     <label for="phone">Your Phone Number</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <input type="text" class="form-control" id="city" name="city"
                                                         placeholder="Your City" required>
                                                     <label for="city">Your City</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <input type="text" class="form-control" id="subject" name="subject"
                                                         placeholder="Subject" required>
                                                     <label for="subject">Subject</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="form-floating">
+                                                <div class="form">
                                                     <textarea class="form-control" placeholder="Leave a message here"
-                                                        id="message" name="message" style="height: 100px"
+                                                        id="message" name="message" style="height: 100px ; font-size: 15px;"
                                                         required></textarea>
                                                     <label for="message">Message</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <button class="btn btn-primary w-100 py-3" type="submit">Send
+                                                <button class="btn btn-primary w-100 py-3" id="contact">Send
                                                     Message</button>
                                             </div>
                                         </div>
@@ -612,44 +612,36 @@
         </script>
 
         <script>
-            // JavaScript to handle form submission and display thank you message
-            document.getElementById('contactBtn').addEventListener('click', function (event) {
-                event.preventDefault();// Prevents the form from being submitted to a server
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const subject = document.getElementById('subject').value.trim();
-                const message = document.getElementById('message').value.trim();
+            // Get the form and submit button
+const form = document.querySelector('form');
+const submitButton = document.querySelector('#contact');
 
-                // Validate the fields
-                if (!name || !email || !subject || !message) {
-                    alert("Please fill in all fields.");
-                    return;
-                }
+// Add an event listener to the submit button
+submitButton.addEventListener('click', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
 
-                // Email validation regex
-                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-                if (!email.match(emailPattern)) {
-                    alert("Please enter a valid email address.");
-                    return;
-                }
+    // Get the input fields
+    const nameInput = document.querySelector('#name');
+    const emailInput = document.querySelector('#email');
+    const phoneInput = document.querySelector('#phone');
+    const cityInput = document.querySelector('#city');
+    const subjectInput = document.querySelector('#subject');
+    const messageInput = document.querySelector('#message');
 
+    // Clear the input fields
+    nameInput.value = '';
+    emailInput.value = '';
+    phoneInput.value = '';
+    cityInput.value = '';
+    subjectInput.value = '';
+    messageInput.value = '';
 
-                // Show the confirmation message
-                document.getElementById('confirmationMessage').style.display = 'block';
-
-                // Hide the confirmation message after a few seconds
-                setTimeout(function () {
-                    document.getElementById('confirmationMessage').style.display = 'none';
-                }, 3000);
-
-                // Clear form fields
-                document.getElementById('nameInput').value = '';
-                document.getElementById('emailInput').value = '';
-                document.getElementById('subjectInput').value = '';
-                document.getElementById('messageInput').value = '';
-            });
-
+    // Display an alert
+    alert('Your details have been submitted!');
+});
         </script>
+      
 
 
         </main>
