@@ -159,7 +159,7 @@ By following these steps, you can easily contribute to this project! If you have
 
 ## 📢Contributors📢
 
-<a href="https://github.com/tushargupta1504/Medical-Website/graphs/contributors> <img src="https://contrib.rocks/image?repo=tushargupta1504/Medical-Website" /> </a>
+<a href="https://github.com/tushargupta1504/Medical-Website/graphs/contributors"> <img src="https://contrib.rocks/image?repo=tushargupta1504/Medical-Website" /> </a>
 
 Your contributions make a difference! Let's work together to provide a better healthcare experience for all.
 
