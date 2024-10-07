@@ -384,23 +384,23 @@
                 <form method="post" action="#" id="contactForm">
                     <div class="mb-4">
                         <label class="block text-xl font-medium text-gray-600" for="name">Name</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="nameInput" />
+                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="name" name="name" placeholder="Enter your name" required/>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-xl font-medium text-gray-600" for="email">Email Address</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" name="email" id="emailInput" type="email" />
+                        <input class="mt-1 p-2 w-full border rounded-md" name="email" id="email" type="email" name="email" placeholder="Enter your email" required />
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-xl font-medium text-gray-600" for="subject">Subject</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subjectInput" />
+                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subject" name="subject" placeholder="Enter subject" required/>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-xl font-medium text-gray-600" for="message">Message</label>
                         <textarea class="mt-1 p-2 w-full border rounded-md" rows="3" name="message"
-                            id="messageInput"></textarea>
+                            id="message" placeholder="Write a Message" required></textarea>
                     </div>
 
                     <div class="flex justify-end">
@@ -439,7 +439,25 @@
     <script>
         // JavaScript to handle form submission and display thank you message
         document.getElementById('contactBtn').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevents the form from being submitted to a server
+            event.preventDefault();// Prevents the form from being submitted to a server
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate the fields
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Email validation regex
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
 
             // Show the confirmation message
             document.getElementById('confirmationMessage').style.display = 'block';
@@ -455,6 +473,7 @@
             document.getElementById('subjectInput').value = '';
             document.getElementById('messageInput').value = '';
         });
+
     </script>
 
 
