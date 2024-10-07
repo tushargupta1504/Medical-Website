@@ -1,41 +1,131 @@
-*{
+* {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.color-teal{
+
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0; /* Add padding to ensure the content doesn't touch the top and bottom */
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    max-width: 90%; /* Ensure the container is responsive */
+    margin: 20px; /* Add margin to create space around the container */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.color-teal {
     color: teal;
 }
-.icon-lg{
+
+.icon-lg {
     font-size: 50px;
 }
-.remove-bullets{
+
+.remove-bullets {
     text-decoration: none;
 }
-.remove-text-decoration{
+
+.remove-text-decoration {
     list-style: none;
 }
-#about-us{
+
+#about-us {
     margin-top: 20px;
 }
-p{
+
+p {
     font-size: 20px;
 }
+
 .filter {
     padding: 10px;
     border: none;
     background-color: inherit;
     margin: auto;
 }
-ul{
+
+ul {
     list-style: none;
 }
-.doctor{
+
+.doctor {
     text-decoration: none;
     color: inherit;
 }
-.doctor:hover{
+
+.doctor:hover {
     text-decoration: underline;
 }
-.contact{
+
+.contact {
     padding: 10px;
     margin: auto;
     background-color: rgb(20, 205, 208);
@@ -43,15 +133,18 @@ ul{
     border-radius: 7px;
     font-weight: bold;
 }
-.card{
+
+.card {
     margin-bottom: 3rem;
 }
-.contactus{
+
+.contactus {
     color: aliceblue;
     font-size: small;
     opacity: 0.7;
 }
-.writetous{
+
+.writetous {
     border: none;
     border-radius: 7px;
     padding: 5px;

@@ -2,29 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f0f4f8;
+    background-color: #e0f7fa;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px 0;
+    /* Add some padding to the body to ensure the container doesn't touch the edges */
 }
 
 .container {
-    background-color: white;
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    max-width: 100%;
+    /* Ensure the container is responsive */
+    margin: 20px;
+    /* Add margin to the container to create space around it */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 25px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .appointment-form {
@@ -33,40 +46,53 @@ h1 {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #555555;
+    font-weight: 500;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333333;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4caf50;
+    background-color: #ffffff;
+    outline: none;
 }
 
 .form-group textarea {
-    resize: none;
+    resize: vertical;
 }
 
 .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 12px;
+    font-size: 17px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn:hover {
     background-color: #45a049;
+    transform: scale(1.02);
 }
-

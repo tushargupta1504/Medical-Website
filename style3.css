@@ -1,105 +1,131 @@
-body{
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     background-image: url("img/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px; /* Add padding to ensure the form doesn't touch the edges */
 }
-.main{
+
+.main {
     width: 100%;
     max-width: 700px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 28px;
-    margin: 0 28px;
+    margin: 20px; /* Add margin to create space around the container */
     border-radius: 10px;
 }
-.form-title{
+
+.form-title {
     font-size: 60px;
     text-align: center;
     padding-bottom: 5px;
     font-style: italic;
+    color: #fff; /* Add color for better readability */
 }
-.main-user-info{
+
+.main-user-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 0;
 }
-.user-input-box{
-    justify-content: end;
+
+.user-input-box {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 15px;
 }
-.user-input-box label{
+
+.user-input-box label {
     width: 95%;
     font-size: 20px;
     margin: 5px 0;
+    color: #fff; /* Add color for better readability */
 }
-.user-input-box input{
+
+.user-input-box input {
     height: 35px;
     width: 95%;
     border-radius: 7px;
     outline: none;
     border: 1px solid grey;
+    padding: 5px; /* Add padding for better usability */
 }
-.gender-details{
+
+.gender-details {
     width: 100%;
     padding: 10px;
 }
-.gender-title{
+
+.gender-title {
     font-size: 23px;
+    color: #fff; /* Add color for better readability */
 }
-.gender-category{
+
+.gender-category {
     margin: 15px 0;
 }
-.gender-category label{
+
+.gender-category label {
     padding: 0 20px 0 5px;
+    color: #fff; /* Add color for better readability */
 }
+
 .gender-category label,
 .gender-category input,
-.form-submit-button input{
+.form-submit-button input {
     cursor: pointer;
 }
-.form-submit-button{
+
+.form-submit-button {
     width: 100%;
 }
-.form-submit-button input{
+
+.form-submit-button input {
     width: 100%;
     margin-top: 10px;
     font-size: 20px;
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background: rgba(56,204,93,0.7)
+    background: rgba(56, 204, 93, 0.7);
+    color: #fff; /* Add color for better readability */
 }
-.form-submit-button input:hover{
-    color: rgb(255,255,255);
+
+.form-submit-button input:hover {
+    background: rgba(56, 204, 93, 1); /* Enhance hover effect */
 }
-.register{
+
+.register {
     font-size: 25px;
     text-align: center;
     padding-top: 20px;
+    color: #fff; /* Add color for better readability */
 }
-@media(max-width: 600px){
-    .main{
+
+@media (max-width: 600px) {
+    .main {
         min-width: 200px;
     }
-    .user-input-box{
+    .user-input-box {
         margin-bottom: 12px;
         width: 100%;
     }
-    .gender-category{
+    .gender-category {
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
-    .main-user-info{
+    .main-user-info {
         max-height: 300px;
         overflow: auto;
     }
-    .main-user-info::-webkit-scrollbar{
+    .main-user-info::-webkit-scrollbar {
         width: 0;
     }
 }
