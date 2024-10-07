@@ -473,18 +473,19 @@ section {
 
 .services .icon-box {
     text-align: center;
-    border: 4px solid #405d7a;
+    background: linear-gradient(106deg,#858383,#ffffff);
+    border: none;
     padding: 20px 20px 20px 20px;
     transition: all ease-in-out 0.5s;
     width: 95%;
-    border-radius: 9%;
+    border-radius: 4%;
   }
   
   .services .icon-box .icon {
     margin: 0 auto;
     width: 140px;
     height: 140px;
-    background: #1977cc;
+    background: #ffffff;
     border-radius: 20%;
     transition: all 0.3s ease-out 0s;
     display: flex;
@@ -519,7 +520,7 @@ section {
   }
   
   .services .icon-box h4 a {
-    color: #2c4964;
+    color: #4b4d4f;
   }
   
   .services .icon-box p {
@@ -529,8 +530,8 @@ section {
   }
   
   .services .icon-box:hover {
-    background: #073a68;
-    border-color: #abcfef;
+    background: #b9cee1;
+    border-color: #7b7b7b;
     transform: scale(1.05);
   }
   
