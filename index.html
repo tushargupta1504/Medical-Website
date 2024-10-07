@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
         integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,12 +34,12 @@
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
-            <a href="#blogs">Blogs</a>
+            <a href="blog.html">Blogs</a>
             <a href="nearby.html">Nearby</a>
             <a href="appointment.html"><span>Book Your Appointment</span></a>
 
             <div class="dark-btn-navbar">
-                <label  id="dark-change"></label>
+                <label id="dark-change"></label>
             </div>
       <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule Appointment</a>
             <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
@@ -312,7 +313,7 @@
 
     <div class="bg-mavi py-5">
         <div class="container">
-            <div class="col d-flex flex-column " id="bottom-carousel">
+            <div class=" d-flex flex-column " id="bottom-carousel">
                 <div class="d-flex justify-content-center mb-5">
                     <div class="card-body text-center text-white w-50 d-flex flex-column">
                         <h1 class="card-title">''</h1>
@@ -381,7 +382,7 @@
                     </button>
                 </div>
             </div>
-            <div id="contact"
+            <!-- <div id="contact"
                 class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
                 <h2 class="text-5xl text-sky-900  font-bold mb-6">Contact Us</h2>
 
@@ -420,8 +421,47 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
+            
+                    <div class="box-contact" id="contact" style="margin: 0 430px;">
+                        <div class="top-header">
+                            Get a call Back
+                        </div>
+                        <div class="input-group">
+                            <div class="input-field">
+                                <input type="text" class="input-box" placeholder="Enter Name *">
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="input-box" placeholder="Enter Phone Number *">
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="input-box" placeholder="Enter Email *">
+                            </div>
+                            <div class="submit1">
+                                <button class="submit">Submit</button>
+                            </div>
+                            <p>Or</p>
+                            <div class="submit2">
+                                <a href="appointment.html">
+                                    <button class="submit">Book an Appointment</button>
+                                </a>
+                            </div>
+                            <div class="remember">
+                                <input type="checkbox" class="check" id="formcheck">
+                                <p>I agree to the terms and conditions</p>
+                                <!-- <label for="formcheck">I agree to the terms and conitions</label> -->
+                            </div>
+                            <div class="mail-blog">
+                                <p>Email- SwasthyaPoint@healthcare.com</p>
+                            </div>
+                            <div class="phn-blog">
+                                <p>Phone- 1-888-299-2000</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
 
     </div>
 
@@ -434,7 +474,7 @@
     <script>
         var content = document.getElementsByTagName('body')[0];
         var darkMode = document.getElementById('dark-change');
-        darkMode.addEventListener('click', function(){
+        darkMode.addEventListener('click', function () {
             darkMode.classList.toggle('active');
             content.classList.toggle('night');
         })
