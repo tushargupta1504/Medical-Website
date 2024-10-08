@@ -57,6 +57,9 @@
                 background-color: #0056b3;
                 /* Darker shade on hover */
             }
+            .our_radio_service{
+                size: 20px;
+            }
 
             /* Responsive design */
             @media (max-width: 768px) {
@@ -65,6 +68,11 @@
                     /* Adjust padding on smaller screens */
                 }
             }
+            .list-group-item {
+                background-color: transparent; 
+                color: inherit;
+            }
+
         </style>
     </head>
 
@@ -79,9 +87,9 @@
 
             <nav class="navbar">
 
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#services">Services</a>
                 <a href="#contact">Contact</a>
                 <a href="blog.html">Blogs</a>
                 <a href="nearby.html">Nearby</a>
@@ -159,331 +167,70 @@
 
         <!-- about section starts -->
 
-        <section class="about" id="about">
-
-            <h1 class="heading"> <span> about </span> us </h1>
-
-            <div class="row">
-
-                <div class="video-container" data-aos="zoom-in-up">
-                    <video src="img/about-video.mp4" loop autoplay muted></video>
-                    <h3>who we are</h3>
+        <section class="about container-fluid py-5" id="about">
+            <div class="container">
+                <h1 class="heading text-center mb-5"> 
+                    <span class="text-primary">Urology</span> 
+                </h1>
+        
+                <div class="row">
+                    <div class="col-md-12" data-aos="fade-left" data-aos-duration="500">
+                        <h3 class="mb-4 fs-2">Advanced Urology Services</h3>
+                        <p class="mb-5 fs-5">At Swasthya Point, we offer comprehensive urology services to address a wide range of urinary and male reproductive system conditions. Our experienced urologists utilize advanced techniques and technologies to provide effective treatments tailored to each patient's needs.</p>
+                        
+                        <h4 class="our_radio_service mb-4 text-primary fs-3">Our Urology Services</h4>
+                        <p class="mb-4 fs-5">We provide a full spectrum of urology services to support the health and well-being of our patients:</p>
+        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item mb-4">
+                                <h5 class="font-weight-bold fs-4">1. Kidney Stone Management</h5>
+                                <p class="fs-5">Our team specializes in diagnosing and treating kidney stones using both non-invasive and minimally invasive techniques to relieve symptoms and prevent recurrence.</p>
+                                <p class="fs-6"><strong>Treatment Options:</strong> Extracorporeal shock wave lithotripsy (ESWL), ureteroscopy, and percutaneous nephrolithotomy.</p>
+                            </li>
+        
+                            <li class="list-group-item mb-4">
+                                <h5 class="font-weight-bold fs-4">2. Prostate Health Services</h5>
+                                <p class="fs-5">We provide comprehensive evaluations and treatments for prostate conditions, including benign prostatic hyperplasia (BPH) and prostate cancer.</p>
+                                <p class="fs-6"><strong>Management Strategies:</strong> Medication, minimally invasive procedures, and surgical options.</p>
+                            </li>
+        
+                            <li class="list-group-item mb-4">
+                                <h5 class="font-weight-bold fs-4">3. Urinary Incontinence Treatment</h5>
+                                <p class="fs-5">Our specialists offer various treatment options for urinary incontinence, helping patients regain control and improve their quality of life.</p>
+                                <p class="fs-6"><strong>Treatment Options:</strong> Behavioral therapies, medications, and surgical interventions.</p>
+                            </li>
+        
+                            <li class="list-group-item mb-4">
+                                <h5 class="font-weight-bold fs-4">4. Male Infertility Solutions</h5>
+                                <p class="fs-5">We provide evaluations and treatment plans for male infertility, utilizing advanced diagnostic tools and assisted reproductive technologies.</p>
+                                <p class="fs-6"><strong>Services Offered:</strong> Semen analysis, hormonal therapy, and surgical sperm retrieval.</p>
+                            </li>
+        
+                            <li class="list-group-item mb-4">
+                                 <h5 class="font-weight-bold fs-4">5. Urologic Oncology</h5>
+                                <p class="fs-5">Our urologic oncology services focus on the diagnosis and treatment of cancers of the urinary system and male reproductive organs, offering comprehensive care for patients.</p>
+                                <p class="fs-6"><strong>Treatment Options:</strong> Surgery, chemotherapy, and immunotherapy.</p>
+                            </li>
+        
+                            <li class="list-group-item mb-4">
+                                <h5 class="font-weight-bold fs-4">6. Pediatric Urology</h5>
+                                <p class="fs-5">We offer specialized urologic care for children, addressing congenital and acquired conditions with a compassionate approach tailored to young patients.</p>
+                                <p class="fs-6"><strong>Conditions Treated:</strong> Undescended testicles, vesicoureteral reflux, and urinary tract infections.</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-4 fs-5">Learn more</a>
+                    </div>
                 </div>
-
-                <div class="content" data-aos="fade-left" data-aos-duration="500">
-                    <h3>Our Commitment to Healthcare</h3>
-                    <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
-                        our
-                        community. </p>
-                    <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
-                        across
-                        various specialties, including emergency services and wellness programs.</p>
-                    <a href="#" class="btn">Learn more</a>
-
-
-                </div>
-
             </div>
-
         </section>
+        
+        
+        
 
+          
         <!-- about section ends -->
 
-        <!-- icons sections starts -->
 
-        <section class="icons-container body.night">
-
-            <div class="icons" data-aos="fade-up">
-                <div class="info">
-                    <h3>Pharmacy</h3>
-                    <span>Prescription and medications.</span>
-                </div>
-            </div>
-
-            <div class="icons" data-aos="fade-up" data-aos-duration="500">
-                <div class="info">
-                    <h3>Maternity Care</h3>
-                    <span>Support for new mothers</span>
-                </div>
-            </div>
-
-            <div class="icons" data-aos="fade-up" data-aos-duration="600">
-                <div class="info">
-                    <h3>Mental Health Services</h3>
-                    <span>Emotional wellness support</span>
-                </div>
-            </div>
-
-            <div class="icons" data-aos="fade-up" data-aos-duration="700">
-                <div class="info">
-                    <h3>Health Screening</h3>
-                    <span>Preventive health evaluations</span>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- icons section ends -->
-
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p><br></p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-right">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology">
-                            </div>
-                            <h4><a href="radiology.html">Radiology</a></h4>
-                            <p>To visualize internal structures and diagnose conditions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-down">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs"
-                                    alt="Psychiatrist">
-                            </div>
-                            <h4><a href="psychatry.html">Psychiatry</a></h4>
-                            <p>Specializes in mental health.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs"
-                                    alt="Dermatology">
-                            </div>
-                            <h4><a href="dermatology.html">Dermatologist</a></h4>
-                            <p>Diagnosis and treatment of skin, hair, and nail conditions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-right">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
-                            </div>
-                            <h4><a href="bloodbank.html">Blood Bank</a></h4>
-                            <p>Transfusion medicine and blood donation center.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
-                            </div>
-                            <h4><a href="urology.html">Urology</a></h4>
-                            <p>Focuses on conditions affecting the urinary tract.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-left">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs"
-                                    alt="Pediatrician">
-                            </div>
-                            <h4><a href="pediatrics.html">Pediatrician</a></h4>
-                            <p>Specializes in the medical care of infants, children.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Services Section -->
-
-        <!-- <div class="bg-boz py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-2.jpg" class="card-img " alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-4.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-        <div class="bg-boz py-3" id="gallery">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="image-container" data-aos="fade-up">
-                            <a href="img/portfolio-6.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
-                            </a>
-
-                        </div>
-                        <div class="image-container" data-aos="fade-up">
-                            <a href="img/portfolio-2.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-2.jpg" class="card-img " alt="...">
-                            </a>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="image-container" data-aos="fade-up" data-aos-duration="500">
-                            <a href="img/portfolio-3.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
-                            </a>
-
-                        </div>
-                        <div class="image-container" data-aos="fade-up" data-aos-duration="500">
-                            <a href="img/portfolio-4.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-4.jpg" class="card-img" alt="...">
-                            </a>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="image-container" data-aos="fade-up" data-aos-duration="600">
-                            <a href="img/portfolio-5.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
-                            </a>
-
-                        </div>
-                        <div class="image-container" data-aos="fade-up" data-aos-duration="600">
-                            <a href="img/portfolio-1.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <div class="bg-mavi py-5">
-            <div class="container">
-                <div class=" d-flex flex-column " id="bottom-carousel">
-                    <div class="d-flex justify-content-center mb-5">
-                        <div class="card-body text-center text-white w-50 d-flex flex-column">
-                            <h1 class="card-title">''</h1>
-                            <p class="card-text" style="font-size: 20px;">Welcome to a world of personalized healthcare.
-                                Schedule appointments,
-                                consult with specialists, and access medical resources conveniently online.</p>
-
-                        </div>
-                    </div>
-
-
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active bt1" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                class="bt2" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                class="bt3" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                                class="bt4" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                                class="bt5" aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Jane Galadriel</h6>
-                                    <p>Ceo Tengkurep</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Jane Galadriel</h6>
-                                    <p>Ceo Tengkurep</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Jane Galadriel</h6>
-                                    <p>Ceo Tengkurep</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Jane Galadriel</h6>
-                                    <p>Ceo Tengkurep</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
-                                    <h6>Jane Galadriel</h6>
-                                    <p>Ceo Tengkurep</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-                <!-- <div id="contact"
-                class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
-                <h2 class="text-5xl text-sky-900  font-bold mb-6">Contact Us</h2>
-
-                <form method="post" action="#" id="contactForm">
-                    <div class="mb-4">
-                        <label class="block text-xl font-medium text-gray-600" for="name">Name</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="name" name="name" placeholder="Enter your name" required/>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-xl font-medium text-gray-600" for="email">Email Address</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" name="email" id="email" type="email" name="email" placeholder="Enter your email" required />
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-xl font-medium text-gray-600" for="subject">Subject</label>
-                        <input class="mt-1 p-2 w-full border rounded-md" type="text" id="subject" name="subject" placeholder="Enter subject" required/>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-xl font-medium text-gray-600" for="message">Message</label>
-                        <textarea class="mt-1 p-2 w-full border rounded-md" rows="3" name="message"
-                            id="message" placeholder="Write a Message" required></textarea>
-                    </div>
-
-                    <div class="flex justify-end">
-                        <button
-                            class="text-2xl d-grid gap-2 col-6 mx-auto [background:linear-gradient(144deg,#af40ff,#5b42f3_50%,#00ddeb)] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
-                            type="submit" id="contactBtn">
-                            Send Message
-                        </button>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
-                            Thank you! Your message has been sent successfully.
-                        </div>
-                    </div>
-                </form>
-            </div> -->
                 <!-- Contact Start -->
                 <div class="container-xxl py-5">
                     <div class="container">
