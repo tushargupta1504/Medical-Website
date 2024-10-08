@@ -71,15 +71,43 @@
     <body>
         <!-- header section starts -->
 
-        <header>
-
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
-            <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
+        <header >
 
             <nav class="navbar">
+                <div class="flex gap-20">
+                <div>
+                    <img class="h-20" src="img/swasthya-logo.png"> 
+                </div>
+                <div class="flex ">
+                <ul class="flex justify-end align-items-center gap-10">
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="blog.html">Blogs</a>
+                    <a href="nearby.html">Nearby</a>
+                    <a href="appointment.html"><span>Book Your Appointment</span></a>
+                </ul>
+                <li class="nav-item dropdown align-items-center flex">
+                    <a class=" dropdown-toggle align-items-center flex justify-content-center visible" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu visible" aria-labelledby="navbarDropdown">
+                        <!-- <a href="https://yourcompany.setmore.com">Schedule Appointment</a> -->
+                        <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+                        <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
+                        <a href="user_login.html">User Login</a>
+                        <a href="#">Doctor Login</a>
+                        <a href="#">Admin Login</a> 
+                  </li>
+            </div>
+        </div>
+                
+       
+                  </nav> 
 
-                <a href="#home">Home</a>
+
+
+                <!-- <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
@@ -90,13 +118,8 @@
                 <div class="dark-btn-navbar">
                     <label id="dark-change"></label>
                 </div>
-                <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule
-                    Appointment</a>
-                <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-                <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
-                <a href="user_login.html">User Login</a>
-                <a href="#">Doctor Login</a>
-                <a href="#">Admin Login</a>
+                telehealth reminders and schedules-->
+                  
             </nav>
 
         </header>
