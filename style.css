@@ -127,21 +127,22 @@ header{
 
 
 .dark-btn-navbar{
-   padding-left: 6em;
+   padding-left: 14em;
    margin-bottom: 5em;
 }
 
 header .navbar a{
-    font-size: 2rem;
-    padding: 0 1.5rem;
+    font-size: 15px;
+    padding: 10px;
     color: #282727;
+    font-weight: bold;
 }
 
 .navbar a {
     color: black;
     text-decoration: none;
-    padding: 5px 18px;
-    font-size: 1.6rem;
+    margin: 5px;
+    font-size: 10px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -152,9 +153,6 @@ header .navbar a{
 
 }
 
-header #toggler{
-    display: none;
-}
 
 header .fa-bars{
     font-size: 20px;
@@ -661,4 +659,16 @@ textarea {
 
 #gallery .image-container:hover img {
     transform: scale(1.5);
+}
+
+.container-xxl .container{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.carousel-inner .carousel-item .carousel-caption h4{
+    font-size: 30px;
+}
+.carousel-inner .carousel-item .carousel-caption p{
+    font-size: 18px;
 }
