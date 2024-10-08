@@ -5,9 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
@@ -72,7 +70,6 @@
         <!-- header section starts -->
 
         <header>
-
             <input type="checkbox" name="" id="toggler">
             <label for="toggler" class="fas fa-bars"></label>
             <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
@@ -81,24 +78,25 @@
 
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
-                <a href="#services">Services</a>
+                <div class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="#services">Our Services</a>
+                        <a href="appointment.html">Book Your Appointment</a>
+                        <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+                        <a href="#setmore_widget">Schedule And Reminder</a>
+                    </div>
+                </div>
                 <a href="#contact">Contact</a>
                 <a href="blog.html">Blogs</a>
                 <a href="nearby.html">Nearby</a>
-                <a href="appointment.html"><span>Book Your Appointment</span></a>
+                <a href="user_login.html">Login</a>
 
                 <div class="dark-btn-navbar">
                     <label id="dark-change"></label>
                 </div>
-                <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule
-                    Appointment</a>
-                <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-                <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
-                <a href="user_login.html">User Login</a>
-                <a href="#">Doctor Login</a>
-                <a href="#">Admin Login</a>
+                
             </nav>
-
         </header>
 
         <!-- header section ends -->
@@ -725,9 +723,12 @@ submitButton.addEventListener('click', function(event) {
                 }
             }; document.addEventListener("DOMContentLoaded", function () { createButton(configObj, null); });</script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
+        <!-- Bootstrap Links -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <!-- Bootstrap links -->
+
         <script src="./index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"
             integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ=="
