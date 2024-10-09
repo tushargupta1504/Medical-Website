@@ -21,6 +21,25 @@ html{
     overflow-x: hidden;
 }
 
+.bg-goy .links {
+    margin-top: 20px;
+}
+
+.bg-goy .links li {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.bg-goy .links li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bg-goy .links li a:hover {
+    color: #ffeb55;
+}
+
 label{
     position: absolute;
     width: 45px;
@@ -553,7 +572,12 @@ section {
   }
   
 
-
+.links h4{
+    font-size: 25px;
+    color: #3291e6;
+    font-weight: 400px;
+    margin-left:50px ;
+}
 
 
 
