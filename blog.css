@@ -123,6 +123,7 @@ tbody, td, tfoot, th, thead, tr {
     margin: 13px;
     border-radius: 7px;
     border: 2px solid white;
+    text-align: center;
 }
 .input-group{
     display: flex;
@@ -135,11 +136,13 @@ tbody, td, tfoot, th, thead, tr {
     padding: 13px;
 }
 .input-field{
-    width: 312px;
+    width: 400px;
     padding: 3px 28px;
 }
 .input-box{
-    height: 38px;
+position: relative;
+left: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 .submit1{
     border-bottom: 2px solid white;
