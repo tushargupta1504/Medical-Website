@@ -39,3 +39,19 @@ function validateInputs1(){
         alert("Registered successfully");
     }
 }
+function triggerSlidingEffect() {
+    // On image click
+document.querySelectorAll('#gallery .image-container img').forEach(img => {
+    img.addEventListener('click', function() {
+      this.classList.toggle('sliding'); // Add or remove sliding effect
+    });
+  });
+  
+  // On scroll
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('#gallery .image-container img').forEach(img => {
+      img.classList.add('sliding'); // Add sliding effect on scroll
+    });
+  });
+
+}

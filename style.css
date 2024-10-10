@@ -659,6 +659,10 @@ textarea {
     border: none;
 }
 
-#gallery .image-container:hover img {
-    transform: scale(1.5);
+#gallery .image-container img {
+    transition: transform 0.5s ease; /* Smooth transition for the sliding effect */
+}
+
+#gallery .image-container img.sliding {
+    transform: translateX(200px); /* Adjust the value based on how much you want to slide the image */
 }
