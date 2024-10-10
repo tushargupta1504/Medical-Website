@@ -330,13 +330,13 @@ ul li .nav-link:hover{
     background-color: var(--blue)
 }
 
-.bg-goy {
-    background-color: #072035;
+/* .bg-goy {
+    background-color: #a31f1f;
 }
 
 .bg-boz {
     background-color: #f1f1f1
-}
+} */
 
 .text-mavi {
     color: var(--blue)

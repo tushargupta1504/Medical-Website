@@ -1,0 +1,50 @@
+.bg-goy{
+    background-color:rgb(17, 20, 27);
+    height: 500px;
+}
+#div1{
+    margin-top: 100px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#about1{
+    font-size: 25px;
+    color: aliceblue;
+    margin-top:100px ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#about2{
+    margin-top: 40px;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contact1{
+    margin-top: 100px;
+    font-size: 25px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contact2{
+    margin-top: 20px;
+    font-size: 25px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#email1{
+    width:300px;
+}
+#email2{
+    height:52px;
+    width: 65px;
+    font-size: 20px;
+    color:steelblue;
+    background-color: black;
+}
+#icon1{
+    margin-top: 20px;
+    font-size: 25px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 400px;
+}
