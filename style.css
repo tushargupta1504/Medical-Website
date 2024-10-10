@@ -403,8 +403,8 @@ ul li .nav-link:hover{
 }
 
 footer p {
-    opacity: 0.7;
     font-size: 1.5rem;
+    margin-left: 50px;
     line-height: 30px;
     color: #fff;
     font-weight: 400;
@@ -412,12 +412,12 @@ footer p {
 
 footer h5 {
     margin-top: 40px;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 400;
-    font-family: "Roboto";
-
+    margin-left: 50px;
+    font-size: 25px;
+    color: #3291e6;
+    font-weight: 400px;
 }
+
 
 .bt1 {
     background: url("img/feature-1.jpg") center/cover;
@@ -578,6 +578,7 @@ section {
     font-weight: 400px;
     margin-left:50px ;
 }
+
 
 
 
