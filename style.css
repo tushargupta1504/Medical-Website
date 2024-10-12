@@ -129,6 +129,7 @@ header{
 .dark-btn-navbar{
    padding-left: 6em;
    margin-bottom: 5em;
+   position: relative;
 }
 
 header .navbar a{

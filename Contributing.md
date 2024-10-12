@@ -1,7 +1,7 @@
 
-# 🌟 Contributing to Our Healthcare Platform
+# 🌟 Contributing to Our Medical Website
 
-We’re excited that you’re interested in contributing to our Healthcare Platform! Your contributions will help improve access to affordable and quality healthcare. This document provides guidelines to help you get started and contribute effectively.
+We’re excited that you’re interested in contributing to our Medical Website! Your contributions will help improve access to affordable and quality healthcare. This document provides guidelines to help you get started and contribute effectively.
 
 ## 👣 Getting Started
 
@@ -11,14 +11,14 @@ We’re excited that you’re interested in contributing to our Healthcare Platf
 2. **Clone Your Fork**  
    Clone your forked repository to your local machine using:
    ```bash
-   git clone https://github.com/<your-username>/Healthcare-Platform.git
-   cd Healthcare-Platform
+   git clone https://github.com/<your-username>/Medical-Website.git
+   cd Medical-Website
    ```
 
 3. **Configure Upstream Remote**  
    Set the original repository as the upstream remote to keep your fork in sync:
    ```bash
-   git remote add upstream https://github.com/OriginalOwner/Healthcare-Platform.git
+   git remote add upstream https://github.com/tushargupta1504/Medical-Website.git
    ```
 
 ## 🛠 Making Changes
