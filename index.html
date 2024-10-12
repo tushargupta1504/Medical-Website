@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -592,78 +594,98 @@
 
 
             </div>
-            <footer>
-                <p class="m-0" style="text-align: center; padding-top: 10px;">&copy; 2024 Swasthya Point</p>
-              </footer>
-        </div>
-        </div>
-        </div>
-        </section>
-        <script>
-            var content = document.getElementsByTagName('body')[0];
-            var darkMode = document.getElementById('dark-change');
-            darkMode.addEventListener('click', function () {
-                darkMode.classList.toggle('active');
-                content.classList.toggle('night');
-            })
-        </script>
-
-        <script>
-            // Get the form and submit button
-const form = document.querySelector('form');
-const submitButton = document.querySelector('#contact');
-
-// Add an event listener to the submit button
-submitButton.addEventListener('click', function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
-    // Get the input fields
-    const nameInput = document.querySelector('#name');
-    const emailInput = document.querySelector('#email');
-    const phoneInput = document.querySelector('#phone');
-    const cityInput = document.querySelector('#city');
-    const subjectInput = document.querySelector('#subject');
-    const messageInput = document.querySelector('#message');
-
-    // Clear the input fields
-    nameInput.value = '';
-    emailInput.value = '';
-    phoneInput.value = '';
-    cityInput.value = '';
-    subjectInput.value = '';
-    messageInput.value = '';
-
-    // Display an alert
-    alert('Your details have been submitted!');
-});
-        </script>
-      
-
-
-        </main>
-
         <footer class="bg-goy">
+            <!-- Custom Styles for Social Media Icons -->
+            <style>
+                /* Increase the size of social media icons */
+                .social-links i {
+                    font-size: 1.5rem;
+                    /* Default size */
+                }
+        
+                /* Optional: Further increase size on larger screens */
+                @media (min-width: 768px) {
+                    .social-links i {
+                        font-size: 2rem;
+                        /* Larger size for desktops */
+                    }
+                }
+        
+                /* Optional: Add hover effects */
+                .social-links a:hover i {
+                    color: #007bff;
+                    /* Change icon color on hover */
+                    transform: scale(1.2);
+                    /* Slightly enlarge icon on hover */
+                    transition: color 0.3s, transform 0.3s;
+                    /* Smooth transition */
+                }
+        
+                /* Ensure smooth scaling */
+                .social-links i {
+                    transition: transform 0.3s, color 0.3s;
+                }
+        
+                /* Add custom space between social icons */
+                .social-links a {
+                    margin-right: 15px;
+                    /* Add space between each icon */
+                }
+            </style>
+        
             <div class="container">
-                <div class="row  py-4 jus d-flex justify-content-center">
-                    <div class="col-md-5 text-white ">
+                <div class="row py-4 justify-content-center">
+                    <!-- Medical Section -->
+                    <div class="col-md-5 text-white">
                         <h5>Medical</h5>
-                        <p>Putting your health first. Connect with top-tier healthcare providers, receive personalized
-                            treatment recommendations, and manage your health journey effortlessly</p>
+                        <p>
+                            Putting your health first. Connect with top-tier healthcare providers, receive personalized
+                            treatment recommendations, and manage your health journey effortlessly.
+                        </p>
                     </div>
-                    <div class="col-md-4 text-white ">
+        
+                    <!-- New York Section -->
+                    <div class="col-md-4 text-white">
                         <h5>New York</h5>
-                        <p>709 Honey Creek Dr. <br> Delhi <br> NY 10028</p>
-                        <p>1-888-299-2000 <br> medical.in </p>
+                        <p>
+                            709 Honey Creek Dr. <br> Delhi <br> NY 10028
+                        </p>
+                        <p>
+                            1-888-299-2000 <br> medical.in
+                        </p>
                     </div>
+        
+                    <!-- Aligarh Section with Social Media Links -->
                     <div class="col-md-3 text-white">
                         <h5>Aligarh</h5>
-                        <p>4851 Willow Greene Drive <br> Montgomery <br> AL 36109</p>
-                        <p>1-888-299-2000 <br> med </p>
+                        <p>
+                            4851 Willow Greene Drive <br> Montgomery <br> AL 36109
+                        </p>
+                        <p>
+                            1-888-299-2000 <br> med
+                        </p>
+        
+                        <!-- Social Media Links -->
+                        <div class="social-links mt-3 d-flex">
+                            <a href="https://facebook.com" class="text-white" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f fa-2x"></i>
+                            </a>
+                            <a href="https://twitter.com" class="text-white" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="https://instagram.com" class="text-white" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://linkedin.com" class="text-white" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
+
+
 
 
         <script> configObj = {
