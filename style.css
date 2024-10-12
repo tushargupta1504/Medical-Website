@@ -25,7 +25,7 @@ label{
     position: absolute;
     width: 45px;
     height: 22px;
-    right: 20px;
+    right: -49px;
     top: 20px;
     border: 2px solid;
     border-radius: 20px;
@@ -108,7 +108,7 @@ header{
         padding: 1rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         z-index: 1100;
 }
 
@@ -132,7 +132,7 @@ header{
 }
 
 header .navbar a{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 1.5rem;
     color: #282727;
 }
