@@ -104,6 +104,7 @@ header{
         position: fixed;
         top: 0; left: 0; right: 0;
         width: 100%;
+        height: 80px;
         background: rgba(243, 239, 239, 0.8);
         padding: 1rem;
         display: flex;
@@ -124,8 +125,43 @@ header{
     height: 100%;
     border:none;
 }
+#shownav{
+    height: 50px;
+    width: 50px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all ease-in-out 0.7s;
+}
+#shownav img{
+    border: none;
+}
+.navbar, .navbar.sticky{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 9999;
+    transition: right 0.5s ease-in-out;
+    background-color: rgba(128, 128, 128, 0.7);
+    backdrop-filter: blur(5px);
+    border-left: 3px solid black;
+}
 
-
+#hidenav{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 20px;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
 .dark-btn-navbar{
    padding-left: 6em;
    margin-bottom: 5em;
@@ -594,31 +630,6 @@ textarea {
 }
 
 @media (max-width:768px){
-
-    html .fa-bars{
-        display: block;
-    }
-
-    header .navbar{
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: #eee;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header #toggler:checked ~ .navbar{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    header .navbar a{
-        margin: 1.5rem;
-        padding: 1.5rem;
-        background: #fff;
-        border: 0.1rem solid rgba(0,0,0,0.1);
-        display: block;
-    }
-
     .home .content h3{
         font-size: 5rem;
     }
@@ -649,9 +660,12 @@ textarea {
     }
     
 }
-
+form{
+    position: relative;
+}
 #gallery .image-container {
     overflow: hidden;
+    margin:20px 0;
 }
 
 #gallery .image-container img {

@@ -72,12 +72,15 @@
         <!-- header section starts -->
 
         <header>
-
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
+            <!-- <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label> -->
             <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
-
+            <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
             <nav class="navbar">
+                <div class="dark-btn-navbar">
+                    <label id="dark-change"></label>
+                </div>
+                <div id="hidenav"> <img src="./img/cross.svg" alt="Hide Menu"></div>
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
@@ -86,17 +89,13 @@
                 <a href="nearby.html">Nearby</a>
                 <a href="appointment.html"><span>Book Your Appointment</span></a>
                 <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-                <div class="dark-btn-navbar">
-                    <label id="dark-change"></label>
-                </div>
-                
                 <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
                 <a href="user_login.html">User Login</a>
                 <a href="#">Doctor Login</a>
                 <a href="#">Admin Login</a>
             </nav>
-
         </header>
+
 
         <!-- header section ends -->
 
@@ -322,7 +321,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up">
                             <a href="img/portfolio-6.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-6.jpg" class="card-img" alt="...">
                             </a>
 
                         </div>
@@ -336,7 +335,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="500">
                             <a href="img/portfolio-3.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-3.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -350,13 +349,13 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-5.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-5.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-1.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
+                                <img src="img/portfolio-1.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -738,6 +737,26 @@ submitButton.addEventListener('click', function(event) {
                 pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js')
             });
             lightbox.init();
+        </script>
+        <script>
+            const show = document.getElementById("shownav");
+            const navbar = document.querySelector('.navbar');
+            show.addEventListener('click',()=>{
+                console.log("show clicked");
+                navbar.style.right='0%';
+                show.style.display='none'
+            })
+            const hide = document.getElementById("hidenav");
+            hide.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
+            navbar.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
         </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
