@@ -135,6 +135,9 @@ header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #282727;
+    display: flex;
+    flex-wrap: nowrap;
+
 }
 
 .navbar a {
@@ -207,10 +210,10 @@ header .fa-bars{
 }
 
 .about .row{
-    display: flex;
+    display: flow-root;
     align-items: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    flex-wrap:nowrap ;
     padding: 2rem 0;
     padding-bottom: 3rem;
 }
