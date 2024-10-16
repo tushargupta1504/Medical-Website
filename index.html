@@ -20,6 +20,58 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Swasthya Point</title>
         <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #root {
+            flex: 1;
+        }
+
+        .follow-us {
+            -ms-flex-align: center;
+            display: flex;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Keep this at the bottom */
+        }
+
+        .follow-us h2 {
+            color: grey; /* Grey color for the heading */
+            font-size: 28px; /* Increased size for the heading */
+            margin-bottom: 15px; /* Space between heading and icons */
+        }
+
+        .follow-us a {
+            margin: 0 15px;
+            color: grey; /* Grey color for icons */
+            text-decoration: none;
+        }
+
+        .follow-us a:hover {
+            color: #007bff; /* Change color on hover */
+        }
+
+        .follow-us a:focus {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+
+        .follow-us img {
+            width: 50px; /* Set logo size */
+            height: 50px;
+            filter: grayscale(100%); /* Grey color for icons */
+            transition: filter 0.3s; /* Smooth transition effect */
+        }
+
+        .follow-us a:hover img {
+            filter: grayscale(0%); /* Color on hover */
+        }
             /* General styles for contact form inputs */
             .form-control {
                 background-color: #fff;
@@ -72,13 +124,15 @@
         <!-- header section starts -->
 
         <header>
-
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
+            <!-- <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label> -->
             <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
-
+            <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
             <nav class="navbar">
-
+                <div class="dark-btn-navbar">
+                    <label id="dark-change"></label>
+                </div>
+                <div id="hidenav"> <img src="./img/cross.svg" alt="Hide Menu"></div>
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
@@ -86,20 +140,14 @@
                 <a href="blog.html">Blogs</a>
                 <a href="nearby.html">Nearby</a>
                 <a href="appointment.html"><span>Book Your Appointment</span></a>
-
-                <div class="dark-btn-navbar">
-                    <label id="dark-change"></label>
-                </div>
-                <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule
-                    Appointment</a>
                 <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
                 <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
                 <a href="user_login.html">User Login</a>
                 <a href="#">Doctor Login</a>
                 <a href="#">Admin Login</a>
             </nav>
-
         </header>
+
 
         <!-- header section ends -->
 
@@ -325,7 +373,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up">
                             <a href="img/portfolio-6.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-6.jpg" class="card-img" alt="...">
                             </a>
 
                         </div>
@@ -339,7 +387,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="500">
                             <a href="img/portfolio-3.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-3.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -353,13 +401,13 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-5.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-5.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-1.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
+                                <img src="img/portfolio-1.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -742,11 +790,42 @@ submitButton.addEventListener('click', function(event) {
             });
             lightbox.init();
         </script>
+        <script>
+            const show = document.getElementById("shownav");
+            const navbar = document.querySelector('.navbar');
+            show.addEventListener('click',()=>{
+                console.log("show clicked");
+                navbar.style.right='0%';
+                show.style.display='none'
+            })
+            const hide = document.getElementById("hidenav");
+            hide.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
+            navbar.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
+        </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
+   
 
     </body>
-
+    <div class="follow-us">
+        <a href="https://www.linkedin.com/in/tushar1504/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" />
+        </a>
+        <a href="https://x.com/tushargupta1504" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Logo" />
+        </a>
+        <a href="https://github.com/tushargupta1504" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
+        </a>
+    </div>
 </html>
