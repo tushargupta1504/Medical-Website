@@ -86,14 +86,16 @@ section{
 }
 
 .btn{
-    display: inline-block;
+    /* display: inline-block; */
     margin-top: 1rem;
+    margin-left: 30rem;
     border-radius: 5rem;
     background: #333;
     color: #fff;
     padding: 0.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
+   
 }
 
 .btn:hover{
@@ -243,13 +245,15 @@ header .fa-bars{
     color: #ffffff;
     padding: 1rem 0;
     line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-style: solid;
 }
 
 .about .row{
     display: flow-root;
     align-items: center;
     gap: 2rem;
-    flex-wrap:nowrap ;
+    /* flex-wrap:nowrap ; */
     padding: 2rem 0;
     padding-bottom: 3rem;
 }
