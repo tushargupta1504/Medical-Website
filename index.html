@@ -20,6 +20,87 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Swasthya Point</title>
         <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #root {
+            flex: 1;
+        }
+
+        .follow-us {
+            -ms-flex-align: center;
+            display: flex;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Keep this at the bottom */
+        }
+
+        .follow-us h2 {
+            color: grey; /* Grey color for the heading */
+            font-size: 28px; /* Increased size for the heading */
+            margin-bottom: 15px; /* Space between heading and icons */
+        }
+
+        .follow-us a {
+            margin: 0 15px;
+            color: grey; /* Grey color for icons */
+            text-decoration: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 3;
+            transition: color 0.5s ease-in-out;
+        }
+        @property --fill{
+            syntax: '<percentage>';
+                inherits: true;
+                initial-value: 0%;
+            }
+        .follow-us a::after{
+            position: absolute;
+            z-index: -1;
+            content: '';
+            inset: -3px;
+            border-radius: inherit;
+            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
+            transition: --fill 0.6s ease-in-out;
+        }
+        .follow-us a::before{
+            position: absolute;
+            content: '';
+            inset: -1px;
+            border-radius: inherit;
+            background-color: #fff;
+            z-index: 0;
+        }
+
+        .follow-us a:hover {
+            color: var(--iconbg); /* Change color on hover */
+            --fill:100%
+        }
+
+        .follow-us a:focus {
+            outline: 2px solid var(--iconbg);
+            outline-offset: 2px;
+        }
+
+        .follow-us img {
+            width: 50px; /* Set logo size */
+            height: 50px;
+            filter: grayscale(100%); /* Grey color for icons */
+            transition: filter 0.3s; /* Smooth transition effect */
+        }
+
+        .follow-us a:hover img {
+            filter: grayscale(0%); /* Color on hover */
+        }
             /* General styles for contact form inputs */
             .form-control {
                 background-color: #fff;
@@ -54,7 +135,7 @@
             }
 
             .btn:hover {
-                background-color: #0056b3;
+                background-color: #3e91e9;
                 /* Darker shade on hover */
             }
 
@@ -72,12 +153,15 @@
         <!-- header section starts -->
 
         <header>
-
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
+            <!-- <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label> -->
             <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
-
+            <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
             <nav class="navbar">
+                <div class="dark-btn-navbar">
+                    <label id="dark-change"></label>
+                </div>
+                <div id="hidenav"> <img src="./img/cross.svg" alt="Hide Menu"></div>
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
@@ -108,9 +192,17 @@
     <label id="dark-change"></label>
 </div>
 
-            </nav>
 
+                <a href="appointment.html"><span>Book Your Appointment</span></a>
+                <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
+                <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
+                <a href="user_login.html">User Login</a>
+                <a href="doctor_login">Doctor Login</a>
+                <a href="admin_login">Admin Login</a>
+
+            </nav>
         </header>
+
 
         <!-- header section ends -->
 
@@ -247,11 +339,12 @@
                 </div>
 
                 <div class="row">
+
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-right">
                         <div class="icon-box">
                             <div class="icon"><img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology">
                             </div>
-                            <h4><a href="">Radiology</a></h4>
+                            <h4><a href="radiology.html">Radiology</a></h4>
                             <p>To visualize internal structures and diagnose conditions.</p>
                         </div>
                     </div>
@@ -261,7 +354,7 @@
                             <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs"
                                     alt="Psychiatrist">
                             </div>
-                            <h4><a href="">Psychiatrist</a></h4>
+                            <h4><a href="psychatry.html">Psychiatry</a></h4>
                             <p>Specializes in mental health.</p>
                         </div>
                     </div>
@@ -269,9 +362,9 @@
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left">
                         <div class="icon-box">
                             <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs"
-                                    alt="Dermatologist">
+                                    alt="Dermatology">
                             </div>
-                            <h4><a href="">Dermatologist</a></h4>
+                            <h4><a href="dermatology.html">Dermatology</a></h4>
                             <p>Diagnosis and treatment of skin, hair, and nail conditions.</p>
                         </div>
                     </div>
@@ -280,7 +373,7 @@
                         <div class="icon-box">
                             <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
                             </div>
-                            <h4><a href="">Blood Bank</a></h4>
+                            <h4><a href="bloodbank.html">Blood Bank</a></h4>
                             <p>Transfusion medicine and blood donation center.</p>
                         </div>
                     </div>
@@ -289,7 +382,7 @@
                         <div class="icon-box">
                             <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
                             </div>
-                            <h4><a href="">Urologist</a></h4>
+                            <h4><a href="urology.html">Urology</a></h4>
                             <p>Focuses on conditions affecting the urinary tract.</p>
                         </div>
                     </div>
@@ -300,7 +393,7 @@
                             <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs"
                                     alt="Pediatrician">
                             </div>
-                            <h4><a href="">Pediatrician</a></h4>
+                            <h4><a href="pediatrics.html">Pediatrician</a></h4>
                             <p>Specializes in the medical care of infants, children.</p>
                         </div>
                     </div>
@@ -308,7 +401,8 @@
                 </div>
 
             </div>
-        </section><!-- End Services Section -->
+        </section>
+        <!-- End Services Section -->
 
         <!-- <div class="bg-boz py-3">
             <div class="container">
@@ -336,7 +430,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up">
                             <a href="img/portfolio-6.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-6.jpg" class="card-img" alt="...">
                             </a>
 
                         </div>
@@ -350,7 +444,7 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="500">
                             <a href="img/portfolio-3.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-3.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -364,13 +458,13 @@
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-5.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
+                                <img src="img/portfolio-5.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
                         <div class="image-container" data-aos="fade-up" data-aos-duration="600">
                             <a href="img/portfolio-1.jpg" data-pswp-width="370" data-pswp-height="300">
-                                <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
+                                <img src="img/portfolio-1.jpg" class="card-img " alt="...">
                             </a>
 
                         </div>
@@ -657,28 +751,31 @@ submitButton.addEventListener('click', function(event) {
 
         </main>
 
-        <footer class="bg-goy">
-            <div class="container">
-                <div class="row  py-4 jus d-flex justify-content-center">
-                    <div class="col-md-5 text-white ">
-                        <h5>Medical</h5>
-                        <p>Putting your health first. Connect with top-tier healthcare providers, receive personalized
-                            treatment recommendations, and manage your health journey effortlessly</p>
+        <footer class="bg-gray-900">
+            <div class="container mx-auto">
+                <div class="row py-4 flex justify-center">
+                    <div class="col-md-5 text-white hover:text-blue-400">
+                        <h5 class="text-xl font-semibold hover:text-blue-400">Medical</h5>
+                        <p class="hover:text-blue-300">Putting your health first. Connect with top-tier healthcare providers, receive personalized treatment recommendations, and manage your health journey effortlessly.</p>
                     </div>
-                    <div class="col-md-4 text-white ">
-                        <h5>New York</h5>
-                        <p>709 Honey Creek Dr. <br> Delhi <br> NY 10028</p>
-                        <p>1-888-299-2000 <br> medical.in </p>
+                    <div class="col-md-4 text-white hover:text-blue-400">
+                        <h5 class="text-xl font-semibold hover:text-blue-400">New York</h5>
+                        <p class="hover:text-blue-300">
+                            709 Honey Creek Dr. <br> Delhi <br> NY 10028
+                        </p>
+                        <p class="hover:text-blue-300">1-888-299-2000 <br> medical.in</p>
                     </div>
-                    <div class="col-md-3 text-white">
-                        <h5>Aligarh</h5>
-                        <p>4851 Willow Greene Drive <br> Montgomery <br> AL 36109</p>
-                        <p>1-888-299-2000 <br> med </p>
+                    <div class="col-md-3 text-white hover:text-blue-400">
+                        <h5 class="text-xl font-semibold hover:text-blue-400">Aligarh</h5>
+                        <p class="hover:text-blue-300">
+                            4851 Willow Greene Drive <br> Montgomery <br> AL 36109
+                        </p>
+                        <p class="hover:text-blue-300">1-888-299-2000 <br> med</p>
                     </div>
                 </div>
             </div>
         </footer>
-
+        
 
         <script> configObj = {
                 "buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z", "buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",
@@ -753,11 +850,42 @@ submitButton.addEventListener('click', function(event) {
             });
             lightbox.init();
         </script>
+        <script>
+            const show = document.getElementById("shownav");
+            const navbar = document.querySelector('.navbar');
+            show.addEventListener('click',()=>{
+                console.log("show clicked");
+                navbar.style.right='0%';
+                show.style.display='none'
+            })
+            const hide = document.getElementById("hidenav");
+            hide.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
+            navbar.addEventListener('click',()=>{
+                console.log("hide clicked");
+                navbar.style.right='-100%';
+                show.style.display='block'
+            })
+        </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
+   
 
     </body>
-
+    <div class="follow-us">
+        <a href="https://www.linkedin.com/in/tushar1504/" target="_blank" style="--iconbg:#007AB9;">
+            <img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn Logo" />
+        </a>
+        <a href="https://x.com/tushargupta1504" target="_blank" style="--iconbg:#01A9F4;">
+            <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter Logo" />
+        </a>
+        <a href="https://github.com/tushargupta1504" target="_blank" style="--iconbg:#5C6BC0;" >
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub Logo" />
+        </a>
+    </div>
 </html>
