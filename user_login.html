@@ -165,18 +165,17 @@
                 <span>User Login</span>
             </div>
             <div class="form">
-                <form id="loginForm" action="/user_login" method="post">
+                <form id="loginForm">
                     <div class="inputBox inputBoxFront">
                         <label><i class="fa-solid fa-user"></i></label>
-                        <input type="text" placeholder="Username" class="input" name="username" required>
+                        <input type="text" placeholder="Email" class="input" name="email" required>
                     </div>
                     <div class="inputBox inputBoxFront" style="position: relative;">
                         <label><i class="fa-solid fa-lock"></i></label>
-                        <input type="password" id="loginPassword" placeholder="Password" class="input" name="password"
-                            required>
-                        <i class="fa-solid fa-eye" id="toggleLoginPassword"
-                            style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" class="input" name="password" required>
+                        <i class="fa-solid fa-eye" id="toggleLoginPassword" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
                     </div>
+                    <input type="hidden" name="role" value="user">
                     <button type="submit" class="btn">Log in</button>
                     <div class="user">New user? <span class="newUser">Sign Up</span></div>
                 </form>
@@ -249,12 +248,13 @@
             document.getElementById("loginForm").addEventListener("submit", function (event) {
                 let isValid = true;
 
-                const username = document.querySelector("input[name='username']").value.trim();
+                const email = document.querySelector("input[name='email']").value.trim();
                 const password = loginPassword.value.trim();
 
-                // Username validation
-                if (username === "") {
-                    alert("Username is required");
+                // Email validation
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email address");
                     isValid = false;
                 }
 
@@ -338,6 +338,63 @@
                 front.style.zIndex = "2";
                 back.style.transform = "rotateY(180deg)";
                 front.style.transform = "rotateY(0deg)";
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: formData.get('email'),
+                        password: formData.get('password'),
+                        role: formData.get('role')
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred during login');
+                });
+            });
+
+            document.getElementById('registerForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: formData.get('username'),
+                        email: formData.get('email'),
+                        password: formData.get('password'),
+                        role: 'user'
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred during registration');
+                });
             });
         </script>
     </body>
