@@ -664,6 +664,9 @@ body.night .mb-4{
     padding-top: 4px;
 }
 
+.w-50 {
+    width: 50%; /* Adjust the width as necessary */
+}
 
 
 
