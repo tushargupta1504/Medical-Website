@@ -1,54 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Appointment</title>
-    <link rel="stylesheet" href="Appointment.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Book Your Doctor's Appointment</h1>
 
-      
-        <form class="appointment-form" action=" https://swasthya.setmore.com/sely" method="POST" target="_blank">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Appointment</title>
+        <link rel="stylesheet" href="Appointment.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                overflow: hidden;
+                background: url('./img/appintment.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: background-image 1s ease-in-out;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                height: 80vh;
+                /* Set height for scrolling */
+                overflow-y: auto;
+                /* Enable vertical scrolling */
+            }
+
+            h1,
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .form-head {
+                margin-bottom: 20px;
+            }
+
+            .form-body {
+                padding: 20px;
+            }
+
+            .mb-3 {
+                margin-bottom: 15px;
+            }
+
+            .form-label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            .btn {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+            }
+
+            .btn:hover {
+                background-color: #218838;
+            }
+
+            .alert {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+
+            .row {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (max-width: 600px) {
+                .col-md-8 {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Book Your Doctor's Appointment</h1>
+
+            <!-- Appointment Form -->
+            <div class="appointment">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="form-data">
+                            <div class="form-head">
+                                <!-- <h2>Book Appointment</h2> -->
+                            </div>
+                            <div class="form-body">
+                                <form method="post" action="/appointment">
+                                    <!-- Full Name Input -->
+                                    <div class="mb-3">
+                                        <label for="nameInput" class="form-label">Full Name</label>
+                                        <input type="text" id="nameInput" placeholder="Enter Full Name" name="name"
+                                            class="form-control" required />
+                                    </div>
+
+                                    <!-- Mobile Number Input -->
+                                    <div class="mb-3">
+                                        <label for="numberInput" class="form-label">Mobile Number</label>
+                                        <input type="text" id="numberInput" placeholder="Enter Mobile Number"
+                                            name="number" class="form-control" required />
+                                    </div>
+
+                                    <!-- Email Address Input -->
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email Address</label>
+                                        <input type="email" id="emailInput" placeholder="Enter Email Address"
+                                            name="email" class="form-control" required />
+                                    </div>
+
+                                    <!-- Address Input -->
+                                    <div class="mb-3">
+                                        <label for="addressInput" class="form-label">Address</label>
+                                        <input type="text" id="addressInput" placeholder="Enter Your Address"
+                                            name="address" class="form-control" required />
+                                    </div>
+
+                                    <!-- Appointment Date Input -->
+                                    <div class="mb-3">
+                                        <label for="dateInput" class="form-label">Appointment Date</label>
+                                        <input type="date" id="dateInput" name="date" class="form-control" required />
+                                    </div>
+
+                                    <!-- Time Slot Selection -->
+                                    <div class="mb-3">
+                                        <label for="timeSlot">Select Time Slot:</label>
+                                        <select id="timeSlot" name="timeSlot" class="form-control" required>
+                                            <option value="" disabled selected>Select a time slot</option>
+                                            <option value="08:00 - 09:00">08:00 - 09:00</option>
+                                            <option value="09:00 - 10:00">09:00 - 10:00</option>
+                                            <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                            <option value="11:00 - 12:00">11:00 - 12:00</option>
+                                            <option value="12:00 - 13:00">12:00 - 13:00</option>
+                                            <option value="13:00 - 14:00">13:00 - 14:00</option>
+                                            <option value="14:00 - 15:00">14:00 - 15:00</option>
+                                            <option value="15:00 - 16:00">15:00 - 16:00</option>
+                                            <option value="16:00 - 17:00">16:00 - 17:00</option>
+                                            <option value="17:00 - 18:00">17:00 - 18:00</option>
+                                            <option value="18:00 - 19:00">18:00 - 19:00</option>
+                                            <option value="19:00 - 20:00">19:00 - 20:00</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Specialty Selection -->
+                                    <div class="mb-3">
+                                        <label for="diseaseInput">Select Specialty:</label>
+                                        <select id="diseaseInput" name="diseaseInput" class="form-control" required>
+                                            <option value="" disabled selected>Select an option</option>
+                                            <option value="Medicine">Medicine</option>
+                                            <option value="Orthopedic">Orthopedic</option>
+                                            <option value="Mental_health">Mental Health</option>
+                                            <option value="Cardiology">Cardiology</option>
+                                            <option value="Neurology">Neurology</option>
+                                            <option value="Gastroenterology">Gastroenterology</option>
+                                            <option value="Endocrinology">Endocrinology</option>
+                                            <option value="Dermatology">Dermatology</option>
+                                            <option value="Pediatrics">Pediatrics</option>
+                                            <option value="Oncology">Oncology</option>
+                                            <option value="Ophthalmology">Ophthalmology</option>
+                                            <option value="Otolaryngology">Otolaryngology (ENT)</option>
+                                            <option value="Pulmonology">Pulmonology</option>
+                                            <option value="Urology">Urology</option>
+                                            <option value="Nephrology">Nephrology</option>
+                                            <option value="Radiology">Radiology</option>
+                                            <option value="Pathology">Pathology</option>
+                                            <option value="Surgery">Surgery</option>
+                                            <option value="Plastic_Surgery">Plastic Surgery</option>
+                                            <option value="Emergency_Medicine">Emergency Medicine</option>
+                                            <option value="Infectious_Diseases">Infectious Diseases</option>
+                                            <option value="Hematology">Hematology</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Hospital Selection -->
+                                    <div class="mb-3">
+                                        <label for="hospital" class="form-label">Select Hospital</label>
+                                        <select id="hospital" name="hospital" class="form-control" required>
+                                            <option value="" disabled selected>Select Hospital</option>
+                                            {% for hospital in hospitals %}
+                                            <option value="{{ hospital }}">{{ hospital }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <!-- Doctor Selection -->
+                                    <div class="mb-3">
+                                        <label for="doctor" class="form-label">Select Doctor</label>
+                                        <select id="doctor" name="doctor" class="form-control" required>
+                                            <option value="" disabled selected>Select Doctor</option>
+                                            {% for doctor in doctors %}
+                                            <option value="{{ doctor }}">{{ doctor }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <!-- Disease Description -->
+                                    <div class="mb-3">
+                                        <label for="diseaseDescription">Description of Disease:</label>
+                                        <input type="text" placeholder="Enter Disease Description"
+                                            name="diseaseDescription" class="form-control" />
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <button class="btn btn-success btn-appointment" type="submit">Book
+                                            Appointment</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
+        <script>
+            $(document).ready(function () {
+                // Set today's date as the minimum date for the appointment date input
+                const today = new Date();
+                const minDate = today.toISOString().split('T')[0];
+                $('#dateInput').attr('min', minDate);
 
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
+                // Set the maximum date to 10 days from today
+                today.setDate(today.getDate() + 10);
+                const maxDate = today.toISOString().split('T')[0];
+                $('#dateInput').attr('max', maxDate);
 
-            <div class="form-group">
-                <label for="date">Appointment Date:</label>
-                <input type="date" id="date" name="date" required>
-            </div>
+                function fetchDoctors() {
+                    const hospital = $('#hospital').val();
+                    const speciality = $('#diseaseInput').val();
 
-            <div class="form-group">
-                <label for="doctor">Select Doctor:</label>
-                <select id="doctor" name="doctor" required>
-                    <option value="" disabled selected>Select a doctor</option>
-                    <option value="dr_smith">Dr. John Smith</option>
-                    <option value="dr_jones">Dr. Emily Jones</option>
-                    <option value="dr_brown">Dr. Michael Brown</option>
-                </select>
-            </div>
+                    if (hospital && speciality) {
+                        $.ajax({
+                            url: `/get-doctors/${hospital}/${speciality}`, // API call to fetch doctors based on hospital and speciality
+                            method: 'GET',
+                            success: function (data) {
+                                const doctorSelect = $('#doctor');
+                                doctorSelect.empty();
+                                doctorSelect.append('<option value="" disabled selected>Select Doctor</option>');
+                                data.doctors.forEach((doctor) => {
+                                    doctorSelect.append(`<option value="${doctor}">${doctor}</option>`);
+                                });
+                            },
+                            error: function () {
+                                alert('Error fetching doctors. Please try again.');
+                            }
+                        });
+                    }
+                }
 
-            <div class="form-group">
-                <label for="message">Additional Notes:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Any special concerns or requirements"></textarea>
-            </div>
+                // Fetch doctors when hospital or speciality is changed
+                $('#hospital, #diseaseInput').on('change', fetchDoctors);
+            });
 
-            <button type="submit" class="btn">Book Appointment</button>
-        </form>
-    </div>
-</body>
+            const images = [
+                './img/appintment (2).jpg', // Path to your first background image
+                './img/appintment.jpg'  // Path to your second background image
+            ];
+
+            let currentIndex = 0;
+
+            function changeBackground() {
+                currentIndex = (currentIndex + 1) % images.length; // Cycle through images
+                document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+            }
+
+            setInterval(changeBackground, 20000); // Change background every 20 seconds
+
+            $(document).ready(function () {
+                // Set today's date as the minimum date for the appointment date input
+                const today = new Date();
+                const minDate = today.toISOString().split('T')[0];
+                $('#dateInput').attr('min', minDate);
+
+                // Set the maximum date to 10 days from today
+                today.setDate(today.getDate() + 10);
+                const maxDate = today.toISOString().split('T')[0];
+                $('#dateInput').attr('max', maxDate);
+
+                $('#appointmentForm').on('submit', function (e) {
+                    e.preventDefault(); // Prevent default submission
+
+                    // Validate Full Name
+                    const name = $('#nameInput').val().trim();
+                    if (name === '') {
+                        alert('Full Name is required.');
+                        return;
+                    }
+
+                    // Validate Mobile Number (Indian)
+                    const mobile = $('#numberInput').val().trim();
+                    const mobilePattern = /^[6-9]\d{9}$/; // Validates 10-digit Indian mobile number starting with 6, 7, 8, or 9
+                    if (!mobilePattern.test(mobile)) {
+                        alert('Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+                        return;
+                    }
+
+                    // Validate that only digits are allowed
+                    if (!/^\d+$/.test(mobile)) {
+                        alert('Mobile number must contain only digits.');
+                        return;
+                    }
+
+                    // Validate Email
+                    const email = $('#emailInput').val().trim();
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email format
+                    if (!emailPattern.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+
+                    // Validate Address
+                    const address = $('#addressInput').val().trim();
+                    if (address === '') {
+                        alert('Address is required.');
+                        return;
+                    }
+
+                    // Validate Appointment Date
+                    const appointmentDate = $('#dateInput').val();
+                    if (!appointmentDate) {
+                        alert('Appointment Date is required.');
+                        return;
+                    }
+
+                    // Validate Time Slot
+                    const timeSlot = $('#timeSlot').val();
+                    if (!timeSlot) {
+                        alert('Please select a time slot.');
+                        return;
+                    }
+
+                    // Validate Specialty
+                    const specialty = $('#diseaseInput').val();
+                    if (!specialty) {
+                        alert('Please select a specialty.');
+                        return;
+                    }
+
+                    // Validate Hospital
+                    const hospital = $('#hospital').val();
+                    if (!hospital) {
+                        alert('Please select a hospital.');
+                        return;
+                    }
+
+                    // Validate Doctor
+                    const doctor = $('#doctor').val();
+                    if (!doctor) {
+                        alert('Please select a doctor.');
+                        return;
+                    }
+
+                    // If all validations pass, you can submit the form or do further processing
+                    this.submit();
+                });
+            });
+        </script>
+    </body>
+
 </html>
