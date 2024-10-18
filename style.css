@@ -443,6 +443,19 @@ footer h5 {
 
 }
 
+body.night .mb-2{
+    color: #000;
+    font-size: small;
+    text-align: left;
+}
+
+body.night .mb-0{
+    color: #000;
+    font-size: small;
+    text-align: left;
+}
+
+
 .bt1 {
     background: url("img/feature-1.jpg") center/cover;
 }
