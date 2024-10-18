@@ -51,14 +51,43 @@
             margin: 0 15px;
             color: grey; /* Grey color for icons */
             text-decoration: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 3;
+            transition: color 0.5s ease-in-out;
+        }
+        @property --fill{
+            syntax: '<percentage>';
+                inherits: true;
+                initial-value: 0%;
+            }
+        .follow-us a::after{
+            position: absolute;
+            z-index: -1;
+            content: '';
+            inset: -3px;
+            border-radius: inherit;
+            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
+            transition: --fill 0.6s ease-in-out;
+        }
+        .follow-us a::before{
+            position: absolute;
+            content: '';
+            inset: -1px;
+            border-radius: inherit;
+            background-color: #fff;
+            z-index: 0;
         }
 
         .follow-us a:hover {
-            color: #007bff; /* Change color on hover */
+            color: var(--iconbg); /* Change color on hover */
+            --fill:100%
         }
 
         .follow-us a:focus {
-            outline: 2px solid #007bff;
+            outline: 2px solid var(--iconbg);
             outline-offset: 2px;
         }
 
@@ -818,14 +847,14 @@ submitButton.addEventListener('click', function(event) {
 
     </body>
     <div class="follow-us">
-        <a href="https://www.linkedin.com/in/tushar1504/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" />
+        <a href="https://www.linkedin.com/in/tushar1504/" target="_blank" style="--iconbg:#007AB9;">
+            <img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn Logo" />
         </a>
-        <a href="https://x.com/tushargupta1504" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Logo" />
+        <a href="https://x.com/tushargupta1504" target="_blank" style="--iconbg:#01A9F4;">
+            <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter Logo" />
         </a>
-        <a href="https://github.com/tushargupta1504" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
+        <a href="https://github.com/tushargupta1504" target="_blank" style="--iconbg:#5C6BC0;" >
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub Logo" />
         </a>
     </div>
 </html>
