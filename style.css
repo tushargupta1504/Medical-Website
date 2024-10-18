@@ -434,13 +434,16 @@ footer p {
     font-weight: 400;
 }
 
-footer h5 {
-    margin-top: 40px;
-    font-size: 4rem;
+footer h1 {
+    margin-top:20px;
+    font-size: 3rem;
     color: #fff;
     font-weight: 400;
     font-family: "Roboto";
 
+}
+footer .footerContainer{
+    margin-left:10px;
 }
 
 body.night .mb-2{
