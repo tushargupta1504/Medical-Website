@@ -8,18 +8,18 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
             crossorigin="anonymous" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="blog.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <!-- <link rel="stylesheet" href="blog.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
             integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
         <link rel="icon" href="img/favicon.png" type="image/png">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -31,6 +31,10 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
+        }
+
+        a{
+            text-decoration: none;
         }
 
         #root {
@@ -151,15 +155,71 @@
                     /* Adjust padding on smaller screens */
                 }
             }
+        }
         </style>
     </head>
 
     <body>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img height="40px" src="img/swasthya-logo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Share Experience</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Appointments
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Book Your Appointment</a></li>
+                      <li><a class="dropdown-item" href="#">Schedule Appointment</a></li>
+                      <li><a class="dropdown-item" href="#">Schedule And Reminder</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Logins
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">User Login</a></li>
+                      <li><a class="dropdown-item" href="#">Doctor Login</a></li>
+                      <li><a class="dropdown-item" href="#">Admin Login</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+        
+
+
+
+
         <!-- header section starts -->
 
-        <header>
-            <!-- <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label> -->
+        <!-- <header>
+
             <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
             <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
             <nav class="navbar">
@@ -182,10 +242,10 @@
         <a href="appointment.html">Book Appointment</a>
         <a href="https://yourcompany.setmore.com">Schedule & Reminder</a>
     </div>
-</div>
+</div> -->
 
 <!-- Login dropdown -->
-<div class="dropdown">
+<!-- <div class="dropdown">
     <a href="#" class="dropbtn">Login</a>
     <div class="dropdown-content">
         <a href="user_login.html">User Login</a>
@@ -206,7 +266,7 @@
                 <a href="doctor_login">Doctor Login</a>
                 <a href="admin_login">Admin Login</a>
 
-            </nav>
+            </nav> -->
         </header>
 
 
@@ -214,53 +274,57 @@
 
 
         <!-- home section starts -->
-
-        <section class="home" id="home">
-
-            <div class="content">
-                <h3>Your Health, Our Priority</h3>
-                <span>Personalized Care for Every Patient</span>
-                <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
-                    your unique health needs.</p>
-                <a href="#" class="btn">EXPLORE</a>
-            </div>
-
-            <div style="height: 100vh; filter: brightness(0.7);">
-
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                    style="height: 100%;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner" style="height: 100%;">
-                        <div class="carousel-item active">
-                            <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+    <div class="container">
+        <section class="" id="">
+            <div class="row d-flex justify-content-center align-items-center">
+               <div class="col-md-6">
+                <div class="">
+                    <h1><strong>Your Health, Our Priority</strong></h1>
+                    <span>Personalized Care for Every Patient</span>
+                    <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
+                        your unique health needs.</p>
+                    <a href="#" class="btn ">EXPLORE</a>
                 </div>
-            </div>
+               </div>
 
+                <div class="col-md-6">
+                    <div>
+
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                            style="height: 100;">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner" style="height: 400px">
+                                <div class="carousel-item active">
+                                    <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </section>
 
 
@@ -270,27 +334,17 @@
 
         <section class="about" id="about">
 
-            <h1 class="heading"> <span> about </span> us </h1>
+            <h1 class="heading text-center mt-3 mb-3"> <span style="color:#4385a9"> About </span> Us </h1>
 
             <div class="row">
 
-                <div class="video-container" data-aos="zoom-in-up">
-                    <video src="img/about-video.mp4" loop autoplay muted></video>
-                    <h3>who we are</h3>
+                <div class="video-container d-flex justify-content-center align-items-center mt-1" data-aos="zoom-in-up">
+                    <h3 class="col-md-4 text-center" data-aos="fade-right" data-aos-duration="500" ><span style="color:#4385a9" >Who</span> we are ?</h3>
+                    <video class="col-md-8" src="img/about-video.mp4" loop autoplay muted data-aos="fade-down" data-aos-duration="500"></video>
+                    
                 </div>
 
-                <div class="content" data-aos="fade-left" data-aos-duration="500">
-                    <h3>Our Commitment to Healthcare</h3>
-                    <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
-                        our
-                        community. </p>
-                    <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
-                        across
-                        various specialties, including emergency services and wellness programs.</p>
-                    <a href="#" class="btn">Learn more</a>
-
-
-                </div>
+               
 
             </div>
 
@@ -301,7 +355,21 @@
         <!-- icons sections starts -->
 
         <section class="icons-container body.night">
+           <div class="row my-5">
+            <div class="col-md-7" data-aos="fade-left" data-aos-duration="500">
+                <h3>Our Commitment to Healthcare</h3>
+                <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
+                    our
+                    community. </p>
+                <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
+                    across
+                    various specialties, including emergency services and wellness programs.</p>
+                <a href="#" class="btn">Learn more</a>
 
+
+            </div>
+
+          <div class="col-md-5">
             <div class="icons" data-aos="fade-up">
                 <div class="info">
                     <h3>Pharmacy</h3>
@@ -329,6 +397,8 @@
                     <span>Preventive health evaluations</span>
                 </div>
             </div>
+          </div>
+           </div>
 
         </section>
 
@@ -337,7 +407,7 @@
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">
-            <div class="container">
+            
 
                 <div class="section-title">
                     <h2>Services</h2>
@@ -406,7 +476,7 @@
 
                 </div>
 
-            </div>
+           
         </section>
         <!-- End Services Section -->
 
@@ -431,7 +501,7 @@
 
 
         <div class="bg-boz py-3" id="gallery">
-            <div class="container">
+           
                 <div class="row">
                     <div class="col-md-4">
                         <div class="image-container" data-aos="fade-up">
@@ -478,11 +548,11 @@
                 </div>
 
 
-            </div>
+            
         </div>
 
 
-        <div class="bg-mavi py-5">
+        <!-- <div class="bg-primary py-5">
             <div class="container">
                 <div class=" d-flex flex-column " id="bottom-carousel">
                     <div class="d-flex justify-content-center mb-5">
@@ -509,7 +579,7 @@
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
                                 class="bt5" aria-label="Slide 5"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="">
                             <div class="carousel-item active">
                                 <div class="carousel-caption d-flex flex-column py-3 d-md-block py-md-5">
                                     <h6>Jane Galadriel</h6>
@@ -552,7 +622,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
+
+
                 <!-- <div id="contact"
                 class="max-w-2xl mx-auto relative overflow-hidden z-10 bg-white p-8 rounded-lg shadow-md before:w-44 before:h-44 before:absolute before:bg-cyan-400 before:rounded-full before:-z-10 before:blur-2xl after:w-56 after:h-56 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-60 after:-right-12">
                 <h2 class="text-5xl text-sky-900  font-bold mb-6">Contact Us</h2>
@@ -592,10 +664,13 @@
                         </div>
                     </div>
                 </form>
-            </div> -->
+            </div>  -->
+
+
+            
                 <!-- Contact Start -->
-                <div class="container-xxl py-5">
-                    <div class="container">
+                <div class="py-5">
+                    <h2 class="my-3"><strong>Contact Us</strong></h2>
                         <div class="row g-4">
                             <div class="col-lg-4 text-[15px]">
                                 <div class="h-100 bg-light rounded d-flex align-items-center p-5 transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-100">
@@ -635,52 +710,52 @@
                             </div>
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="bg-light rounded p-5">
-                                    <p class="d-inline-block  border rounded-pill py-1 px-4 " style="color: #000;">Contact Us</p>
+                                    <!-- <p class="d-inline-block  border rounded-pill py-1 px-4 " style="color: #000;">Contact Us</p> -->
                                     <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
 
                                     <form>
                                         <div class="row g-3">
                                             <div class="col-md-6">
                                                 <div class="form">
+                                                    <label for="name">Your Name</label>
                                                     <input type="text" class="form-control" id="name" name="name"
                                                         placeholder="Your Name" required>
-                                                    <label for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form">
+                                                    <label for="email">Your Email</label>
                                                     <input type="email" class="form-control" id="email" name="email"
                                                         placeholder="Your Email" required>
-                                                    <label for="email">Your Email</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form">
+                                                    <label for="phone">Your Phone Number</label>
                                                     <input type="tel" class="form-control" id="phone" name="phone"
                                                         placeholder="Your Phone Number" required style=" height: 50px; font-size: 15px;">
-                                                    <label for="phone">Your Phone Number</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form">
+                                                    <label for="city">Your City</label>
                                                     <input type="text" class="form-control" id="city" name="city"
                                                         placeholder="Your City" required>
-                                                    <label for="city">Your City</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form">
+                                                    <label for="subject">Subject</label>
                                                     <input type="text" class="form-control" id="subject" name="subject"
                                                         placeholder="Subject" required>
-                                                    <label for="subject">Subject</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form">
+                                                    <label for="message">Message</label>
                                                     <textarea class="form-control" placeholder="Leave a message here"
                                                         id="message" name="message" style="height: 100px ; font-size: 15px;"
                                                         required></textarea>
-                                                    <label for="message">Message</label>
                                                 </div>
                                             </div>
                                             <div class="col-12 d-flex justify-content-center">
@@ -700,17 +775,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                 <!-- Contact End -->
 
-
-            </div>
-            <footer>
-                <p class="m-0" style="text-align: center; padding-top: 10px;">&copy; 2024 Swasthya Point</p>
-              </footer>
-        </div>
-        </div>
+          
         </div>
         </section>
         <script>
@@ -757,7 +826,7 @@ submitButton.addEventListener('click', function(event) {
 
         </main>
 
-        <footer class="bg-gray-900">
+        <footer class="bg-primary">
             <div class="container mx-auto">
                 <div class="row py-4 flex justify-center">
                     <div class="col-md-5 text-white hover:text-blue-400">
@@ -883,36 +952,26 @@ submitButton.addEventListener('click', function(event) {
         
 
 
-<ul class="social-list" style="display: flex; margin-left: 1310px;">
+<div class="row text-center">
 
-
-  <li>
-    <a href="#" class="social-link">
-        <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
-    </a>
-  </li>
-
-  <li>
-    <a href="#" class="social-link">
-        <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
-    </a>
-  </li>
-
-  <li>
-    <a href="#" class="social-link">
-        <i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i>
-    </a>
-  </li>
+    <p class="mt-4" style="color: #ced4da;">&copy; 2024 Swasthya Point</p>
+    <div class="mb-5">
+        <a class="mr-5" href="#" class="social-link">
+            <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+        </a>
+        <a class="mr-5" href="#" class="social-link">
+            <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+        </a>
+        <a class="mr-5" href="#" class="social-link">
+            <i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i>
+        </a>
+    </div>
 
  
 
-</ul>
-
-
-
 </div>
 
-</div>
+
 </footer>
 
    
