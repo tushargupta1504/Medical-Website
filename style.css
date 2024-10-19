@@ -87,8 +87,9 @@ section{
 
 .btn{
     /* display: inline-block; */
-    margin-top: 1rem;
-    margin-left: 30rem;
+    margin-top: 3rem;
+    /* margin-left: 10rem; */
+    margin-bottom: 10px;
     border-radius: 5rem;
     background: #333;
     color: #fff;

@@ -32,7 +32,49 @@
             min-height: 100vh;
             margin: 0;
         }
-
+        .video-container h3{
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .content{
+            /* display: flex; */
+            justify-content: center;
+            text-align: center;
+        }
+        .content h3{
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            /* margin-top: 10px; */
+        }
+        .row{
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transition: box-shadow 0.4s ease,transform 0.4s ease;
+        }
+        .row:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+        }
+        .content p{
+            font-size: 2rem;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 1rem; */
+        }
+        .para{
+            margin-top: 1rem;
+        }
+        .btn{
+            justify-content: center;
+            align-items: center;
+            margin-right: 50px;
+        }
         #root {
             flex: 1;
         }
@@ -271,20 +313,20 @@
         <section class="about" id="about">
 
             <h1 class="heading"> <span> about </span> us </h1>
-
+            <video src="img/about-video.mp4" loop autoplay muted></video>
             <div class="row">
 
                 <div class="video-container" data-aos="zoom-in-up">
-                    <video src="img/about-video.mp4" loop autoplay muted></video>
+                    
                     <h3>who we are</h3>
                 </div>
 
                 <div class="content" data-aos="fade-left" data-aos-duration="500">
                     <h3>Our Commitment to Healthcare</h3>
-                    <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
+                    <p class="para">Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
                         our
                         community. </p>
-                    <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
+                    <p >Our skilled team of professionals utilizes advanced technology to deliver personalized care
                         across
                         various specialties, including emergency services and wellness programs.</p>
                     <a href="#" class="btn">Learn more</a>
