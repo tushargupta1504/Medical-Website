@@ -21,7 +21,7 @@ html{
     overflow-x: hidden;
 }
 
-label{
+#dark-change{
     position: absolute;
     width: 45px;
     height: 22px;
@@ -30,7 +30,7 @@ label{
     border: 2px solid;
     border-radius: 20px;
 }
-label:before{
+#dark-change:before{
     position: absolute;
     content: '';
     width:20px;
@@ -40,7 +40,7 @@ label:before{
     cursor: pointer;
     transition: 0.4s;
 }
-label.active:before{
+#dark-change.active:before{
     left: 24px;
     background: #fff;
 }

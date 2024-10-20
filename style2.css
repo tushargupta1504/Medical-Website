@@ -1,0 +1,218 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #root {
+            flex: 1;
+        }
+
+        .follow-us {
+            -ms-flex-align: center;
+            display: flex;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Keep this at the bottom */
+        }
+
+        .follow-us h2 {
+            color: grey; /* Grey color for the heading */
+            font-size: 28px; /* Increased size for the heading */
+            margin-bottom: 15px; /* Space between heading and icons */
+        }
+
+        .follow-us a {
+            margin: 0 15px;
+            color: grey; /* Grey color for icons */
+            text-decoration: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 3;
+            transition: color 0.5s ease-in-out;
+        }
+        @property --fill{
+            syntax: '<percentage>';
+                inherits: true;
+                initial-value: 0%;
+            }
+        .follow-us a::after{
+            position: absolute;
+            z-index: -1;
+            content: '';
+            inset: -3px;
+            border-radius: inherit;
+            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
+            transition: --fill 0.6s ease-in-out;
+        }
+        .follow-us a::before{
+            position: absolute;
+            content: '';
+            inset: -1px;
+            border-radius: inherit;
+            background-color: #fff;
+            z-index: 0;
+        }
+
+        .follow-us a:hover {
+            color: var(--iconbg); /* Change color on hover */
+            --fill:100%
+        }
+
+        .follow-us a:focus {
+            outline: 2px solid var(--iconbg);
+            outline-offset: 2px;
+        }
+
+        .follow-us img {
+            width: 50px; /* Set logo size */
+            height: 50px;
+            filter: grayscale(100%); /* Grey color for icons */
+            transition: filter 0.3s; /* Smooth transition effect */
+        }
+
+        .follow-us a:hover img {
+            filter: grayscale(0%); /* Color on hover */
+        }
+            /* General styles for contact form inputs */
+        .form-control {
+                background-color: #fff;
+                /* White background */
+                border: 1px solid #ced4da;
+                /* Light border */
+                border-radius: 0.5rem;
+                /* Rounded corners */
+                transition: border-color 0.3s;
+                /* Smooth border transition */
+        }
+
+         .form-control:focus {
+                outline: none;
+                /* Remove default outline */
+                box-shadow: none;
+                /* Remove any shadow */
+                border-color: #007bff;
+                /* Change border color on focus */
+            }
+
+            /* Add custom styles for buttons */
+            .btn {
+                background-color: #007bff;
+                /* Primary color */
+                border: none;
+                /* Remove border */
+                color: #fff;
+                /* White text */
+                transition: background-color 0.3s;
+                /* Smooth background transition */
+            }
+
+            .btn:hover {
+                background-color: #3e91e9;
+                /* Darker shade on hover */
+            }
+
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 20px;
+                    /* Adjust padding on smaller screens */
+                }
+            }
+
+            #newsletter {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                align-items: center;
+                left: 30%;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+            }
+            
+            #newsletter { 
+                background-color: #ffffff; /* White background */
+                margin: auto; /* Center the modal */
+                padding: 20px; /* Inner padding */
+                border-radius: 8px; /* Rounded corners */
+                width: 90%; /* Full width on small screens */
+                max-width: 500px; /* Maximum width */
+                position: absolute; /* Position relative to the modal */
+                top: 50%; /* Position from the top */
+                left: 50%; /* Position from the left */
+                transform: translate(-50%, -50%); /* Center it */
+                text-align: center; /* Center text */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+                height: 50%;
+            }
+            
+            .close {
+                position: absolute; /* Position relative to popup content */
+                top: 5px; /* Distance from the top */
+                right: 5%; /* Distance from the right */
+                font-size: 30px; /* Font size */
+                color: #aaa; /* Close button color */
+                cursor: pointer; /* Pointer cursor */
+            }
+            
+            .close:hover {
+                color: #000; /* Change color on hover */
+            }
+            
+            /* Styling for email input */
+            #nemail , #nname {
+                width: 100%; /* Full width */
+                padding: 10px; /* Inner padding */
+                margin: 10px 0; /* Vertical spacing */
+                border: 1px solid #ccc; /* Border color */
+                border-radius: 4px; /* Rounded corners */
+                font-size: 16px; /* Font size */
+            }
+            
+            /* Styling for subscribe button */
+            #subscribeButton {
+                padding: 10px 20px; /* Inner padding */
+                background-color: #007bff; /* Green background */
+                color: white; /* White text */
+                border: none; /* No border */
+                border-radius: 4px; /* Rounded corners */
+                cursor: pointer; /* Pointer cursor */
+                font-size: 16px; /* Font size */
+                transition: background-color 0.3s; /* Smooth transition */
+            }
+            
+            #subscribeButton:hover {
+                background-color: #218838; /* Darker green on hover */
+            }
+            
+            .privacy-note {
+                margin-top: 10px; /* Top margin */
+                font-size: 12px; /* Font size */
+                color: #666; /* Gray text */
+            }
+            
+            .hpop{
+                text-align: center;
+                font-size: medium;
+                font-family: 'Poppins', sans-serif;
+               
+            }
+
+            .ppop{
+               font-size: small; 
+               font-family: 'Poppins', sans-serif;
+               padding-top: 3px;
+            }
+
+            .tex {
+                text-align: left;
+                display: block; 
+                font-size: 15px;
+            }

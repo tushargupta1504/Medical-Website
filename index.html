@@ -12,6 +12,7 @@
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="blog.css">
+        <link rel="stylesheet" href="style2.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
             integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,134 +25,8 @@
         <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <title>Swasthya Point</title>
-        <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        #root {
-            flex: 1;
-        }
-
-        .follow-us {
-            -ms-flex-align: center;
-            display: flex;
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto; /* Keep this at the bottom */
-        }
-
-        .follow-us h2 {
-            color: grey; /* Grey color for the heading */
-            font-size: 28px; /* Increased size for the heading */
-            margin-bottom: 15px; /* Space between heading and icons */
-        }
-
-        .follow-us a {
-            margin: 0 15px;
-            color: grey; /* Grey color for icons */
-            text-decoration: none;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 3;
-            transition: color 0.5s ease-in-out;
-        }
-        @property --fill{
-            syntax: '<percentage>';
-                inherits: true;
-                initial-value: 0%;
-            }
-        .follow-us a::after{
-            position: absolute;
-            z-index: -1;
-            content: '';
-            inset: -3px;
-            border-radius: inherit;
-            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
-            transition: --fill 0.6s ease-in-out;
-        }
-        .follow-us a::before{
-            position: absolute;
-            content: '';
-            inset: -1px;
-            border-radius: inherit;
-            background-color: #fff;
-            z-index: 0;
-        }
-
-        .follow-us a:hover {
-            color: var(--iconbg); /* Change color on hover */
-            --fill:100%
-        }
-
-        .follow-us a:focus {
-            outline: 2px solid var(--iconbg);
-            outline-offset: 2px;
-        }
-
-        .follow-us img {
-            width: 50px; /* Set logo size */
-            height: 50px;
-            filter: grayscale(100%); /* Grey color for icons */
-            transition: filter 0.3s; /* Smooth transition effect */
-        }
-
-        .follow-us a:hover img {
-            filter: grayscale(0%); /* Color on hover */
-        }
-            /* General styles for contact form inputs */
-            .form-control {
-                background-color: #fff;
-                /* White background */
-                border: 1px solid #ced4da;
-                /* Light border */
-                border-radius: 0.5rem;
-                /* Rounded corners */
-                transition: border-color 0.3s;
-                /* Smooth border transition */
-            }
-
-            .form-control:focus {
-                outline: none;
-                /* Remove default outline */
-                box-shadow: none;
-                /* Remove any shadow */
-                border-color: #007bff;
-                /* Change border color on focus */
-            }
-
-            /* Add custom styles for buttons */
-            .btn {
-                background-color: #007bff;
-                /* Primary color */
-                border: none;
-                /* Remove border */
-                color: #fff;
-                /* White text */
-                transition: background-color 0.3s;
-                /* Smooth background transition */
-            }
-
-            .btn:hover {
-                background-color: #3e91e9;
-                /* Darker shade on hover */
-            }
-
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 20px;
-                    /* Adjust padding on smaller screens */
-                }
-            }
-        </style>
+        
+        
     </head>
 
     <body>
@@ -211,6 +86,45 @@
 
 
         <!-- header section ends -->
+
+        <!--pop up starts here -->
+        <div id="newsletter" class="modal">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2 class="hpop"><b>Stay Healthy, Stay Informed!</b></h2>
+      <p class="ppop">Subscribe to receive health tips, medical news, and special offers straight to your inbox.</p>
+      <form id="newsletterForm">
+        <label for="name" class="tex">Name (Optional):</label>
+        <input type="text" id="nname" name="name" placeholder="Enter your name">
+        <label for="email" class="tex">Email Address:</label>
+        <input type="email" id="nemail" name="email" required placeholder="Enter your email">
+        <button type="submit" id="subscribeButton">Subscribe Now!</button>
+        <p class="privacy-note">We respect your privacy. Your email is safe with us.</p>
+      </form>
+    </div>
+  </div>
+<script>
+        window.onload = function(){
+            document.getElementById('newsletter').style.display = 'flex';
+        };
+
+        document.querySelector('.close').addEventListener('click',function(){
+            document.getElementById('newsletter').style.display = 'none';
+        });
+
+        document.getElementById('newsletterform').addEventListener('submit',function(event){
+            event.preventDefault();
+
+            const email = document.getElementById('nemail').value;
+            if (email){
+                alert(`News letter Subscription added to ${nemail}`);
+                document.getElementById('newsletter').style.display = 'none';
+            }
+        });
+
+</script>
+
+        <!--pop up ends here -->
 
 
         <!-- home section starts -->
