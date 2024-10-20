@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="blog.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
-            integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <title>Swasthya Point</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Combine blog.css into style.css if possible -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Swasthya Point</title>
+    <style>
         body {
             font-family: 'Poppins', sans-serif;
             display: flex;
@@ -38,7 +23,6 @@
         }
 
         .follow-us {
-            -ms-flex-align: center;
             display: flex;
             background-color: #f4f4f4;
             padding: 20px;
@@ -63,21 +47,24 @@
             z-index: 3;
             transition: color 0.5s ease-in-out;
         }
-        @property --fill{
+
+        @property --fill {
             syntax: '<percentage>';
-                inherits: true;
-                initial-value: 0%;
-            }
-        .follow-us a::after{
+            inherits: true;
+            initial-value: 0%;
+        }
+
+        .follow-us a::after {
             position: absolute;
             z-index: -1;
             content: '';
             inset: -3px;
             border-radius: inherit;
-            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
+            background: conic-gradient(var(--iconbg) var(--fill), transparent var(--fill));
             transition: --fill 0.6s ease-in-out;
         }
-        .follow-us a::before{
+
+        .follow-us a::before {
             position: absolute;
             content: '';
             inset: -1px;
@@ -88,7 +75,7 @@
 
         .follow-us a:hover {
             color: var(--iconbg); /* Change color on hover */
-            --fill:100%
+            --fill: 100%;
         }
 
         .follow-us a:focus {
@@ -106,328 +93,124 @@
         .follow-us a:hover img {
             filter: grayscale(0%); /* Color on hover */
         }
-            /* General styles for contact form inputs */
-            .form-control {
-                background-color: #fff;
-                /* White background */
-                border: 1px solid #ced4da;
-                /* Light border */
-                border-radius: 0.5rem;
-                /* Rounded corners */
-                transition: border-color 0.3s;
-                /* Smooth border transition */
+
+        /* General styles for contact form inputs */
+        .form-control {
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #007bff; /* Change border color on focus */
+        }
+
+        /* Add custom styles for buttons */
+        .btn {
+            background-color: #007bff; /* Primary color */
+            border: none; /* Remove border */
+            color: #fff; /* White text */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+
+        .btn:hover {
+            background-color: #3e91e9; /* Darker shade on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px; /* Adjust padding on smaller screens */
             }
+        }
+    </style>
+</head>
 
-            .form-control:focus {
-                outline: none;
-                /* Remove default outline */
-                box-shadow: none;
-                /* Remove any shadow */
-                border-color: #007bff;
-                /* Change border color on focus */
-            }
-
-            /* Add custom styles for buttons */
-            .btn {
-                background-color: #007bff;
-                /* Primary color */
-                border: none;
-                /* Remove border */
-                color: #fff;
-                /* White text */
-                transition: background-color 0.3s;
-                /* Smooth background transition */
-            }
-
-            .btn:hover {
-                background-color: #3e91e9;
-                /* Darker shade on hover */
-            }
-
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 20px;
-                    /* Adjust padding on smaller screens */
-                }
-            }
-        </style>
-    </head>
-
-    <body>
-        <!-- header section starts -->
-
-        <header>
-            <!-- <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label> -->
-            <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
-            <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
-            <nav class="navbar">
-                <div class="dark-btn-navbar">
-                    <label id="dark-change"></label>
-                </div>
-                <div id="hidenav"> <img src="./img/cross.svg" alt="Hide Menu"></div>
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="blog.html">Blogs</a>
-                <a href="reviews.html">Share Experience</a>
-                <a href="nearby.html">Nearby</a>
-
-
-               <div class="dropdown">
-    <a href="#" class="dropbtn">Appointments</a>
-    <div class="dropdown-content">
-        <a href="appointment.html">Book Appointment</a>
-        <a href="https://yourcompany.setmore.com">Schedule & Reminder</a>
-    </div>
-</div>
-
-<!-- Login dropdown -->
-<div class="dropdown">
-    <a href="#" class="dropbtn">Login</a>
-    <div class="dropdown-content">
-        <a href="user_login.html">User Login</a>
-        <a href="#">Doctor Login</a>
-        <a href="#">Admin Login</a>
-    </div>
-</div>
-
-<div class="dark-btn-navbar">
-    <label id="dark-change"></label>
-</div>
-
-
-                <a href="appointment.html"><span>Book Your Appointment</span></a>
-                <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-                <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
-                <a href="user_login.html">User Login</a>
-                <a href="doctor_login">Doctor Login</a>
-                <a href="admin_login">Admin Login</a>
-
-            </nav>
-        </header>
-
-
-        <!-- header section ends -->
-
-
-        <!-- home section starts -->
-
-        <section class="home" id="home">
-
-            <div class="content">
-                <h3>Your Health, Our Priority</h3>
-                <span>Personalized Care for Every Patient</span>
-                <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
-                    your unique health needs.</p>
-                <a href="#" class="btn">EXPLORE</a>
+<body>
+    <!-- Header section starts -->
+    <header>
+        <a href="#" class="logo"><img src="img/swasthya-logo.png" alt="Swasthya Point Logo"></a>
+        <div id="shownav"><img src="./img/menu.svg" alt="Show Menu"></div>
+        <nav class="navbar">
+            <div class="dark-btn-navbar">
+                <label id="dark-change"></label>
             </div>
-
-            <div style="height: 100vh; filter: brightness(0.7);">
-
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                    style="height: 100%;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner" style="height: 100%;">
-                        <div class="carousel-item active">
-                            <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div id="hidenav"><img src="./img/cross.svg" alt="Hide Menu"></div>
+            <a href="#home" aria-label="Home">Home</a>
+            <a href="#about" aria-label="About Us">About Us</a>
+            <a href="#services" aria-label="Services">Services</a>
+            <a href="#contact" aria-label="Contact">Contact</a>
+            <a href="blog.html" aria-label="Blogs">Blogs</a>
+            <a href="reviews.html" aria-label="Share Experience">Share Experience</a>
+            <a href="nearby.html" aria-label="Nearby">Nearby</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Appointments</a>
+                <div class="dropdown-content">
+                    <a href="appointment.html">Book Appointment</a>
+                    <a href="https://yourcompany.setmore.com">Schedule & Reminder</a>
                 </div>
             </div>
-
-        </section>
-
-
-        <!-- home section ends-->
-
-        <!-- about section starts -->
-
-        <section class="about" id="about">
-
-            <h1 class="heading"> <span> about </span> us </h1>
-
-            <div class="row">
-
-                <div class="video-container" data-aos="zoom-in-up">
-                    <video src="img/about-video.mp4" loop autoplay muted></video>
-                    <h3>who we are</h3>
-                </div>
-
-                <div class="content" data-aos="fade-left" data-aos-duration="500">
-                    <h3>Our Commitment to Healthcare</h3>
-                    <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
-                        our
-                        community. </p>
-                    <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
-                        across
-                        various specialties, including emergency services and wellness programs.</p>
-                    <a href="#" class="btn">Learn more</a>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- about section ends -->
-
-        <!-- icons sections starts -->
-
-        <section class="icons-container body.night">
-
-            <div class="icons" data-aos="fade-up">
-                <div class="info">
-                    <h3>Pharmacy</h3>
-                    <span>Prescription and medications.</span>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Login</a>
+                <div class="dropdown-content">
+                    <a href="user_login.html">User Login</a>
+                    <a href="#">Doctor Login</a>
+                    <a href="#">Admin Login</a>
                 </div>
             </div>
+            <a href="appointment.html" aria-label="Book Your Appointment"><span>Book Your Appointment</span></a>
+            <a href="https://yourcompany.setmore.com" aria-label="Schedule Appointment">Schedule Appointment</a>
+            <a href="#setmore_widget" aria-label="Schedule And Reminder"><span>Schedule And Reminder</span></a>
+            <a href="user_login.html" aria-label="User Login">User Login</a>
+            <a href="doctor_login" aria-label="Doctor Login">Doctor Login</a>
+            <a href="admin_login" aria-label="Admin Login">Admin Login</a>
+        </nav>
+    </header>
+    <!-- Header section ends -->
 
-            <div class="icons" data-aos="fade-up" data-aos-duration="500">
-                <div class="info">
-                    <h3>Maternity Care</h3>
-                    <span>Support for new mothers</span>
+    <!-- Home section starts -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Your Health, Our Priority</h3>
+            <span>Personalized Care for Every Patient</span>
+            <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet your unique health needs.</p>
+            <a href="#" class="btn">EXPLORE</a>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="height: 100%;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height: 100%;">
+                <div class="carousel-item active">
+                    <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="Medical Hospital">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="Healthcare People">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="Surgery">
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Home section ends -->
 
-            <div class="icons" data-aos="fade-up" data-aos-duration="600">
-                <div class="info">
-                    <h3>Mental Health Services</h3>
-                    <span>Emotional wellness support</span>
-                </div>
-            </div>
-
-            <div class="icons" data-aos="fade-up" data-aos-duration="700">
-                <div class="info">
-                    <h3>Health Screening</h3>
-                    <span>Preventive health evaluations</span>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- icons section ends -->
-
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p><br></p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-right">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology">
-                            </div>
-                            <h4><a href="radiology.html">Radiology</a></h4>
-                            <p>To visualize internal structures and diagnose conditions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-down">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs"
-                                    alt="Psychiatrist">
-                            </div>
-                            <h4><a href="psychatry.html">Psychiatry</a></h4>
-                            <p>Specializes in mental health.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs"
-                                    alt="Dermatology">
-                            </div>
-                            <h4><a href="dermatology.html">Dermatology</a></h4>
-                            <p>Diagnosis and treatment of skin, hair, and nail conditions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-right">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
-                            </div>
-                            <h4><a href="bloodbank.html">Blood Bank</a></h4>
-                            <p>Transfusion medicine and blood donation center.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
-                            </div>
-                            <h4><a href="urology.html">Urology</a></h4>
-                            <p>Focuses on conditions affecting the urinary tract.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-left">
-                        <div class="icon-box">
-                            <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs"
-                                    alt="Pediatrician">
-                            </div>
-                            <h4><a href="pediatrics.html">Pediatrician</a></h4>
-                            <p>Specializes in the medical care of infants, children.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Services Section -->
-
-        <!-- <div class="bg-boz py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/portfolio-6.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-2.jpg" class="card-img " alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-3.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-4.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/portfolio-5.jpg" class="card-img my-5" alt="...">
-                        <img src="img/portfolio-1.jpg" class="card-img mb-5" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div> -->
+    <!-- About section starts -->
+    <section class="about" id="about">
+        <h1 class="heading"><
 
 
         <div class="bg-boz py-3" id="gallery">
