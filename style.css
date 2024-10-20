@@ -88,7 +88,7 @@ section{
 .btn{
     /* display: inline-block; */
     margin-top: 1rem;
-    margin-left: 30rem;
+   
     border-radius: 5rem;
     background: #333;
     color: #fff;
@@ -165,6 +165,7 @@ header{
 .navbar > a, .navbar > .dropdown {
     flex: 1; 
     text-align: center; 
+}
 
 #hidenav{
     position: absolute;
@@ -286,6 +287,21 @@ header .navbar a{
     line-height: 1.5;
 }
 
+.content-commitment{
+    align-items: center;
+    font-size: large;
+    margin: 2rem;
+}
+.content-commitment h3{
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.content-commitment btn{
+    padding-top: 1rem;
+    align-items: center;
+}
 .home .content p{
     font-size: 1.5rem;
     color: #ffffff;
@@ -752,6 +768,7 @@ form{
 
 #gallery .image-container:hover img {
     transform: scale(1.5);
+}
 
 #gallery .image-container img {
     transition: transform 0.5s ease; /* Smooth transition for the sliding effect */
