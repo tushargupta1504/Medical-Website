@@ -165,12 +165,13 @@ header{
 .navbar > a, .navbar > .dropdown {
     flex: 1; 
     text-align: center; 
+}
 
 #hidenav{
     position: absolute;
     cursor: pointer;
     top: 10px;
-    left: 20px;
+    right: 20px;
     font-size: 2rem;
     height: 50px;
     width: 50px;
@@ -193,14 +194,12 @@ header .navbar a{
 
 .navbar a {
     color: #333;
-    padding: 10px 0;
     text-decoration: none;
     font-size: 17px;
 }
 
 .navbar a:hover{
-    background-color: white;
-    color: black;
+    color: white
 }
 
 .dropdown {
@@ -752,6 +751,7 @@ form{
 
 #gallery .image-container:hover img {
     transform: scale(1.5);
+}
 
 #gallery .image-container img {
     transition: transform 0.5s ease; /* Smooth transition for the sliding effect */
