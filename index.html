@@ -25,133 +25,202 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <title>Swasthya Point</title>
         <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        #root {
-            flex: 1;
-        }
-
-        .follow-us {
-            -ms-flex-align: center;
-            display: flex;
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto; /* Keep this at the bottom */
-        }
-
-        .follow-us h2 {
-            color: grey; /* Grey color for the heading */
-            font-size: 28px; /* Increased size for the heading */
-            margin-bottom: 15px; /* Space between heading and icons */
-        }
-
-        .follow-us a {
-            margin: 0 15px;
-            color: grey; /* Grey color for icons */
-            text-decoration: none;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 3;
-            transition: color 0.5s ease-in-out;
-        }
-        @property --fill{
-            syntax: '<percentage>';
-                inherits: true;
-                initial-value: 0%;
+            body {
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
             }
-        .follow-us a::after{
-            position: absolute;
-            z-index: -1;
-            content: '';
-            inset: -3px;
-            border-radius: inherit;
-            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
-            transition: --fill 0.6s ease-in-out;
-        }
-        .follow-us a::before{
-            position: absolute;
-            content: '';
-            inset: -1px;
-            border-radius: inherit;
-            background-color: #fff;
-            z-index: 0;
-        }
-
-        .follow-us a:hover {
-            color: var(--iconbg); /* Change color on hover */
-            --fill:100%
-        }
-
-        .follow-us a:focus {
-            outline: 2px solid var(--iconbg);
-            outline-offset: 2px;
-        }
-
-        .follow-us img {
-            width: 50px; /* Set logo size */
-            height: 50px;
-            filter: grayscale(100%); /* Grey color for icons */
-            transition: filter 0.3s; /* Smooth transition effect */
-        }
-
-        .follow-us a:hover img {
-            filter: grayscale(0%); /* Color on hover */
-        }
-            /* General styles for contact form inputs */
-            .form-control {
-                background-color: #fff;
-                /* White background */
-                border: 1px solid #ced4da;
-                /* Light border */
-                border-radius: 0.5rem;
-                /* Rounded corners */
-                transition: border-color 0.3s;
-                /* Smooth border transition */
+    
+            #root {
+                flex: 1;
             }
-
-            .form-control:focus {
-                outline: none;
-                /* Remove default outline */
-                box-shadow: none;
-                /* Remove any shadow */
-                border-color: #007bff;
-                /* Change border color on focus */
+    
+            .follow-us {
+                -ms-flex-align: center;
+                display: flex;
+                background-color: #f4f4f4;
+                padding: 20px;
+                text-align: center;
+                margin-top: auto; /* Keep this at the bottom */
             }
-
-            /* Add custom styles for buttons */
-            .btn {
-                background-color: #007bff;
-                /* Primary color */
-                border: none;
-                /* Remove border */
-                color: #fff;
-                /* White text */
-                transition: background-color 0.3s;
-                /* Smooth background transition */
+    
+            .follow-us h2 {
+                color: grey; /* Grey color for the heading */
+                font-size: 28px; /* Increased size for the heading */
+                margin-bottom: 15px; /* Space between heading and icons */
             }
-
-            .btn:hover {
-                background-color: #3e91e9;
-                /* Darker shade on hover */
+    
+            .follow-us a {
+                margin: 0 15px;
+                color: grey; /* Grey color for icons */
+                text-decoration: none;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: relative;
+                z-index: 3;
+                transition: color 0.5s ease-in-out;
             }
-
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 20px;
-                    /* Adjust padding on smaller screens */
+            @property --fill{
+                syntax: '<percentage>';
+                    inherits: true;
+                    initial-value: 0%;
                 }
+            .follow-us a::after{
+                position: absolute;
+                z-index: -1;
+                content: '';
+                inset: -3px;
+                border-radius: inherit;
+                background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
+                transition: --fill 0.6s ease-in-out;
             }
-        </style>
+            .follow-us a::before{
+                position: absolute;
+                content: '';
+                inset: -1px;
+                border-radius: inherit;
+                background-color: #fff;
+                z-index: 0;
+            }
+    
+            .follow-us a:hover {
+                color: var(--iconbg); /* Change color on hover */
+                --fill:100%
+            }
+    
+            .follow-us a:focus {
+                outline: 2px solid var(--iconbg);
+                outline-offset: 2px;
+            }
+    
+            .follow-us img {
+                width: 50px; /* Set logo size */
+                height: 50px;
+                filter: grayscale(100%); /* Grey color for icons */
+                transition: filter 0.3s; /* Smooth transition effect */
+            }
+    
+            .follow-us a:hover img {
+                filter: grayscale(0%); /* Color on hover */
+            }
+                /* General styles for contact form inputs */
+                .form-control {
+                    background-color: #fff;
+                    /* White background */
+                    border: 1px solid #ced4da;
+                    /* Light border */
+                    border-radius: 0.5rem;
+                    /* Rounded corners */
+                    transition: border-color 0.3s;
+                    /* Smooth border transition */
+                }
+    
+                .form-control:focus {
+                    outline: none;
+                    /* Remove default outline */
+                    box-shadow: none;
+                    /* Remove any shadow */
+                    border-color: #007bff;
+                    /* Change border color on focus */
+                }
+    
+                /* Add custom styles for buttons */
+                .btn {
+                    background-color: #007bff;
+                    /* Primary color */
+                    border: none;
+                    /* Remove border */
+                    color: #fff;
+                    /* White text */
+                    transition: background-color 0.3s;
+                    /* Smooth background transition */
+                }
+    
+                .btn:hover {
+                    background-color: #3e91e9;
+                    /* Darker shade on hover */
+                }
+    
+                /* Responsive design */
+                @media (max-width: 768px) {
+                    .container {
+                        padding: 20px;
+                        /* Adjust padding on smaller screens */
+                    }
+                }
+    
+                header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px;
+                    background-color: #f8f9fa;
+                }
+    
+                .logo img {
+                    max-height: 60px;
+                }
+    
+                .navbar {
+                    display: flex;
+                    gap: 20px;
+                }
+    
+                .navbar a {
+                    color: #333;
+                    text-decoration: none;
+                    font-size: 16px;
+                    transition: color 0.3s;
+                }
+    
+                .navbar a:hover {
+                    color: #007bff;
+                }
+    
+                .home .content {
+                    text-align: center;
+                    padding: 50px 20px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border-radius: 10px;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+    
+                .home .content h3 {
+                    font-size: 36px;
+                    color: #333;
+                    margin-bottom: 10px;
+                }
+    
+                .home .content span {
+                    font-size: 18px;
+                    color: #555;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+    
+                .home .content p {
+                    font-size: 16px;
+                    color: #666;
+                    margin-bottom: 30px;
+                }
+    
+                .home .content .btn {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    transition: background-color 0.3s;
+                }
+    
+                .home .content .btn:hover {
+                    background-color: #0056b3;
+                }
+            </style>
     </head>
 
     <body>
