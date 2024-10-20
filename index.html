@@ -23,6 +23,7 @@
         rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Swasthya Point</title>
     <style>
         body {
@@ -32,6 +33,67 @@
             min-height: 100vh;
             margin: 0;
         }
+
+        .card {
+            width: 270px;
+            height: 280px;
+            border: 1px solid #ced4da;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .card-body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body a{
+            position: absolute;
+            right: 200px;
+            bottom: 20px;
+            width: 50px;
+            font-size: 13px;
+        }
+
+        .card-body h5{
+            font-size: 18px;
+        }
+
+        .card-img-top{
+            width: 330px;
+            padding: 0;
+            margin: 0;
+            height: 150px;
+        }
+
+        .icons{
+            background-color: #ced4da;
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .icons-container{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .info{
+            margin-top: 20px;
+        }
+
+        .info h3{
+            font-size: 20px;
+        }
+
+        .info i{
+            font-size: 25px;
+            position: relative;
+            top: 35px;
+            right: 70px;
+        }
+
 
         #root {
             flex: 1;
@@ -132,6 +194,13 @@
             /* Smooth border transition */
         }
 
+        .form input {
+            height: 35px;
+            width: 250px;
+            font-size: 14px;
+            border: 1px solid #333;
+        }
+
         .form-control:focus {
             outline: none;
             /* Remove default outline */
@@ -170,8 +239,7 @@
 
 <body>
     <!-- header section starts -->
-
-    <header>
+       <header>
         <!-- <input type="checkbox" name="" id="toggler">
             <label for="toggler" class="fas fa-bars"></label> -->
         <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
@@ -223,6 +291,7 @@
 
         </nav>
     </header>
+    
 
 
     <!-- header section ends -->
@@ -232,15 +301,14 @@
 
     <section class="home" id="home">
 
-        <div class="content">
-            <h3>Your Health, Our Priority</h3>
-            <span>Personalized Care for Every Patient</span>
-            <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
+        <div class="content" style="text-align: center;">
+            <p style="font-size: 30px; text-align: center;">Your Health, Our Priority</p>
+            <span style="font-size: 20px; align-items: center;">Personalized Care for Every Patient</span>
+            <p style="font-size: 13px;">We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
                 your unique health needs.</p>
-            <a href="#" class="btn">EXPLORE</a>
         </div>
 
-        <div style="height: 100vh; filter: brightness(0.7);">
+        <div style="height: 100vh; margin-top: 20px; filter: brightness(0.7);">
 
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
                 style="height: 100%;">
@@ -289,20 +357,19 @@
 
         <div class="row">
 
-            <div class="video-container" data-aos="zoom-in-up">
+            <div class="video-container" data-aos="zoom-in-up" style=" text-align: center;">
                 <video src="img/about-video.mp4" loop autoplay muted></video>
-                <h3>who we are</h3>
+                <h3 style="font-size: 30px; margin-top: 20px;">who we are</h3>
             </div>
 
-            <div class="content" data-aos="fade-left" data-aos-duration="500">
-                <h3>Our Commitment to Healthcare</h3>
-                <p>Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
+            <div class="content" data-aos="fade-left" data-aos-duration="500" style="text-align: center;">
+                <h3 style="font-size: 20px;">Our Commitment to Healthcare</h3>
+                <p style="font-size: 13px;">Welcome to Swasthya Point! We have been dedicated to providing exceptional healthcare services to
                     our
                     community. </p>
-                <p>Our skilled team of professionals utilizes advanced technology to deliver personalized care
+                <p style="font-size: 13px;">Our skilled team of professionals utilizes advanced technology to deliver personalized care
                     across
                     various specialties, including emergency services and wellness programs.</p>
-                <a href="#" class="btn">Learn more</a>
 
 
             </div>
@@ -321,6 +388,7 @@
             <div class="info">
                 <h3>Pharmacy</h3>
                 <span>Prescription and medications.</span>
+                <i class="fa-solid fa-notes-medical"></i>
             </div>
         </div>
 
@@ -328,13 +396,14 @@
             <div class="info">
                 <h3>Maternity Care</h3>
                 <span>Support for new mothers</span>
+                <i class="fa-solid fa-person-breastfeeding"></i>
             </div>
         </div>
 
         <div class="icons" data-aos="fade-up" data-aos-duration="600">
             <div class="info">
                 <h3>Mental Health Services</h3>
-                <span>Emotional wellness support</span>
+                <i style="position: relative; top: 10px; left: 0px;" class="fa-solid fa-brain"></i>
             </div>
         </div>
 
@@ -354,69 +423,67 @@
     <section id="services" class="services">
         <div class="container">
 
-            <div class="section-title">
-                <h2>Services</h2>
-                <p><br></p>
-            </div>
+            <h1 class="heading"> <span> Services </span> </h1>
 
             <div class="row">
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-right">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic.jpeg" class="card-img-top serviceimgs" alt="Radiology">
-                        </div>
-                        <h4><a href="radiology.html">Radiology</a></h4>
-                        <p>To visualize internal structures and diagnose conditions.</p>
+                <div class="card">
+                    <img src="img/ic.jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Radiology</h5>
+                        <p class="card-text">Specializes in the medical care of infants, children.</p>
+                        <a href="radiology.html" class="btn btn-primary">More</a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-down">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic3.jpeg" class="card-img-top serviceimgs" alt="Psychiatrist">
-                        </div>
-                        <h4><a href="psychatry.html">Psychiatry</a></h4>
-                        <p>Specializes in mental health.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-left">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic5.jpeg" class="card-img-top serviceimgs" alt="Dermatology">
-                        </div>
-                        <h4><a href="dermatology.html">Dermatology</a></h4>
-                        <p>Diagnosis and treatment of skin, hair, and nail conditions.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-right">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic2.jpeg" class="card-img-top serviceimgs" alt="Blood Bank">
-                        </div>
-                        <h4><a href="bloodbank.html">Blood Bank</a></h4>
-                        <p>Transfusion medicine and blood donation center.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic4.jpeg" class="card-img-top serviceimgs" alt="Urologist">
-                        </div>
-                        <h4><a href="urology.html">Urology</a></h4>
-                        <p>Focuses on conditions affecting the urinary tract.</p>
-                    </div>
-                </div>
+                <div class="card">
+  <img src="img/ic6.jpeg" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="img/ic6.jpeg" class="btn btn-primary">More</a>
+  </div>
+</div>
 
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-left">
-                    <div class="icon-box">
-                        <div class="icon"><img src="img/ic6.jpeg" class="card-img-top serviceimgs" alt="Pediatrician">
-                        </div>
-                        <h4><a href="pediatrics.html">Pediatrician</a></h4>
-                        <p>Specializes in the medical care of infants, children.</p>
-                    </div>
-                </div>
+<div class="card">
+  <img src="img/ic4.jpeg" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Urology</h5>
+    <p class="card-text">Focuses on conditions affecting the urinary tract.</p>
+    <a href="urology.html" class="btn btn-primary">More</a>
+  </div>
+</div>
 
-            </div>
+
+<div class="card" >
+  <img src="img/ic2.jpeg" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Blood Bank</h5>
+    <p class="card-text">Transfusion medicine and blood donation center.</p>
+    <a href="bloodbank.html" class="btn btn-primary">More</a>
+  </div>
+</div>
+
+<div class="card" >
+  <img src="img/ic5.jpeg" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Dermatology</h5>
+    <p class="card-text">Diagnosis and treatment of skin, hair, and nail conditions.</p>
+    <a href="dermatology.html" class="btn btn-primary">More</a>
+  </div>
+</div>
+
+
+<div class="card" >
+  <img src="img/ic3.jpeg" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Psychiatry</h5>
+    <p class="card-text">Specializes in mental health.</p>
+    <a href="psychatry.html" class="btn btn-primary">More</a>
+  </div>
+</div>
+</div>
 
         </div>
     </section>
@@ -609,6 +676,8 @@
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="row g-4">
+                        <h1 class="heading"> <span> Contact </span> Us </h1>
+
                         <div class="col-lg-4 text-[15px]">
                             <div
                                 class="h-100 bg-light rounded d-flex align-items-center p-5 transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-100">
@@ -648,10 +717,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="bg-light rounded p-5">
-                            <p class="d-inline-block  border rounded-pill py-1 px-4 " style="color: #000;">Contact Us
-                            </p>
+                    <div class="col-lg-6">
+                        <div style=" width: 600px; margin-top: 20px;">
+                            <h1 style=" font-size: 20px;">Contact Us</h1>
                             <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
 
                             <form>
@@ -673,8 +741,7 @@
                                     <div class="col-md-6">
                                         <div class="form">
                                             <input type="tel" class="form-control" id="phone" name="phone"
-                                                placeholder="Your Phone Number" required
-                                                style=" height: 50px; font-size: 15px;">
+                                                placeholder="Your Phone Number" required>
                                             <label for="phone">Your Phone Number</label>
                                         </div>
                                     </div>
@@ -688,20 +755,22 @@
                                     <div class="col-12">
                                         <div class="form">
                                             <input type="text" class="form-control" id="subject" name="subject"
-                                                placeholder="Subject" required>
+                                                placeholder="Subject" required style=" width: 555px;">
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form">
                                             <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" name="message" style="height: 100px ; font-size: 15px;"
+                                                id="message" name="message"
+                                                style="height: 100px ; font-size: 15px; width: 555px; border: 1px solid #333;"
                                                 required></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-center">
-                                        <button class="btn btn-primary w-100 py-3" id="contact">Send
+                                        <button class="btn btn-primary" id="contact"
+                                            style="position: relative; right: 180px;">Send
                                             Message</button>
                                     </div>
                                 </div>
@@ -724,10 +793,12 @@
 
     </div>
     <footer>
-        /* <p class="m-0" style="text-align: center; ">&copy; 2024 Swasthya Point</p> */
+        <p class="m-0" style="text-align: center; padding-top: 10px;">&copy; 2024 Swasthya Point</p>
     </footer>
     </div>
-
+    </div>
+    </div>
+    </section>
     <script>
         var content = document.getElementsByTagName('body')[0];
         var darkMode = document.getElementById('dark-change');
@@ -740,7 +811,7 @@
     <script>
         // Get the form and submit button
         const form = document.querySelector('form');
-        const submitButton = document.querySelector(#contact);
+        const submitButton = document.querySelector('#contact');
 
         // Add an event listener to the submit button
         submitButton.addEventListener('click', function (event) {
@@ -772,161 +843,30 @@
 
     </main>
 
-    <footer class="bg-red-500 h-[30vh]">
-        <!-- <div class="footercolor"> -->
-        <section class="footer" id="footer" style="background-color: black ">
-            <hr> <!-- Horizontal line -->
-
-            <!-- Parent div wrapping all footer content -->
-            <div class="footer-row">
-
-                <!-- Child div for 'About Scruter' -->
-                <div class="footer-column">
-                    <h3>About Swasthy</h3>
-                   <div class="text-white, text-2xl">Swasthy provides online consultations, health information, diagnostic tests, and affordable
-                    services across various specialties, ensuring accessible healthcare for all.</div>
+    <footer class="bg-gray-900">
+        <div class="container mx-auto">
+            <div class="row py-4 flex justify-center">
+                <div class="col-md-5 text-white hover:text-blue-400">
+                    <h5 class="text-xl font-semibold hover:text-blue-400" style="font-size: 20px;">Medical</h5><br>
+                    <p class="hover:text-blue-300">Prioritize your health<br> with top healthcare providers,<br>
+                        personalized treatments, and <br>easy management of your health journey.</p>
                 </div>
+                <div class="col-md-4 text-white hover:text-blue-400">
+                    <h5 class="text-xl font-semibold hover:text-blue-400">New York</h5>
+                    <p class="hover:text-blue-300">
+                        709 Honey Creek Dr, Delhi NY 10028,1-888-299-2000,medical.in
+                    </p>
 
-                <!-- Child div for 'Quick Links' -->
-                <div class="footer-column">
-                    <h3 class="ml-20">Quick Links</h3>
-                    <a class="ml-20" href="#">About Us</a>
-                    <a class="ml-20" href="#">Our Team</a>
-                    <a class="ml-20" href="#">Privacy Policy</a>
-                    <a class="ml-20" href="#">Terms of Service</a>
-                    <a class="ml-20" href="#">Our Contributors</a>
+
+                    <h2 class="text-xl font-semibold hover:text-blue-400">Aligarh</h2>
+                    <p class="hover:text-blue-300">
+                        4851 Willow Greene Drive Montgomery AL 36109,1-888-299-2000,med
+                    </p>
+
                 </div>
-
-                <!-- Child div for 'Help Desk' -->
-                <div class="footer-column">
-                    <h3>Help Desk</h3>
-                    <a href="#">Help Center</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Support</a>
-                </div>
-
-                <!-- Child div for 'Follow Us' -->
-                <div class="footer-column">
-                    <h3 class="ml-40">Follow Us</h3>
-                    <div  class="social-icons">
-                        <a  href="#"><i class="fa-brands fa-linkedin "></i></a>
-                        <a  href="#"><i class="fa-brands fa-facebook "></i></a>
-                        <a  href="#"><i class="fa-brands fa-x-twitter "></i></a> <!-- Updated X icon -->
-                        <a  href="#"><i class="fa-brands fa-instagram "></i></a>
-                        <a  href="#"><i class="fa-brands fa-pinterest "></i></a>
-                    </div>
-                </div>
-
             </div>
-
-            <!-- Footer credit -->
-            <div class="credit">
-                <p>Made with ❤ by Team Swasthya.</p>
-            </div>
-        </section>
-        <!-- </div> -->
-
-        <!-- Footer Section Ends Here -->
+        </div>
     </footer>
-
-    <style>
-        /* Footer styles */
-
-
-        .footer {
-            padding: 20px;
-            background-color: #FF6F61;
-            /* Ice cream color */
-            color: white;
-            width: 100%;
-        }
-
-        .footer hr {
-            border: 0;
-            border-top: 1px solid white;
-            margin: 20px 0;
-        }
-
-        /* Parent div styling */
-        .footer-row {
-            display: flex;
-            justify-content: space-between;
-            /* Ensures space between child divs */
-            flex-wrap: nowrap;
-            /* Prevent wrapping */
-            align-items: flex-start;
-            /* Aligns child divs at the top */
-        }
-        .footer p{
-            font-size: 1vw;
-           
-        }
-
-        /* Child div styling */
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            /* Ensures child divs do not shrink too much */
-            margin: 0 15px;
-        }
-
-        .footer h3 {
-            margin-bottom: 10px;
-            font-size: 1.5vw;
-            color: white;
-        }
-
-        .footer a {
-            display: block;
-            color: white;
-            transition: color 0.3s;
-            margin-bottom: 5px;
-            size: 1vw;
-        }
-
-        .footer a:hover {
-            color: #ddd;
-            /* Subtle hover effect */
-        }
-
-        /* Social icons container */
-        .footer .social-icons {
-            display: flex;
-            justify-content: center;
-            font-size: large;
-           
-            /* Center align icons */
-        }
-
-      .footer a{
-        font-size: 1vw;
-      }
-        .footer .social-icons a {
-            margin: 0 10px;
-            color: white;
-            transition: color 0.3s;
-            margin-top: 2vw;
-            margin-right: 2vw;
-           
-        }
-
-        .footer .social-icons a:hover {
-            color: #ddd;
-            /* Subtle hover effect */
-        }
-
-        /* Footer credit */
-        .footer .credit {
-            margin-top: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Footer Styles */
-    </style>
-
-
 
 
     <script> configObj = {
@@ -1026,11 +966,11 @@
     <script>
         AOS.init();
     </script>
-    <footer style="background-color: red;">
+    <footer style="background-color: black;">
 
 
 
-        <ul class="social-list" style="display: none; margin-left: 1310px;">
+        <ul class="social-list" style="display: flex; margin-left: 1310px;">
 
 
             <li>
@@ -1065,6 +1005,9 @@
     <script> window.chtlConfig = { chatbotId: "7945237894" } </script>
     <script async data-id="7945237894" id="chatling-embed-script" type="text/javascript"
         src="https://chatling.ai/js/embed.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
 
