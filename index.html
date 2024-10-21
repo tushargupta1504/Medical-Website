@@ -21,6 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&amp;family=Open+Sans&amp;display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Swasthya Point</title>
@@ -170,59 +173,30 @@
 
 <body>
     <!-- header section starts -->
+    <nav class="navbar">
+        <div class="logo"><img src="./img/swasthya-logo.png" alt=""></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="menu"><i class="fa-solid fa-bars"></i></div>
+        </ul>
+    </nav>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
 
-    <header>
-        <!-- <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label> -->
-        <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
-        <div id="shownav"><img src="./img/menu.svg" alt="show menu"></div>
-        <nav class="navbar">
-            <div class="dark-btn-navbar">
-                <label id="dark-change"></label>
-            </div>
-            <div id="hidenav"> <img src="./img/cross.svg" alt="Hide Menu"></div>
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <a href="blog.html">Blogs</a>
-            <a href="write_own_blog.html">Your blog</a>
-            <a href="reviews.html">Share Experience</a>
-            <a href="nearby.html">Nearby</a>
-
-
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Appointments</a>
-                <div class="dropdown-content">
-                    <a href="appointment.html">Book Appointment</a>
-                    <a href="https://yourcompany.setmore.com">Schedule & Reminder</a>
-                </div>
-            </div>
-
-            <!-- Login dropdown -->
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Login</a>
-                <div class="dropdown-content">
-                    <a href="user_login.html">User Login</a>
-                    <a href="#">Doctor Login</a>
-                    <a href="#">Admin Login</a>
-                </div>
-            </div>
-
-            <div class="dark-btn-navbar">
-                <label id="dark-change"></label>
-            </div>
-
-
-            <a href="appointment.html"><span>Book Your Appointment</span></a>
-            <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-            <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
-            <a href="user_login.html">User Login</a>
-            <a href="doctor_login">Doctor Login</a>
-            <a href="admin_login">Admin Login</a>
-
-        </nav>
-    </header>
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
 
 
     <!-- header section ends -->
@@ -783,8 +757,9 @@
                 <!-- Child div for 'About Scruter' -->
                 <div class="footer-column">
                     <h3>About Swasthy</h3>
-                   <div class="text-white, text-2xl">Swasthy provides online consultations, health information, diagnostic tests, and affordable
-                    services across various specialties, ensuring accessible healthcare for all.</div>
+                    <div class="text-white, text-2xl">Swasthy provides online consultations, health information,
+                        diagnostic tests, and affordable
+                        services across various specialties, ensuring accessible healthcare for all.</div>
                 </div>
 
                 <!-- Child div for 'Quick Links' -->
@@ -809,12 +784,12 @@
                 <!-- Child div for 'Follow Us' -->
                 <div class="footer-column">
                     <h3 class="ml-40">Follow Us</h3>
-                    <div  class="social-icons">
-                        <a  href="#"><i class="fa-brands fa-linkedin "></i></a>
-                        <a  href="#"><i class="fa-brands fa-facebook "></i></a>
-                        <a  href="#"><i class="fa-brands fa-x-twitter "></i></a> <!-- Updated X icon -->
-                        <a  href="#"><i class="fa-brands fa-instagram "></i></a>
-                        <a  href="#"><i class="fa-brands fa-pinterest "></i></a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook "></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter "></i></a> <!-- Updated X icon -->
+                        <a href="#"><i class="fa-brands fa-instagram "></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest "></i></a>
                     </div>
                 </div>
 
@@ -858,9 +833,10 @@
             align-items: flex-start;
             /* Aligns child divs at the top */
         }
-        .footer p{
+
+        .footer p {
             font-size: 1vw;
-           
+
         }
 
         /* Child div styling */
@@ -895,20 +871,21 @@
             display: flex;
             justify-content: center;
             font-size: large;
-           
+
             /* Center align icons */
         }
 
-      .footer a{
-        font-size: 1vw;
-      }
+        .footer a {
+            font-size: 1vw;
+        }
+
         .footer .social-icons a {
             margin: 0 10px;
             color: white;
             transition: color 0.3s;
             margin-top: 2vw;
             margin-right: 2vw;
-           
+
         }
 
         .footer .social-icons a:hover {
