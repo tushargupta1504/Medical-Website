@@ -14,9 +14,19 @@
     
 //     lastScrollTop = scrollTop;
 // });
+
+// window.addEventListener('scroll', function(){
+//  var header = document.getElementById('navbar-head');
+//  header.classList.toggle("sticky", window.scrollY>80);
+// })
+
 window.addEventListener('scroll', function(){
- var header = document.querySelector('.navbar');
- header.classList.toggle("sticky", window.scrollY>0);
-})
+    var header = document.getElementById('navbar-head');
+    var scrollPosition = window.scrollY;
 
-
+    if(scrollPosition > 30) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
