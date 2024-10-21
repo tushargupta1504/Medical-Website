@@ -72,7 +72,95 @@ section{
     padding: 2rem 9%;
 }
 
-.heading{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    width: 170px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+   
+}
+
+.nav-list a:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 3px 0;
+}
+.menu{
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .nav-list a {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    .logo{
+        width: 100px;
+    }
+    .bar{
+        margin-left: 500px;
+        margin-bottom: ;
+    }
+
+ 
+}
+
+
+/* .heading{
     text-align: center;
     font-size: 4rem;
     color: #333;
@@ -87,7 +175,7 @@ section{
 
 .btn{
     /* display: inline-block; */
-    margin-top: 1rem;
+    /* margin-top: 1rem;
     margin-left: 30rem;
     border-radius: 5rem;
     background: #333;
@@ -201,7 +289,7 @@ header .navbar a{
 .navbar a:hover{
     background-color: white;
     color: black;
-}
+} */ */
 
 .dropdown {
     position: relative;
