@@ -102,17 +102,30 @@ section{
     background: var(--blue);
 }
 
-header{
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        width: 100%;
-        height: 80px;
-        background: rgba(243, 239, 239, 0.8);
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 1100;
+#navbar-head {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(243, 239, 239, 0.8);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 90;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar-head.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transform: translateY(0);
+}
+
+#navbar-head:not(.sticky) {
+    transform: translateY(0px);
 }
 
 .logo

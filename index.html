@@ -171,7 +171,7 @@
 <body>
     <!-- header section starts -->
 
-    <header>
+    <header id="navbar-head">
         <!-- <input type="checkbox" name="" id="toggler">
             <label for="toggler" class="fas fa-bars"></label> -->
         <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
@@ -1002,25 +1002,32 @@
         });
         lightbox.init();
     </script>
-    <script>
+    <script>    
         const show = document.getElementById("shownav");
         const navbar = document.querySelector('.navbar');
+        const hide = document.getElementById("hidenav");
+
         show.addEventListener('click', () => {
             console.log("show clicked");
             navbar.style.right = '0%';
             show.style.display = 'none'
-        })
-        const hide = document.getElementById("hidenav");
+        });
+
         hide.addEventListener('click', () => {
             console.log("hide clicked");
             navbar.style.right = '-100%';
             show.style.display = 'block'
         })
-        navbar.addEventListener('click', () => {
-            console.log("hide clicked");
-            navbar.style.right = '-100%';
-            show.style.display = 'block'
-        })
+
+        document.addEventListener('click', (event) => {
+            const clickedInsideNavbar = navbar.contains(event.target) || show.contains(event.target);
+            if (!clickedInsideNavbar) {
+                console.log("Clicked outside navbar");
+                navbar.style.right = '-100%';
+                show.style.display = 'block';
+            }
+        });
+
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
