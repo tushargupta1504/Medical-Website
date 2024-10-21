@@ -530,129 +530,75 @@ body.night .mb-0{
 
 section {
     padding: 60px 0;
-    overflow: hidden;
+    background-color: #f7f9fc;
 }
 
 .section-title {
     text-align: center;
     padding-bottom: 30px;
-  }
-  
-  .section-title h2 {
+}
+
+.section-title h2 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
     color: #2c4964;
-  }
-  
-  .section-title h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: #ddd;
-    bottom: 1px;
-    left: calc(50% - 60px);
-  }
-  
-  .section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: #1977cc;
-    bottom: 0;
-    left: calc(50% - 20px);
-  }
-  
-  .section-title p {
-    margin-bottom: 0;
-  }
+}
 
 .services .icon-box {
-    text-align: center;
-    background: linear-gradient(106deg,#858383,#ffffff);
-    border: none;
-    padding: 20px 20px 20px 20px;
-    transition: all ease-in-out 0.5s;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    height: 320px;
     width: 95%;
-    border-radius: 4%;
-  }
-  
-  .services .icon-box .icon {
-    margin: 0 auto;
-    width: 140px;
-    height: 140px;
-    background: #ffffff;
-    border-radius: 20%;
-    transition: all 0.3s ease-out 0s;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    transform-style: preserve-3d;
-  }
-  
-  .services .icon-box .icon i {
-    color: #fff;
-    font-size: 28px;
-  }
-  
-  .services .icon-box .icon::before {
+    align-items: flex-end;
+    padding: 20px;
+    margin: 15px;
+}
+
+.card-background {
     position: absolute;
-    content: "";
-    left: -8px;
-    top: -8px;
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #badaf7;
-    border-radius: 20%;
-    transition: all 0.3s ease-out 0s;
-    transform: translateZ(-1px);
-  }
-  
-  .services .icon-box h4 {
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 24px;
-  }
-  
-  .services .icon-box h4 a {
-    color: #4b4d4f;
-  }
-  
-  .services .icon-box p {
-    line-height: 24px;
-    font-size: 18px;
-    margin-bottom: 0;
-  }
-  
-  .services .icon-box:hover {
-    background: #b9cee1;
-    border-color: #7b7b7b;
-    transform: scale(1.05);
-  }
-  
-  .services .icon-box:hover .icon {
-    background: #fff;
-  }
-  
-  .services .icon-box:hover .icon i {
-    color: #1977cc;
-  }
-  
-  .services .icon-box:hover .icon::before {
-    background: #3291e6;
-  }
-  
-  .services .icon-box:hover h4 a,
-  .services .icon-box:hover p {
-    color: #fff;
-  }
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.card-content h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 16px;
+}
+
+.services .icon-box:hover {
+    transform: scale(1.08);
+}
+
+.services .icon-box:hover .card-background {
+    transform: scale(1.25);
+    
+}
   
 body.night .mb-4{
     color: #000;
@@ -665,7 +611,7 @@ body.night .mb-4{
 }
 
 .w-50 {
-    width: 50%; /* Adjust the width as necessary */
+    width: 50%; 
 }
 
 
