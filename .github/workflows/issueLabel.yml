@@ -1,16 +1,18 @@
-name: issue labeler workflow
-
+# .github/workflows/issue-labeler.yml
+name: "Issue Labeler"
 on:
   issues:
-    types: ["opened"]
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
 
 jobs:
-  Issue-Labeler:
-    name: issue labeler
+  triage:
     runs-on: ubuntu-latest
     steps:
-      - uses: Renato66/auto-label@v2.3.0
+      - uses: github/issue-labeler@v3.3
         with:
+          configuration-path: .github/issue-labeler.yml
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          ignore-comments: true
-          default-labels: '["Triage"]'
