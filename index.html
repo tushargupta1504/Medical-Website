@@ -20,87 +20,101 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Swasthya Point</title>
         <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
+            body {
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+            }
 
-        #root {
-            flex: 1;
-        }
+            #root {
+                flex: 1;
+            }
 
-        .follow-us {
-            -ms-flex-align: center;
-            display: flex;
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto; /* Keep this at the bottom */
-        }
+            .follow-us {
+                -ms-flex-align: center;
+                display: flex;
+                background-color: #f4f4f4;
+                padding: 20px;
+                text-align: center;
+                margin-top: auto;
+                /* Keep this at the bottom */
+            }
 
-        .follow-us h2 {
-            color: grey; /* Grey color for the heading */
-            font-size: 28px; /* Increased size for the heading */
-            margin-bottom: 15px; /* Space between heading and icons */
-        }
+            .follow-us h2 {
+                color: grey;
+                /* Grey color for the heading */
+                font-size: 28px;
+                /* Increased size for the heading */
+                margin-bottom: 15px;
+                /* Space between heading and icons */
+            }
 
-        .follow-us a {
-            margin: 0 15px;
-            color: grey; /* Grey color for icons */
-            text-decoration: none;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 3;
-            transition: color 0.5s ease-in-out;
-        }
-        @property --fill{
-            syntax: '<percentage>';
+            .follow-us a {
+                margin: 0 15px;
+                color: grey;
+                /* Grey color for icons */
+                text-decoration: none;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: relative;
+                z-index: 3;
+                transition: color 0.5s ease-in-out;
+            }
+
+            @property --fill {
+                syntax: '<percentage>';
                 inherits: true;
                 initial-value: 0%;
             }
-        .follow-us a::after{
-            position: absolute;
-            z-index: -1;
-            content: '';
-            inset: -3px;
-            border-radius: inherit;
-            background: conic-gradient(var(--iconbg) var(--fill),transparent var(--fill));
-            transition: --fill 0.6s ease-in-out;
-        }
-        .follow-us a::before{
-            position: absolute;
-            content: '';
-            inset: -1px;
-            border-radius: inherit;
-            background-color: #fff;
-            z-index: 0;
-        }
 
-        .follow-us a:hover {
-            color: var(--iconbg); /* Change color on hover */
-            --fill:100%
-        }
+            .follow-us a::after {
+                position: absolute;
+                z-index: -1;
+                content: '';
+                inset: -3px;
+                border-radius: inherit;
+                background: conic-gradient(var(--iconbg) var(--fill), transparent var(--fill));
+                transition: --fill 0.6s ease-in-out;
+            }
 
-        .follow-us a:focus {
-            outline: 2px solid var(--iconbg);
-            outline-offset: 2px;
-        }
+            .follow-us a::before {
+                position: absolute;
+                content: '';
+                inset: -1px;
+                border-radius: inherit;
+                background-color: #fff;
+                z-index: 0;
+            }
 
-        .follow-us img {
-            width: 50px; /* Set logo size */
-            height: 50px;
-            filter: grayscale(100%); /* Grey color for icons */
-            transition: filter 0.3s; /* Smooth transition effect */
-        }
+            .follow-us a:hover {
+                color: var(--iconbg);
+                /* Change color on hover */
+                --fill: 100%
+            }
 
-        .follow-us a:hover img {
-            filter: grayscale(0%); /* Color on hover */
-        }
+            .follow-us a:focus {
+                outline: 2px solid var(--iconbg);
+                outline-offset: 2px;
+            }
+
+            .follow-us img {
+                width: 50px;
+                /* Set logo size */
+                height: 50px;
+                filter: grayscale(100%);
+                /* Grey color for icons */
+                transition: filter 0.3s;
+                /* Smooth transition effect */
+            }
+
+            .follow-us a:hover img {
+                filter: grayscale(0%);
+                /* Color on hover */
+            }
+
             /* General styles for contact form inputs */
             .form-control {
                 background-color: #fff;
@@ -625,7 +639,8 @@
                                             <div class="col-md-6">
                                                 <div class="form">
                                                     <input type="tel" class="form-control" id="phone" name="phone"
-                                                        placeholder="Your Phone Number" required style=" height: 50px; font-size: 15px;">
+                                                        placeholder="Your Phone Number" required
+                                                        style=" height: 50px; font-size: 15px;">
                                                     <label for="phone">Your Phone Number</label>
                                                 </div>
                                             </div>
@@ -646,8 +661,8 @@
                                             <div class="col-12">
                                                 <div class="form">
                                                     <textarea class="form-control" placeholder="Leave a message here"
-                                                        id="message" name="message" style="height: 100px ; font-size: 15px;"
-                                                        required></textarea>
+                                                        id="message" name="message"
+                                                        style="height: 100px ; font-size: 15px;" required></textarea>
                                                     <label for="message">Message</label>
                                                 </div>
                                             </div>
@@ -676,7 +691,7 @@
             </div>
             <footer>
                 <p class="m-0" style="text-align: center; padding-top: 10px;">&copy; 2024 Swasthya Point</p>
-              </footer>
+            </footer>
         </div>
         </div>
         </div>
@@ -692,35 +707,35 @@
 
         <script>
             // Get the form and submit button
-const form = document.querySelector('form');
-const submitButton = document.querySelector('#contact');
+            const form = document.querySelector('form');
+            const submitButton = document.querySelector('#contact');
 
-// Add an event listener to the submit button
-submitButton.addEventListener('click', function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
+            // Add an event listener to the submit button
+            submitButton.addEventListener('click', function (event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
 
-    // Get the input fields
-    const nameInput = document.querySelector('#name');
-    const emailInput = document.querySelector('#email');
-    const phoneInput = document.querySelector('#phone');
-    const cityInput = document.querySelector('#city');
-    const subjectInput = document.querySelector('#subject');
-    const messageInput = document.querySelector('#message');
+                // Get the input fields
+                const nameInput = document.querySelector('#name');
+                const emailInput = document.querySelector('#email');
+                const phoneInput = document.querySelector('#phone');
+                const cityInput = document.querySelector('#city');
+                const subjectInput = document.querySelector('#subject');
+                const messageInput = document.querySelector('#message');
 
-    // Clear the input fields
-    nameInput.value = '';
-    emailInput.value = '';
-    phoneInput.value = '';
-    cityInput.value = '';
-    subjectInput.value = '';
-    messageInput.value = '';
+                // Clear the input fields
+                nameInput.value = '';
+                emailInput.value = '';
+                phoneInput.value = '';
+                cityInput.value = '';
+                subjectInput.value = '';
+                messageInput.value = '';
 
-    // Display an alert
-    alert('Your details have been submitted!');
-});
+                // Display an alert
+                alert('Your details have been submitted!');
+            });
         </script>
-      
+
 
 
         </main>
@@ -730,7 +745,9 @@ submitButton.addEventListener('click', function(event) {
                 <div class="row py-4 flex justify-center">
                     <div class="col-md-5 text-white hover:text-blue-400">
                         <h5 class="text-xl font-semibold hover:text-blue-400">Medical</h5>
-                        <p class="hover:text-blue-300">Putting your health first. Connect with top-tier healthcare providers, receive personalized treatment recommendations, and manage your health journey effortlessly.</p>
+                        <p class="hover:text-blue-300">Putting your health first. Connect with top-tier healthcare
+                            providers, receive personalized treatment recommendations, and manage your health journey
+                            effortlessly.</p>
                     </div>
                     <div class="col-md-4 text-white hover:text-blue-400">
                         <h5 class="text-xl font-semibold hover:text-blue-400">New York</h5>
@@ -749,8 +766,6 @@ submitButton.addEventListener('click', function(event) {
                 </div>
             </div>
         </footer>
-        
-        \end{code}
         <script> configObj = {
                 "buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z", "buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",
                 "shadowSize": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -827,28 +842,28 @@ submitButton.addEventListener('click', function(event) {
         <script>
             const show = document.getElementById("shownav");
             const navbar = document.querySelector('.navbar');
-            show.addEventListener('click',()=>{
+            show.addEventListener('click', () => {
                 console.log("show clicked");
-                navbar.style.right='0%';
-                show.style.display='none'
+                navbar.style.right = '0%';
+                show.style.display = 'none'
             })
             const hide = document.getElementById("hidenav");
-            hide.addEventListener('click',()=>{
+            hide.addEventListener('click', () => {
                 console.log("hide clicked");
-                navbar.style.right='-100%';
-                show.style.display='block'
+                navbar.style.right = '-100%';
+                show.style.display = 'block'
             })
-            navbar.addEventListener('click',()=>{
+            navbar.addEventListener('click', () => {
                 console.log("hide clicked");
-                navbar.style.right='-100%';
-                show.style.display='block'
+                navbar.style.right = '-100%';
+                show.style.display = 'block'
             })
         </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
-   
+
 
     </body>
     <div class="follow-us">
@@ -858,8 +873,9 @@ submitButton.addEventListener('click', function(event) {
         <a href="https://x.com/tushargupta1504" target="_blank" style="--iconbg:#01A9F4;">
             <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter Logo" />
         </a>
-        <a href="https://github.com/tushargupta1504" target="_blank" style="--iconbg:#5C6BC0;" >
+        <a href="https://github.com/tushargupta1504" target="_blank" style="--iconbg:#5C6BC0;">
             <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub Logo" />
         </a>
     </div>
+
 </html>

@@ -2,499 +2,332 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="blog.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
-            integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Swasthya Point</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="A Online Blood bank by sigma NGO, Abhijeet Sharma">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <meta name="theme-color" content="#d2190b">
+
+        <title> The Online Blood Bank </title>
+
+        <link rel="stylesheet" href="../static/css/blood_w3.css">
+        <link rel="stylesheet" href="../static/css/blood_app.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <style>
-            /* General styles for contact form inputs */
-            .form-control {
-                background-color: #fff;
-                /* White background */
-                border: 1px solid #ced4da;
-                /* Light border */
-                border-radius: 0.5rem;
-                /* Rounded corners */
-                transition: border-color 0.3s;
-                /* Smooth border transition */
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Lato", sans-serif
             }
 
-            .form-control:focus {
-                outline: none;
-                /* Remove default outline */
-                box-shadow: none;
-                /* Remove any shadow */
-                border-color: #007bff;
-                /* Change border color on focus */
+            .w3-bar,
+            h1,
+            button {
+                font-family: "Montserrat", sans-serif
             }
 
-            /* Add custom styles for buttons */
-            .btn {
-                background-color: #007bff;
-                /* Primary color */
-                border: none;
-                /* Remove border */
-                color: #fff;
-                /* White text */
-                transition: background-color 0.3s;
-                /* Smooth background transition */
+            .fa-anchor,
+            .fa-coffee {
+                font-size: 200px
             }
 
-            .btn:hover {
-                background-color: #0056b3;
-                /* Darker shade on hover */
-            }
-            .our_radio_service{
-                size: 20px;
+            /* Smooth */
+            html {
+                scroll-behavior: smooth;
             }
 
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 20px;
-                    /* Adjust padding on smaller screens */
-                }
-            }
-            .list-group-item {
-                background-color: transparent; 
-                color: inherit;
+            /* stop to select */
+            body {
+                -webkit-user-select: none;
+                -moz-user-select: -moz-none;
+                -ms-user-select: none;
+                user-select: none
             }
 
+            /* scollbar */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #ff8981;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: rgb(255, 255, 255);
+                border: 1px solid rgb(59, 59, 59)
+            }
+
+            /* ::-webkit-scrollbar-thumb:hover { background: rgb(104, 104, 104); } */
         </style>
+
+        <link rel="icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png" />
+
     </head>
 
-    <body>
-        <!-- header section starts -->
+    <body oncontextmenu="return false">
 
-        <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+                <a rel="noreferrer" aria-label="menu"
+                    class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-red w3-large w3-red"
+                    href="javascript:void(0);" onclick="toggleNavBar()"><i class="fa fa-bars"></i></a>
+                <!-- <a rel="noreferrer" class="w3-bar-item w3-button w3-padding-large w3-white">RakhtaCharitra.org</a> -->
+                <a rel="noreferrer" href="index.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> <i
+                        class="fa fa-home"></i> Home </a>
+                <a rel="noreferrer" href="donor.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> <i
+                        class="fa fa-envira"></i> Donor </a>
+                <a rel="noreferrer" href="search.html"
+                    class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> <i
+                        class="fa fa-search"></i> Search </a>
+                <input class="search-bar w3-input w3-bar-item  w3-hide-medium w3-hide-small w3-padding-large"
+                    type="search" placeholder="  Search Donor near you  ">
+            </div>
 
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
-            <a href="#" class="logo"><img src="img/swasthya-logo.png"></a>
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+                <a rel="noreferrer" href="index.html" class="w3-bar-item w3-button w3-padding-large"> <i
+                        class="fa fa-home"></i> Home </a>
+                <a rel="noreferrer" href="donor.html" class="w3-bar-item w3-button w3-padding-large"> <i
+                        class="fa fa-envira"></i> Donor </a>
+                <a rel="noreferrer" href="search.html" class="w3-bar-item w3-button w3-padding-large"> <i
+                        class="fa fa-search"></i> Search </a>
+            </div>
+        </div>
 
-            <nav class="navbar">
-
-                <a href="index.html#home">Home</a>
-                <a href="index.html#about">About Us</a>
-                <a href="index.html#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="blog.html">Blogs</a>
-                <a href="nearby.html">Nearby</a>
-                <a href="appointment.html"><span>Book Your Appointment</span></a>
-
-                <div class="dark-btn-navbar">
-                    <label id="dark-change"></label>
-                </div>
-                <!--telehealth reminders and schedules--><a href="https://yourcompany.setmore.com">Schedule
-                    Appointment</a>
-                <a href="https://yourcompany.setmore.com">Schedule Appointment</a>
-                <a href="#setmore_widget"><span>Schedule And Reminder</span></a>
-                <a href="user_login.html">User Login</a>
-                <a href="#">Doctor Login</a>
-                <a href="#">Admin Login</a>
-            </nav>
-
+        <!-- Header -->
+        <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+            <h1 class="w3-margin w3-jumbo">
+                The Online Blood Bank
+                <i class="w3-animate-fading fa fa-heartbeat" style="animation-duration: 1.8s;"></i>
+            </h1>
+            <h3> Govt of Delhi</h3>
+            <a href="#register" class="get-started w3-button w3-black w3-padding-large w3-large w3-margin-top">
+                <i class="fa fa-medkit"></i>
+                Get Started
+            </a>
         </header>
 
-        <!-- header section ends -->
+        <!-- First Grid -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1> Hello India! </h1>
+                    <h4 class="w3-padding-32"> We Welcomes You to the Blood Bank database in our WebSite. If you are a
+                        donor
+                        , We appreciate you signing up online as a Donor. If you need blood we are happy to help you.
+                    </h4>
 
+                    <h5>This blood donor list is hosted by Sigma NGO on behalf of City Hospital as a
+                        public service without any profit motive. This is a free service.
+                    </h5>
+                </div>
 
-        <!-- home section starts -->
-
-        <section class="home" id="home">
-
-            <div class="content">
-                <h3>Your Health, Our Priority</h3>
-                <span>Personalized Care for Every Patient</span>
-                <p>We believe in a patient-centered approach, offering a wide range of medical services tailored to meet
-                    your unique health needs.</p>
-                <a href="#" class="btn">EXPLORE</a>
-            </div>
-
-            <div style="height: 100vh; filter: brightness(0.7);">
-
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                    style="height: 100%;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner" style="height: 100%;">
-                        <div class="carousel-item active">
-                            <img src="./img/HD-wallpaper-medical-hospital.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/medicine-healthcare-people-conce.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/surgery-1822458_640.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                <div class="w3-third w3-center">
+                    <i style="font-size: 200px" class="w3-animate-zoom fa fa-tint w3-padding-64 w3-text-red"></i>
                 </div>
             </div>
-
-        </section>
-
-
-        <!-- home section ends-->
-
-        <!-- about section starts -->
-
-        <section class="about container-fluid py-5" id="about">
-            <div class="container">
-                <h1 class="heading text-center mb-5"> 
-                    <span class="text-primary">Blood Bank</span> 
-                </h1>
-        
-                <div class="row">
-                    <div class="col-md-12" data-aos="fade-left" data-aos-duration="500">
-                        <h3 class="mb-4 fs-2">Advanced Blood Bank Services</h3>
-                        <p class="mb-5 fs-5">At Swasthya Point, we provide comprehensive blood bank services to ensure safe and timely access to blood products for patients in need. Our state-of-the-art facility adheres to the highest standards of quality and safety, enabling us to meet the transfusion needs of our community.</p>
-                        
-                        <h4 class="our_radio_service mb-4 text-primary fs-3">Our Blood Bank Services</h4>
-                        <p class="mb-4 fs-5">We offer a full range of blood bank services to support patient care:</p>
-        
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">1. Blood Donation</h5>
-                                <p class="fs-5">We organize regular blood donation drives and provide facilities for voluntary blood donations to ensure a steady supply of blood for those in need.</p>
-                                <p class="fs-6"><strong>Donation Types:</strong> Whole blood, platelets, and plasma donations.</p>
-                            </li>
-        
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">2. Blood Collection and Testing</h5>
-                                <p class="fs-5">Our trained staff collects blood samples and conducts thorough testing to ensure the safety and compatibility of blood products before transfusion.</p>
-                                <p class="fs-6"><strong>Testing Includes:</strong> Infectious disease screening, blood typing, and cross-matching.</p>
-                            </li>
-        
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">3. Component Separation</h5>
-                                <p class="fs-5">We utilize advanced technology to separate blood into its components—such as red blood cells, plasma, and platelets—allowing for more targeted treatment options for patients.</p>
-                                <p class="fs-6"><strong>Benefits:</strong> Efficient use of blood products and tailored therapies for various medical conditions.</p>
-                            </li>
-        
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">4. Blood Transfusion Services</h5>
-                                <p class="fs-5">Our blood transfusion services ensure that patients receive safe and appropriate blood products based on their medical requirements.</p>
-                                <p class="fs-6"><strong>Protocols:</strong> Strict adherence to transfusion guidelines and monitoring of patients during transfusion.</p>
-                            </li>
-        
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">5. Blood Storage and Preservation</h5>
-                                <p class="fs-5">We maintain optimal storage conditions for blood products to ensure their viability and safety until they are needed for transfusion.</p>
-                                <p class="fs-6"><strong>Storage Facilities:</strong> Controlled temperature and environment for maximum preservation.</p>
-                            </li>
-        
-                            <li class="list-group-item mb-4">
-                                <h5 class="font-weight-bold fs-4">6. Patient Support and Education</h5>
-                                <p class="fs-5">We provide educational resources and support for patients and their families regarding blood donation, transfusion processes, and safety measures.</p>
-                                <p class="fs-6"><strong>Topics Covered:</strong> Importance of blood donation, transfusion reactions, and recovery.</p>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-4 fs-5">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-
-          
-        <!-- about section ends -->
-
-
-                <!-- Contact Start -->
-                <div class="container-xxl py-5">
-                    <div class="container">
-                        <div class="row g-4">
-                            <div class="col-lg-4">
-                                <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
-                                        style="width: 55px; height: 55px;">
-                                        <i class="fa fa-map-marker-alt text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Address</p>
-                                        <h5 class="mb-0">Swasthya Point Delhi, India</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
-                                        style="width: 55px; height: 55px;">
-                                        <i class="fa fa-phone-alt text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Call Us Now</p>
-                                        <h5 class="mb-0">+91 9876543210</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
-                                        style="width: 55px; height: 55px;">
-                                        <i class="fa fa-envelope-open text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Mail Us Now</p>
-                                        <h5 class="mb-0"> swasthyapoint2024@gmail.com</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="bg-light rounded p-5">
-                                    <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
-                                    <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
-
-                                    <form>
-                                        <div class="row g-3">
-                                            <div class="col-md-6">
-                                                <div class="form">
-                                                    <input type="text" class="form-control" id="name" name="name"
-                                                        placeholder="Your Name" required>
-                                                    <label for="name">Your Name</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form">
-                                                    <input type="email" class="form-control" id="email" name="email"
-                                                        placeholder="Your Email" required>
-                                                    <label for="email">Your Email</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form">
-                                                    <input type="tel" class="form-control" id="phone" name="phone"
-                                                        placeholder="Your Phone Number" required style=" height: 50px; font-size: 15px;">
-                                                    <label for="phone">Your Phone Number</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form">
-                                                    <input type="text" class="form-control" id="city" name="city"
-                                                        placeholder="Your City" required>
-                                                    <label for="city">Your City</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form">
-                                                    <input type="text" class="form-control" id="subject" name="subject"
-                                                        placeholder="Subject" required>
-                                                    <label for="subject">Subject</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form">
-                                                    <textarea class="form-control" placeholder="Leave a message here"
-                                                        id="message" name="message" style="height: 100px ; font-size: 15px;"
-                                                        required></textarea>
-                                                    <label for="message">Message</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button class="btn btn-primary w-100 py-3" id="contact">Send
-                                                    Message</button>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="h-100" style="min-height: 400px;">
-                                    <iframe class="rounded w-100 h-100"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.77249238306!2d77.06889927915427!3d28.527582456103037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d4567aef7fd%3A0xddb0beddcd6d3c74!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603794290143!5m2!1sen!2sin"
-                                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Contact End -->
-
-
-            </div>
-            <footer>
-                <p class="m-0" style="text-align: center; padding-top: 10px;">&copy; 2024 Swasthya Point</p>
-              </footer>
         </div>
-        </div>
-        </div>
-        </section>
-        <script>
-            var content = document.getElementsByTagName('body')[0];
-            var darkMode = document.getElementById('dark-change');
-            darkMode.addEventListener('click', function () {
-                darkMode.classList.toggle('active');
-                content.classList.toggle('night');
-            })
-        </script>
 
-        <script>
-            // Get the form and submit button
-const form = document.querySelector('form');
-const submitButton = document.querySelector('#contact');
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-third w3-center">
+                    <i style="font-size: 200px"
+                        class="w3-animate-zoom fa fa-heartbeat w3-padding-64 w3-text-red w3-margin-right"></i>
+                </div>
 
-// Add an event listener to the submit button
-submitButton.addEventListener('click', function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
+                <div class="w3-twothird">
+                    <h1>
+                        <i class="fa fa-ambulance"></i>
+                        Govt of Delhi
+                    </h1>
+                    <h4 class="w3-padding-32">Our main priority is to save every one instead of someone, by giving blood
+                        and
+                        medical support.
+                    </h4>
 
-    // Get the input fields
-    const nameInput = document.querySelector('#name');
-    const emailInput = document.querySelector('#email');
-    const phoneInput = document.querySelector('#phone');
-    const cityInput = document.querySelector('#city');
-    const subjectInput = document.querySelector('#subject');
-    const messageInput = document.querySelector('#message');
-
-    // Clear the input fields
-    nameInput.value = '';
-    emailInput.value = '';
-    phoneInput.value = '';
-    cityInput.value = '';
-    subjectInput.value = '';
-    messageInput.value = '';
-
-    // Display an alert
-    alert('Your details have been submitted!');
-});
-        </script>
-      
-
-
-        </main>
-
-        <footer class="bg-goy">
-            <div class="container">
-                <div class="row  py-4 jus d-flex justify-content-center">
-                    <div class="col-md-5 text-white ">
-                        <h5>Medical</h5>
-                        <p>Putting your health first. Connect with top-tier healthcare providers, receive personalized
-                            treatment recommendations, and manage your health journey effortlessly</p>
-                    </div>
-                    <div class="col-md-4 text-white ">
-                        <h5>New York</h5>
-                        <p>709 Honey Creek Dr. <br> Delhi <br> NY 10028</p>
-                        <p>1-888-299-2000 <br> medical.in </p>
-                    </div>
-                    <div class="col-md-3 text-white">
-                        <h5>Aligarh</h5>
-                        <p>4851 Willow Greene Drive <br> Montgomery <br> AL 36109</p>
-                        <p>1-888-299-2000 <br> med </p>
-                    </div>
+                    <h5>By belief that we are the obedient of nature and we abide to follow the nature
+                        rules and regulations, that humans are necessity of each other and no one can ignore that all
+                        are
+                        related with blood relations, no matter what the caste and
+                        category is. By the same way we are providing the basic and most important things to the
+                        civilization which is “BLOOD”. It means we are govt of delhi is the median of receiver
+                        and the
+                        donor.
+                    </h5>
                 </div>
             </div>
-        </footer>
+        </div>
+
+        <div class="w3-center w3-panel w3-yellow w3-topbar w3-bottombar w3-border-amber">
+            <h2>
+                <i class="fa fa-hashtag"></i>
+                EVERY DONOR IS A LIFE SAVER
+                <i class="fa fa-life-ring"></i>
+            </h2>
+        </div>
+
+        <div class="w3-row w3-white w3-padding-large" id="register">
+            <div class="w3-col s12 m12 l8" style="padding-top:20px;">
+                <form class="w3-container w3-card-4 w3-white w3-margin"
+                    style="border-radius: 8px; border:1px solid black;">
+                    <h2 class="w3-center w3-text-black">
+                        <i class="fa fa-edit"></i> Donor Registration
+                    </h2>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <h4>Full Name *</h4><input class="w3-input w3-light-grey w3-border" type="text">
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Email </h4><input class="w3-input w3-light-grey w3-border" type="email">
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Phone </h4><input class="w3-input w3-light-grey w3-border" type="number">
+                        </div>
 
 
-        <script> configObj = {
-                "buttonD": "M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z", "buttonT": "translate(-1088 -172) translate(832 140) translate(32 32) translate(224)",
-                "shadowSize": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                "roundnessSize": "999px",
-                "buttonDToBottom": "32px",
-                "buttonDToRight": "32px",
-                "selectedBackgroundColor": "#13324b",
-                "selectedIconColor": "#b3ddff",
-                "buttonWidth": "56px",
-                "buttonHeight": "56px",
-                "svgWidth": "48px",
-                "svgHeight": "48px"
-            };
-            function createButton(obj, pageSimulator) {
-                const body = document.querySelector("body");
-                backToTopButton = document.createElement("span");
-                backToTopButton.classList.add("softr-back-to-top-button");
-                backToTopButton.id = "softr-back-to-top-button";
-                pageSimulator ? pageSimulator.appendChild(backToTopButton) : body.appendChild(backToTopButton);
-                backToTopButton.style.width = obj.buttonWidth;
-                backToTopButton.style.height = obj.buttonHeight;
-                backToTopButton.style.marginRight = obj.buttonDToRight;
-                backToTopButton.style.marginBottom = obj.buttonDToBottom;
-                backToTopButton.style.borderRadius = obj.roundnessSize;
-                backToTopButton.style.boxShadow = obj.shadowSize;
-                backToTopButton.style.color = obj.selectedBackgroundColor;
-                backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;
-                pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";
-                backToTopButton.style.outline = "none";
-                backToTopButton.style.bottom = "0px";
-                backToTopButton.style.right = "0px";
-                backToTopButton.style.cursor = "pointer";
-                backToTopButton.style.textAlign = "center";
-                backToTopButton.style.border = "solid 2px currentColor";
-                backToTopButton.innerHTML = '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';
-                backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");
-                backToTopButtonSvg.style.verticalAlign = "middle";
-                backToTopButtonSvg.style.margin = "auto";
-                backToTopButtonSvg.style.justifyContent = "center";
-                backToTopButtonSvg.style.width = obj.svgWidth;
-                backToTopButtonSvg.style.height = obj.svgHeight;
-                backToTopButton.appendChild(backToTopButtonSvg);
-                backToTopButtonImg = document.querySelector(".back-to-top-button-img");
-                backToTopButtonImg.style.fill = obj.selectedIconColor;
-                backToTopButtonSvg.appendChild(backToTopButtonImg);
-                backToTopButtonImg.setAttribute("d", obj.buttonD);
-                backToTopButtonImg.setAttribute("transform", obj.buttonT); if (!pageSimulator) {
-                    backToTopButton.style.display = "none";
-                    window.onscroll = function () {
-                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { backToTopButton.style.display = "block"; }
-                        else { backToTopButton.style.display = "none"; }
-                    };
-                    backToTopButton.onclick = function () { document.body.scrollTop = 0; document.documentElement.scrollTop = 0; };
-                }
-            }; document.addEventListener("DOMContentLoaded", function () { createButton(configObj, null); });</script>
+                        <div class="w3-half">
+                            <h4> Date of Birth *</h4><input type="date" class="w3-input w3-border w3-light-grey">
+                        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
-        <script src="./index.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"
-            integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                        <div class="w3-half">
+                            <h4> Choose Blood Group *</h4>
+                            <select class="w3-select w3-border w3-light-grey" name="bloodgroup">
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="IDK" selected>I Don't Know</option>
+                            </select>
+                        </div>
+
+                        <div class="w3-half">
+                            <h4> Your Gender *</h4>
+                            <div class="w3-border w3-light-grey w3-padding-small">
+                                <label> Male </label><input class="w3-radio" type="radio" name="gender" value="male"
+                                    checked>
+                                <label> Female </label><input class="w3-radio" type="radio" name="gender"
+                                    value="female">
+                            </div><br>
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Choose District/City *</h4>
+                            <!-- <label for="district">Select District/City:</label> -->
+                            <select id="district" class="w3-select w3-border w3-light-grey" onchange="populateAreas()"
+                                required>
+                                <option value="">--Select District/City--</option>
+                                <option value="Central Delhi">Central Delhi</option>
+                                <option value="North Delhi">North Delhi</option>
+                                <option value="South Delhi">South Delhi</option>
+                                <option value="East Delhi">East Delhi</option>
+                                <option value="West Delhi">West Delhi</option>
+                                <option value="New Delhi">New Delhi</option>
+                            </select>
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Select Area *</h4>
+                            <!-- <label for="area">Select Area:</label> -->
+                            <select id="area" class="w3-select w3-border w3-light-grey" required>
+                                <option value="">--Select Area--</option>
+                            </select>
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Pincode *</h4>
+                            <input type="number" name="pincode" class="w3-input w3-light-grey w3-border">
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>City Name *</h4>
+                            <input type="text" name="city" class="w3-input w3-light-grey w3-border">
+                        </div>
+
+                        <!-- <div class="w3-half">
+                            <h4>Local Area *</h4>
+                            <input type="text" name="area" class="w3-input w3-light-grey w3-border">
+                        </div> -->
+
+
+                        <div class="w3-half">
+                            <h4>Username *</h4><input class="w3-input w3-light-grey w3-border" type="text">
+                        </div>
+
+                        <div class="w3-half">
+                            <h4>Password *</h4><input class="w3-input w3-light-grey w3-border" type="password"><br>
+                        </div>
+
+                        <div class="w3-half">
+                            <button class="w3-button w3-blue w3-hover-black" type="button">Register <i
+                                    class="fa fa-angle-double-right"></i> </button>
+                            <button class="w3-button w3-red w3-hover-black" type="reset">Clear <i
+                                    class="fa fa-close"></i> </button><br><br>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="w3-col s12 m12 l4" style="padding-top: 20px">
+                <form class="w3-container w3-margin w3-card-4 w3-light-grey"
+                    style="border-radius: 8px; border:1px solid black; max-width: 415px">
+                    <h2 class="w3-center w3-text-black">
+                        <i class="fa fa-user-circle"></i> Donor Login
+                    </h2>
+                    <h4>Username</h4><input class="w3-input w3-white w3-border" type="text">
+                    <h4>Password</h4><input class="w3-input w3-white w3-border" type="password"><br>
+                    <button class="w3-button w3-black w3-hover-red" type="button"> Login <i
+                            class="fa fa-paper-plane"></i> </button><br><br>
+                </form>
+            </div>
+        </div>
 
         <script>
-            const lightbox = new PhotoSwipeLightbox({
-                gallery: '#gallery',
-                children: 'a',
-                showHideAnimationType: 'fade',
-                pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js')
-            });
-            lightbox.init();
-        </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
+            function populateAreas() {
+                const district = document.getElementById("district").value;
+
+                fetch('/get_areas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ district: district })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        const areaSelect = document.getElementById("area");
+                        areaSelect.innerHTML = "<option value=''>--Select Area--</option>";
+
+                        data.forEach(area => {
+                            const option = document.createElement("option");
+                            option.value = area;
+                            option.textContent = area;
+                            areaSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching areas:', error));
+            }
         </script>
 
+        <script async src="../static/js/Blood_home_page.js"></script>
     </body>
 
 </html>
