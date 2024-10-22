@@ -20,24 +20,3 @@ window.addEventListener('scroll', function(){
 })
 
 
-document.addEventListener('DOMContentLoaded',() => {
-    const darkToggle = document.getElementById('dark-change');
-
-    if(localStorage.getItem('darkMode') === 'enabled'){
-        document.body.classList.add('dark-mode');
-        darkToggle.classList.add('active');
-    }
-
-    darkToggle.addEventListener('click' , ()=>
-    {
-        document.body.classList.toggle('dark-mode');
-        darkToggle.classList.toggle('active');
-
-        if (document.body.classList.contains('dark-mode')){
-            localStorage.setItem('darkMode','enabled');
-        }
-        else{
-            localStorage.setItem('darkMode','disabled');
-        }
-    });
-});
