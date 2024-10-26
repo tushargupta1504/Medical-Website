@@ -72,18 +72,23 @@ section{
     padding: 2rem 9%;
 }
 
-.heading{
+:root {
+    --blue: #007BFF; /* Define --blue */
+}
+
+.heading {
     text-align: center;
     font-size: 4rem;
     color: #333;
     padding: 1rem;
     margin: 2rem 0;
-    background: rgba(255,51,153,0.05);
+    background: rgba(255, 51, 153, 0.05);
 }
 
-.heading span{
+.heading span {
     color: var(--blue);
 }
+
 
 .btn{
     display: inline-block;
