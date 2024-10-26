@@ -9,7 +9,7 @@
     <title>Admin Login</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
         * {
             margin: 0;
@@ -19,28 +19,33 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(to right, #b1b1b1b9, #838a9393);
-            background-image: url(./img/helth\ 3.jpg);
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
-            background-repeat: no-repeat;
+            background: linear-gradient(to right, #b1b1b1b9, #838a9393), url(./img/helth\ 3.jpg);
             background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .container {
             position: relative;
             width: 50vh;
             height: 65vh;
+            perspective: 1000px;
         }
 
-        .front, .back {
+        .front,
+        .back {
             position: absolute;
             width: 100%;
             height: 100%;
+            padding: 20px;
             backface-visibility: hidden;
-            transition: transform 0.6s linear;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         .front {
@@ -61,71 +66,62 @@
 
         .top {
             text-align: center;
-            margin-bottom: 10vh;
-        }
-
-        .top span {
-            position: relative;
-            top: 3vh;
-            font-size: 25px;
-            letter-spacing: 0.2vh;
+            margin-bottom: 15px;
+            font-size: 28px;
             font-weight: 700;
             color: #264653;
-            text-shadow: 1px 1px 2px rgba(83, 154, 182, 1);
         }
 
         .inputBox {
-            box-shadow: rgb(219, 219, 219) 3px 3px 6px 0px inset,
-                rgba(221, 220, 220, 0.301) -3px -3px 6px 1px inset;
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            margin-left: 4.5vh;
-            width: 40vh;
-            height: 6vh;
-            margin-bottom: 4vh;
-            border-radius: 5vh;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            background-color: #f7f7f7;
+            box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.3s;
         }
 
         .inputBox:focus-within {
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                -5px -5px 10px rgba(255, 255, 255, 0.6);
             outline: 0.5vh solid #264653a1;
         }
 
         .input {
-            height: 4vh;
-            width: 30vh;
-            margin-left: -2vh;
+            flex: 1;
+            height: 100%;
             border: none;
+            background: none;
             outline: none;
-            background: inherit;
+            padding-left: 10px;
+            font-size: 15px;
+            color: #333;
         }
 
         .input::placeholder {
-            color: black;
-            letter-spacing: 0.05em;
+            color: #999;
             font-size: 14px;
         }
 
         .btn {
-            margin-top: 2vh;
-            height: 5vh;
-            width: 10vh;
+            width: 100%;
+            height: 40px;
             border: none;
-            border-radius: 5vh;
-            background: transparent;
-            cursor: pointer;
-            color: #264653;
-            border: 1px solid #264653;
+            border-radius: 20px;
             font-weight: 600;
-            transition: 0.3s ease;
-            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(135deg, #264653, #2a9d8f);
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .btn:hover {
-            background: #264653;
-            color: #fff;
+            background: linear-gradient(135deg, #2a9d8f, #264653);
         }
 
         form {
@@ -133,162 +129,101 @@
         }
 
         .user {
-            margin-top: 3vh;
+            margin-top: 10px;
             color: #0f1f26;
+            font-size: 14px;
         }
 
         .user span {
-            margin-left: 1vh;
-            font-size: 20px;
-            font-weight: bold;
-            color: #195c71;
+            margin-left: 5px;
+            color: #2a9d8f;
             cursor: pointer;
             font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .user span:hover {
+            color: #264653;
+        }
+
+        /* Password Toggle */
+        .password-toggle {
+            cursor: pointer;
+            color: #999;
+            font-size: 16px;
+            position: absolute;
+            right: 15px;
         }
     </style>
-
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="front">
-            <div class="top">
-                <span>Admin Login</span>
-            </div>
-            <div class="form">
-                <form id="adminLoginForm">
-                    <div class="inputBox">
-                        <label><i class="fa-solid fa-user"></i></label>
-                        <input type="email" placeholder="Email" class="input" name="email" required>
-                    </div>
-                    <div class="inputBox" style="position: relative;">
-                        <label><i class="fa-solid fa-lock"></i></label>
-                        <input type="password" id="loginPassword" placeholder="Password" class="input" name="password" required>
-                        <i class="fa-solid fa-eye" id="toggleLoginPassword" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
-                    </div>
-                    <button type="submit" class="btn">Log in</button>
-                    <div class="user">New admin? <span class="newUser">Sign Up</span></div>
-                </form>
-            </div>
+            <div class="top">Admin Login</div>
+            <form id="adminLoginForm">
+                <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" placeholder="Email" class="input" name="email" required>
+                </div>
+                <div class="inputBox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" class="input" name="password" required>
+                    <i class="fa-solid fa-eye password-toggle" id="toggleLoginPassword"></i>
+                </div>
+                <button type="submit" class="btn">Log in</button>
+                <div class="user">New admin? <span class="newUser">Sign Up</span></div>
+            </form>
         </div>
 
         <div class="back">
-            <div class="top">
-                <span>Admin Register</span>
-            </div>
-            <div class="form">
-                <form id="adminRegisterForm">
-                    <div class="inputBox">
-                        <label><i class="fa-solid fa-user"></i></label>
-                        <input type="text" placeholder="Full Name" class="input" name="name" required>
-                    </div>
-                    <div class="inputBox">
-                        <label><i class="fa-solid fa-envelope"></i></label>
-                        <input type="email" placeholder="Email" class="input" name="email" required>
-                    </div>
-                    <div class="inputBox">
-                        <label><i class="fa-solid fa-briefcase"></i></label>
-                        <input type="text" placeholder="Department" class="input" name="department" required>
-                    </div>
-                    <div class="inputBox" style="position: relative;">
-                        <label><i class="fa-solid fa-lock"></i></label>
-                        <input type="password" id="registerPassword" placeholder="Password" class="input" name="password" required>
-                        <i class="fa-solid fa-eye" id="toggleRegisterPassword" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
-                    </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                    <div class="user">Existing admin? <span class="existingUser">Log In</span></div>
-                </form>
-            </div>
+            <div class="top">Admin Register</div>
+            <form id="adminRegisterForm">
+                <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Full Name" class="input" name="name" required>
+                </div>
+                <div class="inputBox">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" class="input" name="email" required>
+                </div>
+                <div class="inputBox">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <input type="text" placeholder="Department" class="input" name="department" required>
+                </div>
+                <div class="inputBox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="registerPassword" placeholder="Password" class="input" name="password" required>
+                    <i class="fa-solid fa-eye password-toggle" id="toggleRegisterPassword"></i>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="user">Existing admin? <span class="existingUser">Log In</span></div>
+            </form>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const container = document.getElementById('container');
             const newUser = document.querySelector('.newUser');
             const existingUser = document.querySelector('.existingUser');
 
-            newUser.addEventListener('click', function() {
-                container.classList.add('flipped');
-            });
+            newUser.addEventListener('click', () => container.classList.add('flipped'));
+            existingUser.addEventListener('click', () => container.classList.remove('flipped'));
 
-            existingUser.addEventListener('click', function() {
-                container.classList.remove('flipped');
-            });
-
-            document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                console.log('Admin login form submitted');
-                const formData = new FormData(this);
-                fetch('/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        email: formData.get('email'),
-                        password: formData.get('password'),
-                        role: 'admin'
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.redirect) {
-                        window.location.href = data.redirect; // This will redirect to the home page
-                    } else {
-                        alert(data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred during login');
+            // Password toggle for login and register forms
+            const togglePassword = (inputId, toggleIconId) => {
+                const input = document.getElementById(inputId);
+                const toggleIcon = document.getElementById(toggleIconId);
+                toggleIcon.addEventListener('click', () => {
+                    const type = input.getAttribute("type") === "password" ? "text" : "password";
+                    input.setAttribute("type", type);
+                    toggleIcon.classList.toggle("fa-eye-slash");
                 });
-            });
+            };
 
-            document.getElementById('adminRegisterForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                console.log('Admin register form submitted');
-                const formData = new FormData(this);
-                fetch('/signup', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: formData.get('name'),
-                        email: formData.get('email'),
-                        department: formData.get('department'),
-                        password: formData.get('password'),
-                        role: 'admin',
-                        username: formData.get('email') // Use email as username if there's no separate username field
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.redirect) {
-                        window.location.href = data.redirect;
-                    } else {
-                        alert(data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred during registration');
-                });
-            });
-
-            // Toggle password visibility
-            const toggleLoginPassword = document.querySelector("#toggleLoginPassword");
-            const loginPassword = document.querySelector("#loginPassword");
-            toggleLoginPassword.addEventListener("click", function () {
-                const type = loginPassword.getAttribute("type") === "password" ? "text" : "password";
-                loginPassword.setAttribute("type", type);
-                this.classList.toggle("fa-eye-slash");
-            });
-
-            const toggleRegisterPassword = document.querySelector("#toggleRegisterPassword");
-            const registerPassword = document.querySelector("#registerPassword");
-            toggleRegisterPassword.addEventListener("click", function () {
-                const type = registerPassword.getAttribute("type") === "password" ? "text" : "password";
-                registerPassword.setAttribute("type", type);
-                this.classList.toggle("fa-eye-slash");
-            });
+            togglePassword("loginPassword", "toggleLoginPassword");
+            togglePassword("registerPassword", "toggleRegisterPassword");
         });
     </script>
 </body>
