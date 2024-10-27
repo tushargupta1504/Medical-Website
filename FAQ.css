@@ -33,6 +33,12 @@
     border: none;
 }
 
+.question:hover{
+    background-color:rgb(209, 209, 236);
+    text-decoration: underline; 
+    transform: scale(1.05);
+}
+
 .question .icon {
     font-size: 1.5em;
     color: #2980b9;
