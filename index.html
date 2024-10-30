@@ -40,108 +40,20 @@
             flex: 1;
         }
 
-        .follow-us {
-            -ms-flex-align: center;
-            display: flex;
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto;
-            /* Keep this at the bottom */
+        .navbar .nav-list li a:hover {
+            color: #007bff;
+            /* Color for hover effect */
+            transition: color 0.3s ease;
         }
 
-        .follow-us h2 {
-            color: grey;
-            /* Grey color for the heading */
-            font-size: 28px;
-            /* Increased size for the heading */
-            margin-bottom: 15px;
-            /* Space between heading and icons */
-        }
-
-        .follow-us a {
-            margin: 0 15px;
-            color: grey;
-            /* Grey color for icons */
-            text-decoration: none;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 3;
-            transition: color 0.5s ease-in-out;
-        }
-
-        @property --fill {
-            syntax: '<percentage>';
-            inherits: true;
-            initial-value: 0%;
-        }
-
-        .follow-us a::after {
-            position: absolute;
-            z-index: -1;
-            content: '';
-            inset: -3px;
-            border-radius: inherit;
-            background: conic-gradient(var(--iconbg) var(--fill), transparent var(--fill));
-            transition: --fill 0.6s ease-in-out;
-        }
-
-        .follow-us a::before {
-            position: absolute;
-            content: '';
-            inset: -1px;
-            border-radius: inherit;
-            background-color: #fff;
-            z-index: 0;
-        }
-
-        .follow-us a:hover {
-            color: var(--iconbg);
-            /* Change color on hover */
-            --fill: 100%
-        }
-
-        .follow-us a:focus {
-            outline: 2px solid var(--iconbg);
-            outline-offset: 2px;
-        }
-
-        .follow-us img {
-            width: 50px;
-            /* Set logo size */
-            height: 50px;
-            filter: grayscale(100%);
-            /* Grey color for icons */
-            transition: filter 0.3s;
-            /* Smooth transition effect */
-        }
-
-        .follow-us a:hover img {
-            filter: grayscale(0%);
-            /* Color on hover */
-        }
-
-        /* General styles for contact form inputs */
-        .form-control {
-            background-color: #fff;
-            /* White background */
-            border: 1px solid #ced4da;
-            /* Light border */
-            border-radius: 0.5rem;
-            /* Rounded corners */
-            transition: border-color 0.3s;
-            /* Smooth border transition */
-        }
-
-        .form-control:focus {
-            outline: none;
-            /* Remove default outline */
-            box-shadow: none;
-            /* Remove any shadow */
-            border-color: #007bff;
-            /* Change border color on focus */
+        /* Styling for carousel text */
+        .carousel-text {
+            font-size: 2.5rem;
+            /* Increased font size */
+            color: #fff;
+            /* White color for contrast */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            /* Optional shadow for readability */
         }
 
         /* Add custom styles for buttons */
