@@ -80,6 +80,70 @@
                 /* Adjust padding on smaller screens */
             }
         }
+         .contact-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .contact-container h1 {
+            font-size: 2rem;
+            color: #333333;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .contact-container p {
+            background-color: #f3f3f3;
+            color: #555555;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d1d1d1;
+            padding: 0.8rem;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+
+        .form label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-left: 0.5rem;
+        }
+
+        .contact-btn {
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -534,77 +598,67 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="bg-light rounded p-5">
-                            <p class="d-inline-block  border rounded-pill py-1 px-4 " style="color: #000;">Contact Us
-                            </p>
-                            <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
-
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form">
-                                            <input type="text" class="form-control" id="name" name="name"
-                                                placeholder="Your Name" required>
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form">
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                placeholder="Your Email" required>
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form">
-                                            <input type="tel" class="form-control" id="phone" name="phone"
-                                                placeholder="Your Phone Number" required
-                                                style=" height: 50px; font-size: 15px;">
-                                            <label for="phone">Your Phone Number</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form">
-                                            <input type="text" class="form-control" id="city" name="city"
-                                                placeholder="Your City" required>
-                                            <label for="city">Your City</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form">
-                                            <input type="text" class="form-control" id="subject" name="subject"
-                                                placeholder="Subject" required>
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form">
-                                            <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" name="message" style="height: 100px ; font-size: 15px;"
-                                                required></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <button class="btn btn-primary w-100 py-3" id="contact">Send
-                                            Message</button>
-                                    </div>
+                        <div class="container mt-5">
+        <div class="row">
+            <!-- Contact Form Section -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="contact-container">
+                    <p>Contact Us</p>
+                    <h1>Have Any Query? Please Contact Us!</h1>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                    <label for="name">Your Name</label>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" required>
+                                    <label for="phone">Your Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form">
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="Your City" required>
+                                    <label for="city">Your City</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px;" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="submit" class="contact-btn w-100 py-3">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="h-100" style="min-height: 400px;">
-                            <iframe class="rounded w-100 h-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.77249238306!2d77.06889927915427!3d28.527582456103037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d4567aef7fd%3A0xddb0beddcd6d3c74!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603794290143!5m2!1sen!2sin"
-                                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
+            <!-- Map Section -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="map-container">
+                    <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.77249238306!2d77.06889927915427!3d28.527582456103037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d4567aef7fd%3A0xddb0beddcd6d3c74!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603794290143!5m2!1sen!2sin" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
+    </div>
         <!-- Contact End -->
 
 
