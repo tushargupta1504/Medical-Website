@@ -19,7 +19,7 @@ Our platform revolutionizes healthcare by offering **online medical consultation
 <table border="1">
   <tr>
       <td><img src="https://github.com/user-attachments/assets/82287ad0-2c5f-419f-ae49-5283fcc6fcfd" alt="Discord Logo" width="50"></td>
-      <td><a href=""> Join our Official Discord Server </a></td>
+   
   </tr>
 </table>
 
