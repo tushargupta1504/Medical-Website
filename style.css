@@ -25,7 +25,7 @@ label{
     position: absolute;
     width: 45px;
     height: 22px;
-    right: 20px;
+    left:  20px;
     top: 20px;
     border: 2px solid;
     border-radius: 20px;
@@ -36,7 +36,7 @@ label:before{
     width:20px;
     height: 20px;
     border-radius: 50%;
-    background: #000;
+    background: #010101;
     cursor: pointer;
     transition: 0.4s;
 }
