@@ -81,15 +81,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    background-color: #343a40; /* bg-dark */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    color: white;
     font-size: 24px;
     width: 170px;
 }
+
+/* Logo styling */
+.navbar .logo img {
+    width: 100px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
 
 .nav-list {
     list-style: none;
@@ -109,6 +118,37 @@ body {
    
 }
 
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+/* Hover effects for links */
+.nav-link:hover {
+    color: #23d1c8;
+}
+
+/* Underline effect on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #23d1c8;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
 /*.nav-list a:hover {
     background-color: white;
     border-radius: 5px;
@@ -125,6 +165,7 @@ body {
     width: 25px;
     background-color: black;
     margin: 3px 0;
+    transition: 0.3s;
 }
 .menu{
     display: none;
