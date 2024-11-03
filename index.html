@@ -39,7 +39,9 @@
         #root {
             flex: 1;
         }
-
+        .h1 {
+          font-size: 40px;
+        }
         .follow-us {
             -ms-flex-align: center;
             display: flex;
@@ -166,10 +168,7 @@
             /* Darker shade on hover */
         }
 
-        .nav-link:hover{
-            color: green !important;
-        }
-
+       
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
@@ -177,36 +176,107 @@
                 /* Adjust padding on smaller screens */
             }
         }
+         .navbar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        list-style: none;
+        padding: 10px;
+    }
+    li:hover .dropdown {
+        display: block;
+    }
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .nav-list {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .nav-list.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: flex;
+        }
+    }
     </style>
 </head>
 
 <body>
     <!-- header section starts -->
     <nav class="navbar bg-dark">
-        <div class="logo"><img src="./img/swasthya-logo.png" alt=""></div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="nav-list">
-            <li><a class="nav-link text-white" href="#home">Home</a></li>
-            <li><a class="nav-link text-white" href="#about">About Us</a></li>
-            <li><a class="nav-link text-white" href="#services">Services</a></li>
-            <li><a class="nav-link text-white" href="#blog">Blog</a></li>
-            <li><a class="nav-link text-white" href="#contact">Contact</a></li>
-            <div class="menu"><i class="fa-solid fa-bars"></i></div>
-        </ul>
-    </nav>
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
+    <div class="logo">
+        <img src="./img/swasthya-logo.png" alt="Swasthya Logo">
+    </div>
+    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" tabindex="0">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a class="nav-link text-white" href="#home">Home</a></li>
+        <li><a class="nav-link text-white" href="#about">About Us</a></li>
+        <li>
+            <a class="nav-link text-white" href="#services">Services</a>
+            <ul class="dropdown">
+                <li><a class="dropdown-link text-white" href="#service1">Service 1</a></li>
+                <li><a class="dropdown-link text-white" href="#service2">Service 2</a></li>
+                <li><a class="dropdown-link text-white" href="#service3">Service 3</a></li>
+            </ul>
+        </li>
+        <li><a class="nav-link text-white" href="#blog">Blog</a></li>
+        <li><a class="nav-link text-white" href="#contact">Contact</a></li>
+        <div class="menu"><i class="fa-solid fa-bars"></i></div>
+    </ul>
+</nav>
 
-        mobileMenu.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
-    </script>
+ <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
 
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!navList.contains(event.target) && !mobileMenu.contains(event.target)) {
+            navList.classList.remove('active');
+        }
+    });
+</script>
 
     <!-- header section ends -->
 
