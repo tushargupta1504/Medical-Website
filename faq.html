@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page Background and Font */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #333;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container Styling */
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styling */
+        .faq-container h2 {
+            font-size: 2.7rem; /* Increased font size */
+            color: #0066cc;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* FAQ Item Styling */
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Question Styling */
+        .faq-question {
+            font-size: 1.5rem; /* Increased font size */
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Answer Styling */
+        .faq-answer {
+            font-size: 1.4rem; /* Increased font size */
+            color: #555;
+            line-height: 1.7;
+            margin-top: 10px;
+            display: none;
+            padding: 0 10px;
+            border-left: 3px solid #0066cc;
+        }
+
+        /* Accordion Effect */
+        .faq-answer.visible {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Button Styling */
+        .explore-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.25rem; /* Increased font size */
+            color: #fff;
+            background-color: #0066cc;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #004999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">What services do you offer? <span>+</span></div>
+            <div class="faq-answer">We offer a wide range of medical services, including primary care, specialized consultations, diagnostics, and surgical procedures.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I book an appointment? <span>+</span></div>
+            <div class="faq-answer">You can book an appointment through our online booking system on the website or call our customer service at (123) 456-7890.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What is your approach to patient care? <span>+</span></div>
+            <div class="faq-answer">Our approach focuses on personalized, compassionate care tailored to each patient's unique needs. We prioritize patient education and preventive health measures.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you accept insurance? <span>+</span></div>
+            <div class="faq-answer">Yes, we accept most major insurance providers. Please contact us to confirm if your insurance is accepted.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What should I bring to my appointment? <span>+</span></div>
+            <div class="faq-answer">Please bring a valid ID, your insurance card, any medical records related to your visit, and a list of current medications.</div>
+        </div>
+
+        <!-- Add more FAQ items as needed -->
+        
+        <a href="index.html" class="explore-btn">Back to Home</a>
+    </div>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.classList.toggle('visible');
+                
+                const sign = item.querySelector('span');
+                sign.textContent = sign.textContent === '+' ? '–' : '+';
+            });
+        });
+    </script>
+
+</body>
+</html>
