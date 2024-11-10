@@ -385,13 +385,36 @@ header .navbar a{
     text-decoration-style: solid;
 }
 
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.about h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px; 
+    padding-bottom: 10px;
+    position: relative;
+    color: #101010;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about h1 span{
+    color: #2c4964;
+}
+
 .about .row{
     display: flow-root;
     align-items: center;
     gap: 2rem;
     /* flex-wrap:nowrap ; */
-    padding: 2rem 0;
-    padding-bottom: 3rem;
+    padding: 1.5rem 0; 
+    padding-bottom: 1.5rem; 
 }
 
 .about .row .video-container{
@@ -419,22 +442,51 @@ header .navbar a{
     mix-blend-mode: screen;
 }
 
-.about .row .content{
-    flex:1 1 40rem;
+.about .row .content {
+    flex: 1 1 40rem;
+    max-width: 900px; /* Control width for better readability */
+    margin: 0 auto;
+    text-align: center;
 }
 
-.about .row .content h3{
-    font-size: 3rem;
+.about .row .content h3 {
+    font-size: 3.8rem; /* Adjusted font size */
     color: #333;
+    font-weight: 600; /* Moderate weight for titles */
+    padding-top: 5rem;
+    margin-bottom: 1rem; /* Add spacing under heading */
+    text-align: center;
 }
 
-.about .row .content p{
-    font-size: 1.5rem;
-    color: #999;
+.about .row .content p {
+    font-size: 1.8rem; /* Adjusted font size for better readability */
+    color: #666; /* Slightly darker for better contrast */
     padding: 0.5rem 0;
-    padding-top: 1rem;
-    line-height: 1.5;
+    line-height: 1.5; /* Slightly increased line-height */
+    font-weight: 200; /* Regular weight for body text */
+    text-align: center;
 }
+
+.about .row .content .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: #2c4964; /* Button background color */
+    color: #fff; /* Text color for contrast */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none; /* Remove underline if it's a link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.about .row .content .btn:hover {
+    background-color: #1f354a; /* Darker shade for hover effect */
+}
+
 
 .icons-container{
     background: #eee;
