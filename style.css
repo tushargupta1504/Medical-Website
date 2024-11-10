@@ -368,8 +368,10 @@ header .navbar a{
 }
 
 .home .content span{
-    font-size: 3.5rem;
-    color: #a7e0ff;
+    font-size: 4.4rem;
+    outline: #000;
+    
+    color: red;
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -664,7 +666,7 @@ section {
 
 .services .icon-box {
     text-align: center;
-    background: linear-gradient(106deg,#858383,#ffffff);
+    background: linear-gradient(106deg,#fefcfc,#ffffff);
     border: none;
     padding: 20px 20px 20px 20px;
     transition: all ease-in-out 0.5s;
