@@ -932,6 +932,61 @@ function googleTranslateElementInit() {
                     <div class="text-white, text-2xl">Swasthy provides online consultations, health information,
                         diagnostic tests, and affordable
                         services across various specialties, ensuring accessible healthcare for all.</div>
+
+
+
+                        <div class="visitor-counter">
+                <span class="icon">👁️</span> <!-- You can replace this with an eye icon image if you prefer -->
+                <span id="visitorCount">Visitors Count:</span>
+                <span class="website-counter">0</span>
+            </div>
+        <script>
+              // Function to get the count from localStorage or initialize it
+        function getVisitorCount() {
+        return localStorage.getItem('visitorCount') || 0;
+        }
+
+        // Function to increment and save the count
+        function incrementVisitorCount() {
+        let count = parseInt(getVisitorCount()) + 1;
+        localStorage.setItem('visitorCount', count);
+        return count;
+        }
+
+        // Function to display the count
+        function displayVisitorCount() {
+        const counterElement = document.querySelector('.website-counter');
+        const count = incrementVisitorCount();
+        counterElement.textContent = count;
+        }
+
+        // Call the display function when the page loads
+        document.addEventListener('DOMContentLoaded', displayVisitorCount);
+        </script>
+        <style>
+
+            .visitor-counter {
+  position: absolute;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  top: 5698px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-left: 0px;
+  z-index: 10; /* Ensure it stays on top of the border */
+}  
+
+.visitor-counter .icon {
+  margin-right: 10px;
+}
+
+
+            
+        </style>
+
                 </div>
 
                 <!-- Child div for 'Quick Links' -->
