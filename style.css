@@ -2,7 +2,6 @@
 :root {
     --blue: #4385a9;
 }
-
 * {
     margin: 0; 
     padding: 0;
@@ -14,14 +13,20 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
 
-label{
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Improved line height for better readability */
+}
+
+label {
     position: absolute;
     width: 45px;
     height: 22px;
@@ -30,64 +35,64 @@ label{
     border: 2px solid;
     border-radius: 20px;
 }
-label:before{
+
+label:before {
     position: absolute;
     content: '';
-    width:20px;
+    width: 20px;
     height: 20px;
     border-radius: 50%;
     background: #010101;
     cursor: pointer;
     transition: 0.4s;
 }
-label.active:before{
+
+label.active:before {
     left: 24px;
     background: #fff;
 }
 
-body.night{
+body.night {
     background: #000;
     color: #fff;
 }
-body.night .icons-container{
+
+body.night .icons-container {
     background: #101010;
     color: #fff;
 }
 
-body.night .bg-boz{
+body.night .bg-boz {
     background: #101010;
     color: #fff;
 }
 
-body.night header{
+body.night header {
     background: #101010;
     color: #fff;
 }
-body.night header a{
-    color: #101010;
-    color: #fff;
+
+body.night header a {
+    color: #fff; /* Adjusted for visibility in night mode */
 }
 
-section{
+section {
     padding: 2rem 9%;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 10px 20px;
+    background-color: #fff; /* Adjusted for better contrast */
+    padding: 15px 30px; /* Increased padding for a more spacious look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .logo {
-    color: white;
-    font-size: 24px;
+    color: #2c3e50; /* Changed color for better visibility */
+    font-size: 28px; /* Increased font size for prominence */
+    font-weight: bold; /* Made logo text bold */
     width: 170px;
 }
 
@@ -99,20 +104,21 @@ body {
 }
 
 .nav-list li {
-    margin-left: 20px;
+    margin-left: 30px; /* Increased margin for spacing */
 }
 
 .nav-list a {
-    color: black;
+    color: #34495e; /* Changed to a softer color for better aesthetics */
     text-decoration: none;
-    padding: 5px 10px;
-   
+    padding: 10px 15px; /* Increased padding for touch targets */
+    border-radius: 5px; /* Added border-radius for softer edges */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-/*.nav-list a:hover {
-    background-color: white;
-    border-radius: 5px;
-}*/
+.nav-list a:hover {
+    background-color: #ecf0f1; /* Light background on hover */
+    color: #2c3e50; /* Darker text on hover for contrast */
+}
 
 .menu-toggle {
     display: none;
@@ -126,7 +132,8 @@ body {
     background-color: black;
     margin: 3px 0;
 }
-.menu{
+
+.menu {
     display: none;
 }
 
@@ -148,17 +155,15 @@ body {
     .menu-toggle {
         display: flex;
     }
-    .logo{
+
+    .logo {
         width: 100px;
     }
-    .bar{
+
+    .bar {
         margin-left: 500px;
-        /*margin-bottom: ;*/
     }
-
- 
 }
-
 
 /* .heading{
     text-align: center;
