@@ -230,29 +230,48 @@ header {
             box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
         }
 
-        .star-rating {
-            display: inline-block;
-        }
+        .rating-container {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rating-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+    .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}   
 
         .star-rating input {
             display: none;
         }
 
         .star-rating label {
-            float: right;
-            padding: 0 2px;
-            font-size: 30px;
-            color: #ddd;
-            cursor: pointer;
-            transition: color var(--transition-speed) ease;
-        }
+    cursor: pointer;
+    font-size: 2rem;
+    color: #cbd5e1;
+    transition: color 0.2s ease;
+}
 
-        .star-rating input:checked ~ label,
-        .star-rating label:hover,
-        .star-rating label:hover ~ label {
-            color: #ffca08;
-        }
-
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input:checked ~ label {
+        color: #fbbf24;
+    }
+    .rating-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
         .submit-btn {
             background-color: var(--primary-color);
             color: white;
@@ -536,7 +555,7 @@ footer {
                             <input type="text" id="contentLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="contentType">ype of Medical Service:</label>
+                            <label for="contentType">Type of Medical Service:</label>
                             <select id="contentType" required>
                                 <option value="">Select type</option>
                                 <option value="consultation">Consultation</option>
@@ -573,13 +592,26 @@ footer {
                 </div>
             </div>
             <div class="form-group">
-                <label for="rating">Rating:</label>
-                <div class="star-rating">
-                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5">☆</label>
-                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4">☆</label>
-                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3">☆</label>
-                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2">☆</label>
-                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1">☆</label>
+               
+                <div class="rating-container">
+                    <h3 class="rating-title">Rate Your Experience</h3>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                    <div class="rating-labels">
+                        <span>Poor</span>
+                        <span>Average</span>
+                        <span>Excellent</span>
+                    </div>
                 </div>
             </div>
 
