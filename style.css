@@ -2,16 +2,7 @@
 :root {
     --blue: #4385a9;
 }
-* {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-}
+ 
 
 html {
     font-size: 62.5%;
@@ -1111,3 +1102,149 @@ footer {
         margin-left: 0;
     }
 }       
+/* Fix text overlapping issues */
+
+/* Improve base text spacing */
+* {
+    box-sizing: border-box;
+}
+
+/* Fix navbar text overlapping */
+.nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Fix content spacing */
+.content {
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Improve heading hierarchy and spacing */
+h1, h2, h3, h4, h5, h6 {
+    margin: 2rem 0 1rem;
+    line-height: 1.2;
+}
+
+/* Fix paragraph spacing */
+p {
+    margin-bottom: 1.5rem;
+    max-width: 70ch; /* Improve readability */
+}
+
+/* Fix mobile menu text overlap */
+@media (max-width: 780px) {
+    .nav-list.active {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nav-list a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bar {
+        margin-left: auto; /* Fix hamburger menu alignment */
+    }
+}
+
+/* Fix footer text spacing */
+.footer-distributed {
+    padding: 3rem 2rem;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    padding: 1rem;
+}
+/* Fix text overlapping and spacing issues */
+
+/* Base text settings */
+* {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+/* Service section fixes */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.services .icon-box {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure consistent height */
+}
+
+.services .icon-box h4 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    min-height: 3.6rem; /* Prevent title overlap */
+}
+
+.services .icon-box p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 4.2rem; /* Prevent description overlap */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+    
+    .services .icon-box {
+        margin-bottom: 2rem;
+    }
+}
+ 
+/* Remove personalized care section */
+.home .content h3:last-of-type,
+.home .content p:last-of-type {
+    display: none;
+}
+
+/* Adjust spacing for remaining content */
+.home .content {
+    max-width: 50rem;
+    position: absolute;
+    z-index: 1;
+    top: 40%; /* Adjusted from 50% to better center remaining content */
+    transform: translateY(-40%);
+    left: 10%;
+}
+
+/* Ensure proper spacing between elements */
+.home .content > * {
+    margin-bottom: 2rem;
+}
+
+/* Update responsive behavior */
+@media (max-width: 768px) {
+    .home .content {
+        top: 35%;
+        transform: translateY(-35%);
+    }
+}
