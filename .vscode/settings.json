@@ -1,3 +1,5 @@
 {
-  "liveServer.settings.port": 5503
+  "liveServer.settings.port": 5503,
+  "github.copilot.chat.agent.thinkingTool": false,
+  "github.copilot.chat.scopeSelection": false
 }
