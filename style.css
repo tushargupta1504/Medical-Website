@@ -347,48 +347,42 @@ header .navbar a{
 }
 
 .home{
-    /* display: flex; */
-    /* align-items: center; */
-    min-height: 100vh;
-    /* background: url(img/bg-home.png)no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center; */
+    position: relative;
+    height: 100vh;
     padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-.home .content{
-    max-width: 50rem;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10%;
+.home .carousel {
+    height: 100%;
 }
 
-.home .content h3{
-    font-size: 5rem;
-    color: #ffffff;
-    font-weight: bold;
-    /*text-shadow: 0 0 4px #ffffff;*/
+.home .carousel-inner {
+    height: 100vh;
 }
 
-.home .content span{
-    font-size: 4.4rem;
-    outline: #000;
-    
-    color: red;
-    padding: 1rem 0;
-    line-height: 1.5;
+.home .carousel-item {
+    height: 100vh;
 }
 
-.home .content p{
-    font-size: 1.5rem;
-    color: #ffffff;
-    padding: 1rem 0;
-    line-height: 1.5;
-    /*text-decoration: underline;*/
-    text-decoration-style: solid;
+.home .carousel-item img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
 }
+
+.home .carousel-indicators {
+    bottom: 20px;
+    z-index: 15;
+}
+
+.home .carousel-control-prev,
+.home .carousel-control-next {
+    z-index: 15;
+}
+
 
 /*--------------------------------------------------------------
 # About Us
@@ -673,6 +667,57 @@ body.night .mb-0{
 
 
 /*--------------------------------------------------------------
+# Hero Content Section
+--------------------------------------------------------------*/
+.hero-content-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #2c4964;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content-section .btn {
+    background: linear-gradient(135deg, #2c4964, #4385a9);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 73, 100, 0.3);
+}
+
+.hero-content-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 73, 100, 0.4);
+    background: linear-gradient(135deg, #1f354a, #2c4964);
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 
@@ -854,12 +899,25 @@ textarea {
 }
 
 @media (max-width:768px){
-    .home .content h3{
-        font-size: 5rem;
+    .hero-content-section {
+        padding: 60px 0;
     }
-
-    .home .content span{
+    
+    .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content-section .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
     }
 
     .icons-container .icons h3{
@@ -869,11 +927,29 @@ textarea {
     .icons-container .icons span{
         font-size: 1.7rem;
     }
-     
-
 }
 
 @media (max-width:450px){
+    .hero-content-section {
+        padding: 40px 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-content-section .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
 
     html{
         font-size: 50%;
@@ -882,7 +958,6 @@ textarea {
     .heading{
         font-size: 3rem;
     }
-    
 }
 form{
     position: relative;
