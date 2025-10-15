@@ -140,7 +140,7 @@ We’re excited to have you contribute to this *Ice Cream Parlour Website* proje
 
 4. **🛠️ Make Your Changes**
    - Open the project files in your code editor (like VS Code) and make your changes.
-   - You can contact the project manager for any queiries you have.
+   - You can contact the project manager for any queries you have.
 
 5. **✅ Test Your Changes**
    - Make sure your changes work correctly by testing the website locally. Open the index.html file in your browser to see your updates.
