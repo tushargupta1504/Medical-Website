@@ -235,12 +235,32 @@
             display: flex;
         }
     }
+    .custom-navbar {
+  background-color: #f2f2f2; /* soft light gray */
+  color: #333333; /* dark text for contrast */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .nav-link {
+  color: #333333 !important;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #00695c !important; /* subtle green highlight on hover */
+  background-color: rgba(0, 105, 92, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
     </style>
 </head>
 
 <body>
     <!-- header section starts -->
-    <nav class="navbar bg-dark">
+    
+    <nav class="navbar custom-navbar">
+
     <div class="logo">
         <img src="./img/swasthya-logo.png" alt="Swasthya Logo">
     </div>
